@@ -1,6 +1,6 @@
 type Props = {
   title: string;
-  subtitle: string;
+  subtitle?: string;
 
   description?: JSX.Element;
 
@@ -14,7 +14,7 @@ function ListItem(props: Props) {
     <div className="flex flex-row">
       <div className="grow">
         <h3 className="uppercase text-2xl font-bold">{title}</h3>
-        <div className="uppercase text-xl text-gray-400 mb-4">{subtitle}</div>
+        {subtitle && <div className="uppercase text-xl text-gray-400 mb-4">{subtitle}</div>}
        {description &&  <div className="mb-1">{description}</div>}
         {footer && <div className="text-sm">{footer}</div>}
       </div>
