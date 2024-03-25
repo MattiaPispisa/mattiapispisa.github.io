@@ -1,6 +1,6 @@
-import { formatDateRange } from "../../functions";
-import ListItem from "../widgets/Item";
-import SubTitle from "../widgets/Subtitle";
+import { formatDateRange } from "../../../functions";
+import ListItem from "../../widgets/ListItem";
+import SubTitle from "../../widgets/SubTitle";
 
 function Education() {
   return (

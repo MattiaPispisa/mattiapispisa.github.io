@@ -4,15 +4,22 @@ import { useHash } from "./HashProvider";
 
 type Props = {
   id: string;
+  centered?: boolean;
   children: JSX.Element;
 };
-function Section(props: Props) {
+function Section({ centered = true, ...props }: Props) {
   const { id } = props;
   const [ref] = useUpdateSection(id);
 
   return (
-    <section ref={ref} className="p-12 min-h-[100vh] border-b-[1px] flex" id={id}>
-      <div className="mt-auto mb-auto w-full h-full">{props.children}</div>
+    <section
+      ref={ref}
+      className="p-12 min-h-[100vh] border-b-[1px] flex"
+      id={id}
+    >
+      <div className={`${centered ? "mt-auto mb-auto" : ""} w-full h-full`}>
+        {props.children}
+      </div>
     </section>
   );
 }

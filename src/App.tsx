@@ -1,7 +1,7 @@
-import About from "./ui/resume/About";
-import Education from "./ui/resume/Education";
-import Experience from "./ui/resume/Experience";
-import Posts from "./ui/resume/Post";
+import About from "./ui/resume/About/About";
+import Education from "./ui/resume/Education/Education";
+import Experience from "./ui/resume/Experience/Experience";
+import Posts from "./ui/resume/Post/Post";
 import { Body, NavBar, Section } from "./ui/widgets";
 import HashProvider from "./ui/widgets/HashProvider";
 
@@ -9,6 +9,7 @@ type Section = {
   id: string;
   label: string;
   component: JSX.Element;
+  centered?: boolean;
 };
 
 const sections: Section[] = [
@@ -17,13 +18,13 @@ const sections: Section[] = [
     label: "About",
     component: <About />,
   },
+  { id: "post", label: "Post", component: <Posts />, centered: false },
   {
     id: "experience",
     label: "Experience",
     component: <Experience />,
   },
   { id: "education", label: "Education", component: <Education /> },
-  { id: "post", label: "Post", component: <Posts /> },
 ];
 
 export default function App() {
@@ -35,7 +36,7 @@ export default function App() {
           <>
             {sections.map((s) => {
               return (
-                <Section key={s.id} id={s.id}>
+                <Section centered={s.centered} key={s.id} id={s.id}>
                   {s.component}
                 </Section>
               );

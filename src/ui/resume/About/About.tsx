@@ -1,8 +1,8 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
-import Title from "../widgets/Title";
+import Title from "../../widgets/Title";
 import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
-import { MailTo, SocialProfile } from "../widgets";
+import { MailTo, SocialProfile } from "../../widgets";
 import {
   faInstagram,
   faLinkedin,
