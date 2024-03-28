@@ -2,13 +2,14 @@ import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 import Title from "../../widgets/Title";
 import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
-import { MailTo, SocialProfile } from "../../widgets";
+import { MailTo, SocialProfile, Text } from "../../widgets";
 import {
   faInstagram,
   faLinkedin,
   faDev,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import DownloadResumeButton from "../../widgets/DownloadResumeButton";
 
 type SocialProfileType = {
   link: string;
@@ -48,17 +49,18 @@ function About() {
         <MailTo mail="mattia.pispisa@gmail.com" />
       </div>
       <div className="mb-8">
-        <p>
+        <Text>
           As a Mobile Developer at MV Labs, I'm constantly seeking new
           challenges, driven by my passion for both web and mobile programming,
           along with a keen interest in design books.
-        </p>
+        </Text>
       </div>
-      <div className="flex flex-row gap-x-4">
+      <div className="flex flex-row gap-x-4 mb-8">
         {socials.map((s) => {
           return <SocialProfile key={s.link} link={s.link} icon={s.icon} />;
         })}
       </div>
+      <DownloadResumeButton />
     </>
   );
 }

@@ -1,4 +1,5 @@
 import { useCallback } from "react";
+import { Text } from "../widgets";
 
 type Props = {
   id: string;
@@ -19,13 +20,13 @@ function NavItem(props: Props) {
   return (
     <li>
       <a className="cursor-pointer" onClick={smoothScrollTo}>
-        <p
-          className={`text-center text-lg font-bold uppercase text-neutral-50  hover:opacity-100 ${
+        <Text
+          className={`text-center text-lg font-bold uppercase text-light hover:opacity-100 ${
             selected ? "opacity-100" : "opacity-65"
           }`}
         >
           {label}
-        </p>
+        </Text>
       </a>
     </li>
   );

@@ -1,6 +1,6 @@
 import { useCallback, useMemo, useState } from "react";
 import { formatDate } from "../../../functions";
-import { ListItem, Chip, SubTitle, ButtonChip } from "../../widgets";
+import { ListItem, Chip, SubTitle, ButtonChip, Text } from "../../widgets";
 import { posts } from "./posts";
 import { PostModel } from "./model";
 import React from "react";
@@ -63,7 +63,7 @@ function Posts() {
               link={post.link}
               title={post.title}
               description={post.description}
-              trailing={<p>{formatDate(post.date)}</p>}
+              trailing={formatDate(post.date)}
               footer={
                 <>
                   {post.hashtags.map((hashtag) => {

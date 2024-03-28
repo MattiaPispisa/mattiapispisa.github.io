@@ -1,7 +1,7 @@
 type PostModel = {
   link: string;
   title: string;
-  description: JSX.Element;
+  description: JSX.Element | string;
   date: string;
   hashtags: string[];
 };

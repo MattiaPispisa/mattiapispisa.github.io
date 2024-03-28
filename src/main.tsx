@@ -1,10 +1,16 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Resume from "./ui/resume/Resume.tsx";
+import "./index.css";
+import HashProvider from "./ui/widgets/HashProvider.tsx";
+import DarkModeProvider from "./ui/widgets/DarkModeProvider.tsx";
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+    <DarkModeProvider>
+      <HashProvider>
+        <Resume />
+      </HashProvider>
+    </DarkModeProvider>
+  </React.StrictMode>
+);

@@ -1,9 +1,15 @@
+import { Text } from ".";
+
 type Props = {
-  children: JSX.Element;
+  children: JSX.Element | string;
 };
 function SubTitle(props: Props) {
   const { children } = props;
-  return <h2 className="text-6xl uppercase font-bold mb-12">{children}</h2>;
+  return (
+    <Text type="h2" className="text-6xl uppercase font-bold mb-12 ">
+      {children}
+    </Text>
+  );
 }
 
 export default SubTitle;
