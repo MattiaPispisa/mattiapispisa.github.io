@@ -3,8 +3,9 @@ const it = {
   post: "Post",
   experience: "Esperienze",
   education: "Formazione",
+  passions: "Passioni",
   myInfo:
-    "Sono sempre stato appassionato di sviluppo mobile. Ho iniziato con iOS per poi passare ad un approccio ibrido. Dopo la passione per il mobile è arrivata quella per sviluppo Web Front-End e ora sono anche specializzo in React. Inizio sempre con un approccio teorico 🤓 per poi metterlo in pratica 👨🏻‍💻.",
+    "Sono sempre stato appassionato di sviluppo mobile. Ho iniziato con iOS per poi passare ad un approccio ibrido. Dopo la passione per il mobile è arrivata quella per sviluppo Web Front-End e ora sono anche specializzo in React. Inizio sempre con uno studio teorico 🤓 per poi metterlo in pratica 👨🏻‍💻.",
   curriculum: "Curriculum",
   mvExperience: "Progettista e sviluppatore di applicazioni web e mobile",
   mvExperienceWeb:
@@ -20,8 +21,7 @@ const it = {
   archeidoExperience: "Sviluppatore Mobile iOS",
   fillInTheBlanksExperience: "Impiegato",
   masterDegree: "Laurea magistrale",
-  masterDegreeDesc:
-    "Laurea magistrale in informatica (Sistemi interattivi)",
+  masterDegreeDesc: "Laurea magistrale in informatica (Sistemi interattivi)",
   masterDegreeVote: "Voto: ",
   masterDegreeBestGraduate: " con merito di laurea ai migliori graduati",
   bachelorDegree: "Laurea breve",
@@ -29,6 +29,13 @@ const it = {
   bachelorDegreeVote: "Voto: ",
   diploma: "Diploma",
   diplomaText: "Diploma in telecomunicazioni",
+  passionsCode:
+    "Adoro progettare, programmare e trovare sempre nuove sfide per mettermi in gioco.",
+  passionF1:
+    "Oltre a questo, nel tempo libero, sono un appassionato di motori, sopratutto della formula 1, sempre forza Ferrari 🏎️!",
+  passionGym:
+    "Vado spesso in palestra 🏋🏻‍♀️ e gestisco insieme ad altri miei amici una pagina dedicata all'organizzazione di escursioni in montagna 🏔️, seguitela anche voi:",
+  passionNerd: "Adoro la Marvel, Star Wars e Naruto 🍥!",
 };
 
 export { it };

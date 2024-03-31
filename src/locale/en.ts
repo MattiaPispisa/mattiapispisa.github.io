@@ -3,6 +3,7 @@ const en = {
   post: "Post",
   experience: "Experience",
   education: "Education",
+  passions: "Passions",
   myInfo:
     "I have always been passionate about mobile development. I started with iOS and then transitioned to a hybrid approach. After my passion for mobile, I discovered Front-End Web development, and now I specialize in React. I always begin with a theoretical approach 🤓 before putting it into practice 👨🏻‍💻.",
   curriculum: "Curriculum",
@@ -29,6 +30,13 @@ const en = {
   bachelorDegreeVote: "Vote: ",
   diploma: "Diploma",
   diplomaText: "Diploma in telecommunications",
+  passionsCode:
+    "I love designing, programming, and always finding new challenges to push myself.",
+  passionF1:
+    "Besides that, in my free time, I'm passionate about motorsports, especially Formula 1, always Ferrari 🏎️!",
+  passionGym:
+    "I often go to the gym 🏋🏻‍♀️ and together with some friends, I manage a page dedicated to organizing mountain excursions 🏔️. Follow it too:",
+  passionNerd: "I also love Marvel, Star Wars, and Naruto 🍥!",
 };
 
 export { en };
