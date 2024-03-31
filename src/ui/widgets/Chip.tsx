@@ -8,7 +8,7 @@ type Props = {
 function Chip(props: Props) {
   const { name, onRemove } = props;
   return (
-    <div className="flex items-center bg-gray-200 rounded-full px-3 py-1 m-1 w-fit">
+    <div className="flex items-center bg-gray-200 rounded-full px-3 py-1 w-fit">
       <span className="mr-2">{name}</span>
       <button
         className="text-red-500 hover:text-red-700 focus:outline-none"

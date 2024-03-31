@@ -7,7 +7,7 @@ function ProfileImage(props: Props) {
 
   return (
     <img
-      className={`container align-middle object-cover rounded-full overflow-clip md:w-[160px] md:h-[160px]`}
+      className={`align-middle object-cover rounded-full overflow-clip w-[40px] h-[40px] md:w-[160px] md:h-[160px]`}
       alt="profile-image"
       src={src}
     />

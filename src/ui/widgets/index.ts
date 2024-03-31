@@ -1,4 +1,5 @@
 export { default as Body } from './Body';
+export { default as Button } from './Button';
 export { default as ButtonChip } from './ButtonChip';
 export { default as Chip } from './Chip';
 export { default as DarkModeProvider } from './DarkModeProvider';

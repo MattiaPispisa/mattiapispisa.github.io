@@ -16,7 +16,7 @@ type Props = {
 function ListItem(props: Props) {
   const { description, footer, subtitle, title, trailing, link } = props;
   return (
-    <ul className="flex flex-row">
+    <ul className="flex flex-row gap-4 flex-wrap md:flex-nowrap">
       <div className="grow">
         {link ? (
           <ListLinkTitle link={link} title={title} />
@@ -39,7 +39,9 @@ function ListItem(props: Props) {
         {footer && <div className="text-sm">{footer}</div>}
       </div>
       {trailing && (
-        <div className="md:min-w-72 md:text-right text-primary">{trailing}</div>
+        <div className="lg:min-w-52 md:text-right text-primary ">
+          {trailing}
+        </div>
       )}
     </ul>
   );
@@ -49,7 +51,7 @@ function ListLinkTitle(props: Required<Pick<Props, "title" | "link">>) {
   const { link, title } = props;
   return (
     <a
-      className="hover:text-primary text-dark dark:text-light dark:hover:text-primary"
+      className="hover:text-primary text-dark dark:text-light dark:hover:text-primary-dark"
       href={link}
       target="_blank"
     >

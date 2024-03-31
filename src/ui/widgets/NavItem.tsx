@@ -5,6 +5,7 @@ type Props = {
   id: string;
   label: string;
   selected: boolean;
+  onClick?: () => void;
 };
 
 function NavItem(props: Props) {
@@ -17,9 +18,14 @@ function NavItem(props: Props) {
     }
   }, [id]);
 
+  const onClick = () => {
+    props.onClick?.();
+    smoothScrollTo();
+  };
+
   return (
     <li>
-      <a className="cursor-pointer" onClick={smoothScrollTo}>
+      <a className="cursor-pointer" onClick={onClick}>
         <Text
           className={`text-center text-lg font-bold uppercase text-light hover:opacity-100 ${
             selected ? "opacity-100" : "opacity-65"

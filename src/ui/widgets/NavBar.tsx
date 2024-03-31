@@ -1,6 +1,10 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useToggle } from "../../hooks";
 import { useHash } from "./HashProvider";
 import NavItem from "./NavItem";
 import ProfileImage from "./ProfileImage";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { Button, DarkModeToggle } from ".";
 
 type NavBarItem = {
   id: string;
@@ -13,16 +17,31 @@ function NavBar(props: Props) {
   const { items } = props;
   const { hash } = useHash();
 
+  const [open, toggle, set] = useToggle();
+
   return (
     <nav
       className={
-        "fixed right-0 top-0 left-0 md:w-72 md:h-full bg-primary p-2 container md:flex md:flex-col md:items-center"
+        "fixed right-0 top-0 left-0 md:w-72 md:h-full bg-primary dark:bg-primary-dark p-2 flex flex-row flex-wrap justify-between md:flex-col items-center"
       }
     >
       <div className={"py-3"}>
         <ProfileImage src={"profile_image.jpg"} />
       </div>
-      <div className={"w-full"}>
+      <div className="flex flex-row gap-2">
+        <div className="md:fixed md:top-0 md:right-0">
+          <DarkModeToggle />
+        </div>
+        <Button
+          className="md:hidden"
+          onClick={toggle}
+          icon={<FontAwesomeIcon icon={faBars} size="2x" />}
+        />
+      </div>
+
+      <div
+        className={`w-full flex-grow  ${open ? "block" : "hidden"}  md:block `}
+      >
         <ul>
           {items.map((item) => {
             return (
@@ -31,6 +50,7 @@ function NavBar(props: Props) {
                   selected={item.id === hash}
                   id={item.id}
                   label={item.label}
+                  onClick={() => set(false)}
                 />
               </div>
             );
@@ -42,39 +62,3 @@ function NavBar(props: Props) {
 }
 
 export default NavBar;
-
-/* 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-block d-lg-none">Start Bootstrap</span>
-        <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
-        </span>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
- */
