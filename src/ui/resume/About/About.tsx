@@ -3,6 +3,7 @@ import { MailTo, SocialProfile, Text } from "../../widgets";
 import DownloadResumeButton from "../../widgets/DownloadResumeButton";
 import { socials } from "./socials";
 import { mail } from "../../../constants";
+import { myInfo } from "./myInfo";
 
 function About() {
   return (
@@ -19,11 +20,7 @@ function About() {
         <MailTo mail={mail} />
       </div>
       <div className="mb-8">
-        <Text>
-          As a Mobile Developer at MV Labs, I'm constantly seeking new
-          challenges, driven by my passion for both web and mobile programming,
-          along with a keen interest in design books.
-        </Text>
+        <Text>{myInfo}</Text>
       </div>
       <div className="flex flex-row gap-x-4 mb-8">
         {socials.map((s) => {

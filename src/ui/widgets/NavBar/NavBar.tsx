@@ -8,6 +8,7 @@ import Settings from "./_Settings";
 import NavItems, { NavBarItem } from "./_NavItems";
 import onScreen from "../../../functions/screens";
 import { profileImage } from "../../../constants";
+import HamburgerButton from "./_HamburgerButton";
 
 type Props = {
   items: NavBarItem[];
@@ -15,7 +16,7 @@ type Props = {
 
 const navClassName = onScreen({
   def: [
-    "fixed right-0 top-0 left-0",
+    "fixed right-0 top-0 left-0", 
     "p-2",
     "bg-primary dark:bg-primary-dark",
     "flex flex-row flex-wrap justify-between items-center",
@@ -36,11 +37,7 @@ function NavBar(props: Props) {
       </div>
       <div className="flex flex-row gap-4">
         <Settings />
-        <Button
-          className="md:hidden"
-          onClick={toggle}
-          icon={<FontAwesomeIcon icon={faBars} size="2x" />}
-        />
+        <HamburgerButton onClick={toggle} />
       </div>
       <NavItems
         hash={hash}
