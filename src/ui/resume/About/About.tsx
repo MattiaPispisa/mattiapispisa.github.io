@@ -2,6 +2,7 @@ import Title from "../../widgets/Title";
 import { MailTo, SocialProfile, Text } from "../../widgets";
 import DownloadResumeButton from "../../widgets/DownloadResumeButton";
 import { socials } from "./socials";
+import { mail } from "../../../constants";
 
 function About() {
   return (
@@ -15,7 +16,7 @@ function About() {
         </>
       </Title>
       <div className="mb-8">
-        <MailTo mail="mattia.pispisa@gmail.com" />
+        <MailTo mail={mail} />
       </div>
       <div className="mb-8">
         <Text>

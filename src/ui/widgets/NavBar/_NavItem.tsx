@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { Text } from "../widgets";
+import { Text } from "..";
 
 type Props = {
   id: string;
