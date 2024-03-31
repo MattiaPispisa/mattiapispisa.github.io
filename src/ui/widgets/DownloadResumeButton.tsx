@@ -1,11 +1,14 @@
 import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useCallback } from "react";
+import { resume } from "../../constants";
+import { useTranslation } from "react-i18next";
 
 const DownloadResumeButton = () => {
+  const { t } = useTranslation();
   const handleDownload = useCallback(() => {
     const link = document.createElement("a");
-    link.href = "./resume.pdf";
+    link.href = resume;
     link.setAttribute("download", "resume.pdf");
     document.body.appendChild(link);
     link.click();
@@ -20,7 +23,7 @@ const DownloadResumeButton = () => {
       }
     >
       <FontAwesomeIcon icon={faFileArrowDown} />
-      <p>Resume</p>
+      <p>{t("curriculum")}</p>
     </button>
   );
 };

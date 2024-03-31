@@ -1,13 +1,12 @@
-import React, { createContext, useContext } from "react";
+import React from "react";
+import { provide } from "../../functions";
 
 type HashContextType = {
   hash: string;
   updateHash: (newHash: string) => void;
 };
 
-const HashContext = createContext<HashContextType | undefined>(undefined);
-
-const HashProvider = (props: { children: JSX.Element }) => {
+function _useHash(): HashContextType {
   const [hash, setHash] = React.useState(() => window.location.hash);
 
   const hashChangeHandler = React.useCallback(() => {
@@ -30,20 +29,13 @@ const HashProvider = (props: { children: JSX.Element }) => {
     };
   }, []);
 
-  return (
-    <HashContext.Provider value={{ hash, updateHash }}>
-      {props.children}
-    </HashContext.Provider>
-  );
-};
+  return {
+    hash,
+    updateHash,
+  };
+}
 
-const useHash = (): HashContextType => {
-  const context = useContext(HashContext);
-  if (!context) {
-    throw new Error("useHash must be used within a HashProvider");
-  }
-  return context;
-};
+const [HashProvider, useHash] = provide(_useHash);
 
 export { useHash };
 export default HashProvider;

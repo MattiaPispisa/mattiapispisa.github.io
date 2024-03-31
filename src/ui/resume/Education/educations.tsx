@@ -1,19 +1,19 @@
 import { EducationModel } from "./mode";
 import { Text } from "../../widgets";
+import { LanguageResolver } from "../../../locale";
 
-const educations: EducationModel[] = [
+const educations: (t: LanguageResolver) => EducationModel[] = (t) => [
   {
-    degree: "Master's Degree",
+    degree: t("masterDegree"),
     university: "Università degli studi di Udine",
     description: (
       <>
-        <Text>
-          Master's Degree in Computer Science, Computer Science (Interactive
-          Systems)
-        </Text>
+        <Text>{t("masterDegreeDesc")}</Text>
         <Text>
           <>
-            Vote: <b>110/110</b> with merit to the best graduates
+            {t("masterDegreeVote")}
+            <b>110/110</b>
+            {t("masterDegreeBestGraduate")}
           </>
         </Text>
         <img
@@ -27,14 +27,15 @@ const educations: EducationModel[] = [
     end: "2021-10-01",
   },
   {
-    degree: "Bachelor's Degree",
+    degree: t("bachelorDegree"),
     university: "Università degli studi di Udine",
     description: (
       <>
-        <Text>Bachelor's degree in Computer Science, Computer Science</Text>
+        <Text>{t("bachelorDegreeDesc")}</Text>
         <Text>
           <>
-            Vote: <b>110/110</b>
+            {t("bachelorDegreeVote")}
+            <b>110/110</b>
           </>
         </Text>
       </>
@@ -43,9 +44,9 @@ const educations: EducationModel[] = [
     end: "2019-10-01",
   },
   {
-    degree: "Diploma",
+    degree: t("diploma"),
     university: "ISIS Arturo Malignani",
-    description: <Text>diploma in telecommunications</Text>,
+    description: <Text>{t("diplomaText")}</Text>,
     start: "2012",
     end: "2016",
   },

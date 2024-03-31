@@ -1,38 +1,32 @@
 import { ExperienceModel } from "./model";
 import { Text } from "../../widgets";
+import { LanguageResolver } from "../../../locale";
 
-const experiences: ExperienceModel[] = [
+const experiences: (t: LanguageResolver) => ExperienceModel[] = (t) => [
   {
-    application: "Web and mobile application designer and developer",
+    application: t("mvExperience"),
     company: "MVLabs",
     description: (
       <>
-        <Text>
-          Specialized in developing web applications, primarily utilizing the
-          following technologies/tools: TypeScript, React, Vite, TurboRepo.
-        </Text>
-        <Text>
-          While mobile applications are primarily developed using Dart/Flutter.
-        </Text>
+        <Text>{t("mvExperienceWeb")}</Text>
+        <Text>{t("mvExperienceMob")}</Text>
       </>
     ),
     start: "2021-02-01",
   },
   {
-    application:
-      "Designer and developer of a Web connector for the ProXFlow application",
+    application: t("tecnotronicaExperience"),
     company: "TECNOTRONICA S.A.S.",
     description: (
       <Text>
         <>
-          Technologies used in the development of the WEB connector for
-          ProXFlow:
+          {t("tecnotronicaExperienceDesc")}
           <ul>
             <li className="ml-4 list-disc">
-              Development of a Web-App in dart/flutter
+              {t("tecnotronicaExperienceDescWeb")}
             </li>
             <li className="ml-4 list-disc">
-              Development of a Back-End in dart
+              {t("tecnotronicaExperienceDescBe")}
             </li>
           </ul>
         </>
@@ -42,13 +36,13 @@ const experiences: ExperienceModel[] = [
     end: "2023-05-01",
   },
   {
-    application: "iOS Mobile Developer",
+    application: t("archeidoExperience"),
     company: "Archeido",
     start: "2019-07-01",
     end: "2020-03-01",
   },
   {
-    application: "Employee",
+    application: t("fillInTheBlanksExperience"),
     company: "Fill In The Blanks s.r.l.",
     start: "2015-06-01",
     end: "2015-07-01",

@@ -14,7 +14,7 @@ function Section({ centered = true, ...props }: Props) {
   return (
     <section
       ref={ref}
-      className="p-12 min-h-[100vh] border-b-[1px] dark:border-black flex"
+      className="pl-6 pr-6 pb-6 pt-20 md:p-12 min-h-[100vh] border-b-[1px] dark:border-black flex"
       id={id}
     >
       <div className={`${centered ? "mt-auto mb-auto" : ""} w-full h-full`}>

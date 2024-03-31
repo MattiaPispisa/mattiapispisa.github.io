@@ -16,7 +16,7 @@ type Props = {
 function ListItem(props: Props) {
   const { description, footer, subtitle, title, trailing, link } = props;
   return (
-    <ul className="flex flex-row gap-4 flex-wrap md:flex-nowrap">
+    <ul className="flex flex-col md:flex-row gap-4 flex-wrap md:flex-nowrap">
       <div className="grow">
         {link ? (
           <ListLinkTitle link={link} title={title} />

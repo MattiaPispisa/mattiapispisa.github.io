@@ -1,9 +1,17 @@
+import { useMemo } from "react";
+import { useAppTranslation } from "../../locale";
 import { Body, NavBar, Section } from "../widgets";
 import { useDarkMode } from "../widgets/DarkModeProvider";
-import { sections } from "./sections";
+import { sections as sectionFunc } from "./sections";
 
 export default function App() {
   const { darkMode } = useDarkMode();
+  const { t } = useAppTranslation();
+
+  const sections = useMemo(() => {
+    return sectionFunc(t);
+  }, [t]);
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <NavBar items={sections} />

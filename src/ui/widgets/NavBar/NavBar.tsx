@@ -1,12 +1,8 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useToggle } from "../../../hooks";
 import { useHash } from "../HashProvider";
 import ProfileImage from "../ProfileImage";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { Button } from "..";
 import Settings from "./_Settings";
 import NavItems, { NavBarItem } from "./_NavItems";
-import onScreen from "../../../functions/screens";
 import { profileImage } from "../../../constants";
 import HamburgerButton from "./_HamburgerButton";
 
@@ -14,15 +10,10 @@ type Props = {
   items: NavBarItem[];
 };
 
-const navClassName = onScreen({
-  def: [
-    "fixed right-0 top-0 left-0", 
-    "p-2",
-    "bg-primary dark:bg-primary-dark",
-    "flex flex-row flex-wrap justify-between items-center",
-  ],
-  md: ["w-72", "h-full", "flex-col"],
-});
+const mobClassName =
+  "fixed right-0 top-0 left-0 p-2 bg-primary dark:bg-primary-dark flex flex-row flex-wrap justify-between items-center";
+const mdClassName = "md:w-72 md:h-full md:flex-col";
+const className = `${mobClassName} ${mdClassName}`;
 
 function NavBar(props: Props) {
   const { items } = props;
@@ -31,7 +22,7 @@ function NavBar(props: Props) {
   const [open, toggle, set] = useToggle();
 
   return (
-    <nav className={navClassName}>
+    <nav className={className}>
       <div className={"py-3"}>
         <ProfileImage src={profileImage} />
       </div>

@@ -1,16 +1,19 @@
 import { formatDateRange } from "../../../functions";
+import { useAppTranslation } from "../../../locale";
 import ListItem from "../../widgets/ListItem";
 import SubTitle from "../../widgets/SubTitle";
 import { experiences } from "./experiences";
 
 function Experience() {
+  const { t } = useAppTranslation();
   return (
     <>
       <SubTitle>Experience</SubTitle>
       <div className="flex flex-col gap-y-12">
-        {experiences.map((experience) => {
+        {experiences(t).map((experience, i) => {
           return (
             <ListItem
+              key={i}
               title={experience.application}
               subtitle={experience.company}
               description={experience.description}

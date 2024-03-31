@@ -1,16 +1,14 @@
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button } from "..";
-import onScreen from "../../../functions/screens";
 
 type Props = {
   onClick: () => void;
 };
 
-const className = onScreen({
-  def: ["text-dark dark:text-light"],
-  md: ["hidden"],
-});
+const mobClassName = "text-dark dark:text-light";
+const mdClassName = "md:hidden";
+const className = `${mobClassName} ${mdClassName}`;
 
 function HamburgerButton({ onClick }: Props) {
   return (

@@ -3,9 +3,10 @@ import { MailTo, SocialProfile, Text } from "../../widgets";
 import DownloadResumeButton from "../../widgets/DownloadResumeButton";
 import { socials } from "./socials";
 import { mail } from "../../../constants";
-import { myInfo } from "./myInfo";
+import { useAppTranslation } from "../../../locale";
 
 function About() {
+  const { t } = useAppTranslation();
   return (
     <>
       <Title>
@@ -20,13 +21,16 @@ function About() {
         <MailTo mail={mail} />
       </div>
       <div className="mb-8">
-        <Text>{myInfo}</Text>
+        <Text>{t("myInfo")}</Text>
       </div>
-      <div className="flex flex-row gap-x-4 mb-8">
+      <div className="flex flex-row gap-x-4 mb-8 overflow-x-auto">
         {socials.map((s) => {
           return <SocialProfile key={s.link} link={s.link} icon={s.icon} />;
         })}
       </div>
+      {/* <div className="mb-8 min-h-14 flex justify-center">
+        <Skills />
+      </div> */}
       <DownloadResumeButton />
     </>
   );

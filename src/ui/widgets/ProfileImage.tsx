@@ -1,15 +1,11 @@
-import onScreen from "../../functions/screens";
-
 type Props = {
   src: string;
 };
 
-const className = onScreen({
-  def: [
-    "align-middle object-cover rounded-full overflow-clip w-[40px] h-[40px]",
-  ],
-  md: ["w-[160px]", "h-[160px]"],
-});
+const mobClassName =
+  "align-middle object-cover rounded-full overflow-clip w-[40px] h-[40px]";
+const mdClassName = "md:w-[160px] md:h-[160px]";
+const className = `${mobClassName} ${mdClassName}`;
 
 function ProfileImage(props: Props) {
   const { src } = props;

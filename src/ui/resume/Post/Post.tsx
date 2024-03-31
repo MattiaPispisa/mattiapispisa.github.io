@@ -27,7 +27,6 @@ function Posts() {
 
   const canView = useCallback(
     (post: PostModel) => {
-      console.log("hashtags", hashtags, "ignoreFilters", ignoreFilters);
       return (
         post.hashtags.some((hashtag) => hashtags[hashtag]) || ignoreFilters
       );

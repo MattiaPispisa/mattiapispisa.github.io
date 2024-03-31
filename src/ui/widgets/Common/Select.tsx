@@ -6,12 +6,13 @@ import { useCallback } from "react";
 type Props = {
   className?: string;
   options: SelectOptionProps[];
+  value?: string;
   onSelected?: (value: string) => void;
 };
 
-function Select({ options, onSelected, className }: Props) {
+function Select({ options, onSelected, className, value }: Props) {
   const onChange = useCallback(
-    (event: React.MouseEvent<HTMLSelectElement, MouseEvent>) => {
+    (event: React.ChangeEvent<HTMLSelectElement>) => {
       const targetValue = event.currentTarget.value;
       onSelected?.(targetValue);
     },
@@ -21,11 +22,12 @@ function Select({ options, onSelected, className }: Props) {
   return (
     <div className="relative">
       <select
-        onClick={onChange}
+        onChange={onChange}
+        value={value}
         className={`block appearance-none w-full bg-transparent border border-dark  dark:border-light  text-dark dark:text-light py-3 px-4 pr-8 rounded leading-tight focus:outline-none ${className}`}
       >
         {options.map((option) => {
-          return <SelectOption {...option} />;
+          return <SelectOption key={option.value} {...option} />;
         })}
       </select>
       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-dark dark:text-light">

@@ -1,17 +1,20 @@
 import { formatDateRange } from "../../../functions";
+import { useAppTranslation } from "../../../locale";
 import { ListItem, SubTitle } from "../../widgets";
 import { educations } from "./educations";
 
 function Education() {
+  const { t } = useAppTranslation();
   return (
     <>
       <SubTitle>
-        <>Education</>
+        <>{t("education")}</>
       </SubTitle>
       <div className="flex flex-col gap-y-12">
-        {educations.map((education) => {
+        {educations(t).map((education, i) => {
           return (
             <ListItem
+              key={i}
               title={education.degree}
               subtitle={education.university}
               description={education.description}

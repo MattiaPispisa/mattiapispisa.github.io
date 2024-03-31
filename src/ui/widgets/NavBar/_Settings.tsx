@@ -1,11 +1,9 @@
-import onScreen from "../../../functions/screens";
 import DarkModeToggle from "./_DarkModeToggle";
 import LanguageSelector from "./_LanguageSelector";
 
-const className = onScreen({
-  def: ["flex flex-row gap-4"],
-  md: ["fixed", "top-[10px]", "right-[10px]"],
-});
+const mobClassName = "flex flex-row gap-4";
+const mdClassName = "md:fixed md:top-[10px] md:right-[10px]";
+const className = `${mobClassName} ${mdClassName}`;
 
 function Settings() {
   return (
