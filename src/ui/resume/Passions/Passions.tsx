@@ -1,3 +1,4 @@
+import { igMontanri } from "../../../constants";
 import { useAppTranslation } from "../../../locale";
 import { SubTitle, Text } from "../../widgets";
 
@@ -15,7 +16,11 @@ function Passions() {
         <Text>
           <>
             {t("passionGym")}
-            <a className="pl-1 text-primary dark:text-primary-dark" href="https://www.instagram.com/montanari_scarsi/">
+            <a
+              target={`_blank`}
+              className="pl-1 text-primary dark:text-primary-dark"
+              href={igMontanri}
+            >
               montanari_scarsi
             </a>
           </>
