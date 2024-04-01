@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { Text } from "..";
+import { A, Text } from "..";
 
 type Props = {
   id: string;
@@ -25,15 +25,16 @@ function NavItem(props: Props) {
 
   return (
     <li>
-      <a className="cursor-pointer" onClick={onClick}>
+      <A onClick={onClick}>
         <Text
-          className={`text-center text-lg font-bold uppercase text-light hover:opacity-100 ${
+          semantic="light"
+          className={`text-center text-lg font-bold uppercase  hover:opacity-100 ${
             selected ? "opacity-100" : "opacity-65"
           }`}
         >
           {label}
         </Text>
-      </a>
+      </A>
     </li>
   );
 }

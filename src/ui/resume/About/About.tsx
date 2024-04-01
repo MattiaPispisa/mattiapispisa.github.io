@@ -1,9 +1,11 @@
-import Title from "../../widgets/Title";
-import { MailTo, SocialProfile, Text } from "../../widgets";
-import DownloadResumeButton from "../../widgets/DownloadResumeButton";
+import Title from "../../widgets/Common/Title";
+import { HorizontalList, MailTo, SocialProfile, Text } from "../../widgets";
+import DownloadResumeButton from "./_DownloadResumeButton";
 import { socials } from "./socials";
 import { mail } from "../../../constants";
 import { useAppTranslation } from "../../../locale";
+
+const spaceAfter = "mb-8" as const;
 
 function About() {
   const { t } = useAppTranslation();
@@ -17,17 +19,17 @@ function About() {
           </Text>
         </>
       </Title>
-      <div className="mb-8">
+      <div className={spaceAfter}>
         <MailTo mail={mail} />
       </div>
-      <div className="mb-8">
+      <div className={spaceAfter}>
         <Text>{t("myInfo")}</Text>
       </div>
-      <div className="flex flex-row gap-x-4 mb-8 overflow-x-auto">
+      <HorizontalList className={spaceAfter}>
         {socials.map((s) => {
           return <SocialProfile key={s.link} link={s.link} icon={s.icon} />;
         })}
-      </div>
+      </HorizontalList>
       {/* <div className="mb-8 min-h-14 flex justify-center">
         <Skills />
       </div> */}

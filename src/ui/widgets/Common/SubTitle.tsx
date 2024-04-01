@@ -1,4 +1,4 @@
-import { Text } from ".";
+import { Text } from "..";
 
 type Props = {
   children: JSX.Element | string;

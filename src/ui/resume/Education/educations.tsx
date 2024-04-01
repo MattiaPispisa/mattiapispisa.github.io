@@ -1,13 +1,14 @@
 import { EducationModel } from "./mode";
-import { Text } from "../../widgets";
+import { Text, ZoomableImage } from "../../widgets";
 import { LanguageResolver } from "../../../locale";
+import { merito } from "../../../constants";
 
 const educations: (t: LanguageResolver) => EducationModel[] = (t) => [
   {
     degree: t("masterDegree"),
     university: "Università degli studi di Udine",
     description: (
-      <>
+      <div className="flex flex-col items-start">
         <Text>{t("masterDegreeDesc")}</Text>
         <Text>
           <>
@@ -16,12 +17,12 @@ const educations: (t: LanguageResolver) => EducationModel[] = (t) => [
             {t("masterDegreeBestGraduate")}
           </>
         </Text>
-        <img
+        <ZoomableImage
           alt="merito"
-          src="merito.jpeg"
+          src={merito}
           className="object-contain w-fit	h-[100px]"
         />
-      </>
+      </div>
     ),
     start: "2019-10-01",
     end: "2021-10-01",

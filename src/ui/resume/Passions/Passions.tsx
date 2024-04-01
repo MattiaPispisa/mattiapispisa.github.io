@@ -1,6 +1,6 @@
 import { igMontanri } from "../../../constants";
 import { useAppTranslation } from "../../../locale";
-import { SubTitle, Text } from "../../widgets";
+import { A, SubTitle, Text } from "../../widgets";
 
 function Passions() {
   const { t } = useAppTranslation();
@@ -16,13 +16,9 @@ function Passions() {
         <Text>
           <>
             {t("passionGym")}
-            <a
-              target={`_blank`}
-              className="pl-1 text-primary dark:text-primary-dark"
-              href={igMontanri}
-            >
+            <A semantic="primary" className="pl-1 " href={igMontanri}>
               montanari_scarsi
-            </a>
+            </A>
           </>
         </Text>
         <Text>{t("passionNerd")}</Text>

@@ -1,6 +1,12 @@
 import { useCallback, useMemo, useState } from "react";
 import { formatDate } from "../../../functions";
-import { ListItem, Chip, SubTitle, ButtonChip } from "../../widgets";
+import {
+  ListItem,
+  Chip,
+  SubTitle,
+  ButtonChip,
+  HorizontalList,
+} from "../../widgets";
 import { posts } from "./posts";
 import { PostModel } from "./model";
 import React from "react";
@@ -40,7 +46,7 @@ function Posts() {
         <p>Post</p>
       </SubTitle>
       {
-        <div className="flex flex-row gap-2 mb-2">
+        <HorizontalList className="mb-2">
           {hashtagsSelected.map((hashtag) => (
             <Chip
               key={hashtag}
@@ -48,7 +54,7 @@ function Posts() {
               onRemove={() => removeHashtag(hashtag)}
             />
           ))}
-        </div>
+        </HorizontalList>
       }
       <li className="flex flex-col gap-y-12">
         {posts.map((post) => {
@@ -64,7 +70,7 @@ function Posts() {
               description={post.description}
               trailing={formatDate(post.date)}
               footer={
-                <div className="flex flex-row gap-2">
+                <HorizontalList>
                   {post.hashtags.map((hashtag) => {
                     return (
                       <ButtonChip
@@ -74,7 +80,7 @@ function Posts() {
                       />
                     );
                   })}
-                </div>
+                </HorizontalList>
               }
             />
           );

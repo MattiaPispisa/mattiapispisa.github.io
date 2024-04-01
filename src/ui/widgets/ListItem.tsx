@@ -1,6 +1,6 @@
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons/faUpRightFromSquare";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Text } from ".";
+import { A, Text } from ".";
 
 type Props = {
   title: string;
@@ -13,10 +13,15 @@ type Props = {
 
   trailing?: JSX.Element | string;
 };
+
+const mobListClassName = "flex flex-col gap-2 flex-wrap";
+const mdListClassName = "md:flex-row md:gap-4 md:flex-nowrap";
+const listClassName = `${mobListClassName} ${mdListClassName}`;
+
 function ListItem(props: Props) {
   const { description, footer, subtitle, title, trailing, link } = props;
   return (
-    <ul className="flex flex-col md:flex-row gap-4 flex-wrap md:flex-nowrap">
+    <ul className={listClassName}>
       <div className="grow">
         {link ? (
           <ListLinkTitle link={link} title={title} />
@@ -25,10 +30,16 @@ function ListItem(props: Props) {
         )}
 
         {subtitle && (
-          <div className="uppercase text-xl text-gray-400 mb-4">{subtitle}</div>
+          <div
+            className={`uppercase text-xl text-gray-400 ${
+              description ? "mb-4" : ""
+            }`}
+          >
+            {subtitle}
+          </div>
         )}
         {description && (
-          <div className="mb-1">
+          <div className={`${footer ? "mb-1" : ""} `}>
             {typeof description === "string" ? (
               <Text>{description}</Text>
             ) : (
@@ -50,16 +61,12 @@ function ListItem(props: Props) {
 function ListLinkTitle(props: Required<Pick<Props, "title" | "link">>) {
   const { link, title } = props;
   return (
-    <a
-      className="hover:text-primary text-dark dark:text-light dark:hover:text-primary-dark"
-      href={link}
-      target="_blank"
-    >
-      <div className={`flex flex-row items-center gap-2`}>
+    <A hover={true} href={link} semantic="default" newTab={true}>
+      <div className={`flex flex-row items-baseline gap-2`}>
         <h3 className="uppercase text-2xl font-bold  ">{title}</h3>
         <FontAwesomeIcon icon={faUpRightFromSquare} />
       </div>
-    </a>
+    </A>
   );
 }
 

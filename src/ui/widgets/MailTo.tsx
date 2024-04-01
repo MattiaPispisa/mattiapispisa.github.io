@@ -1,3 +1,5 @@
+import { A } from ".";
+
 type Props = {
   mail: string;
   newTab?: boolean;
@@ -5,13 +7,14 @@ type Props = {
 function Mail({ newTab = true, ...props }: Props) {
   const { mail } = props;
   return (
-    <a
-      className={`uppercase text-primary dark:text-primary-dark`}
+    <A
+      semantic="primary"
+      className={`uppercase `}
       href={`mailto:${mail}`}
-      target={newTab ? `_blank` : undefined}
+      newTab={newTab}
     >
       {mail}
-    </a>
+    </A>
   );
 }
 

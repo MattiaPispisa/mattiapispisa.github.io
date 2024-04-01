@@ -1,7 +1,6 @@
 import React from "react";
 import { ReactHTML } from "react";
-
-type Semantic = "default" | "primary" | "white" | "dark";
+import { Semantic, sematicToTextClass } from "../../../constants";
 
 type Props = {
   type?: keyof ReactHTML;
@@ -19,17 +18,10 @@ function Text({
   return React.createElement(
     type,
     {
-      className: `${sematicToClassName[semantic]} ${className}`,
+      className: `${sematicToTextClass[semantic]} ${className}`,
     },
     props.children
   );
 }
-
-const sematicToClassName: Record<Semantic, string> = {
-  default: "text-dark dark:text-light",
-  primary: "text-primary dark:text-primary-dark",
-  white: "text-light",
-  dark: "text-dark",
-};
 
 export default Text;

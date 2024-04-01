@@ -1,7 +1,7 @@
 import { formatDateRange } from "../../../functions";
 import { useAppTranslation } from "../../../locale";
 import ListItem from "../../widgets/ListItem";
-import SubTitle from "../../widgets/SubTitle";
+import SubTitle from "../../widgets/Common/SubTitle";
 import { experiences } from "./experiences";
 
 function Experience() {
