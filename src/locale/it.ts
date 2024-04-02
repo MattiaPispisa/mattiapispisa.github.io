@@ -36,6 +36,7 @@ const it = {
   passionGym:
     "Vado spesso in palestra 🏋🏻‍♀️ e gestisco insieme ad altri miei amici una pagina dedicata all'organizzazione di escursioni in montagna 🏔️, seguitela anche voi:",
   passionNerd: "Adoro la Marvel, Star Wars e Naruto 🍥!",
+  present: "Adesso"
 };
 
 export { it };

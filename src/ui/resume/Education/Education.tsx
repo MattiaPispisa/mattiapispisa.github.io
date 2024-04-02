@@ -4,7 +4,7 @@ import { ListItem, SubTitle } from "../../widgets";
 import { educations } from "./educations";
 
 function Education() {
-  const { t } = useAppTranslation();
+  const { t, language } = useAppTranslation();
   return (
     <>
       <SubTitle>
@@ -18,7 +18,9 @@ function Education() {
               title={education.degree}
               subtitle={education.university}
               description={education.description}
-              trailing={formatDateRange(education.start, education.end)}
+              trailing={formatDateRange(education.start, education.end, {
+                language,
+              })}
             />
           );
         })}

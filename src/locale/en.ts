@@ -37,6 +37,7 @@ const en = {
   passionGym:
     "I often go to the gym 🏋🏻‍♀️ and together with some friends, I manage a page dedicated to organizing mountain excursions 🏔️. Follow it too:",
   passionNerd: "I also love Marvel, Star Wars, and Naruto 🍥!",
+  present: "Present",
 };
 
 export { en };

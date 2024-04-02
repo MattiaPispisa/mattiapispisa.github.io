@@ -5,7 +5,7 @@ import SubTitle from "../../widgets/Common/SubTitle";
 import { experiences } from "./experiences";
 
 function Experience() {
-  const { t } = useAppTranslation();
+  const { t, language } = useAppTranslation();
   return (
     <>
       <SubTitle>Experience</SubTitle>
@@ -17,7 +17,9 @@ function Experience() {
               title={experience.application}
               subtitle={experience.company}
               description={experience.description}
-              trailing={formatDateRange(experience.start, experience.end)}
+              trailing={formatDateRange(experience.start, experience.end, {
+                language,
+              })}
             />
           );
         })}

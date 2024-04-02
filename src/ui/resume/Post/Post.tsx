@@ -10,8 +10,11 @@ import {
 import { posts } from "./posts";
 import { PostModel } from "./model";
 import React from "react";
+import { useAppTranslation } from "../../../locale";
 
 function Posts() {
+  const { language } = useAppTranslation();
+
   const [hashtags, setHashtagsSelected] = useState<Record<string, boolean>>({});
   const hashtagsSelected = useMemo(() => {
     return Object.entries(hashtags)
@@ -68,7 +71,7 @@ function Posts() {
               link={post.link}
               title={post.title}
               description={post.description}
-              trailing={formatDate(post.date)}
+              trailing={formatDate(post.date, { language })}
               footer={
                 <HorizontalList>
                   {post.hashtags.map((hashtag) => {
