@@ -2,6 +2,14 @@ import { PostModel } from "./model";
 
 const posts: PostModel[] = [
   {
+    link: "https://dev.to/mattia/expand-your-future-extensions-in-dart-22j",
+    title: "Expand your Future, extensions in Dart",
+    description:
+      "You can extend functions, and if these functions are asynchronous, you can create something truly remarkable. Let's dive into some practical and simple demonstrative examples.",
+    date: "2024-04-12",
+    hashtags: ["flutter", "dart", "async"],
+  },
+  {
     link: "https://dev.to/mattia/flutter-not-yet-ready-for-web-1jm6",
     title: "Flutter, not yet ready for web",
     description:

@@ -13,6 +13,7 @@ const experiences: (t: LanguageResolver) => ExperienceModel[] = (t) => [
       </>
     ),
     start: "2021-02-01",
+    type: "work",
   },
   {
     application: t("tecnotronicaExperience"),
@@ -34,18 +35,21 @@ const experiences: (t: LanguageResolver) => ExperienceModel[] = (t) => [
     ),
     start: "2022-11-01",
     end: "2023-05-01",
+    type: "work",
   },
   {
     application: t("archeidoExperience"),
     company: "Archeido",
     start: "2019-07-01",
     end: "2020-03-01",
+    type: "work",
   },
   {
     application: t("fillInTheBlanksExperience"),
     company: "Fill In The Blanks s.r.l.",
     start: "2015-06-01",
     end: "2015-07-01",
+    type: "work",
   },
 ];
 
