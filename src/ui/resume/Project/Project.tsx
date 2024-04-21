@@ -1,4 +1,3 @@
-import { formatDate } from "../../../functions";
 import {
   ListItem,
   Chip,
@@ -6,20 +5,20 @@ import {
   ButtonChip,
   HorizontalList,
 } from "../../widgets";
-import { posts } from "./posts";
 import React from "react";
 import { useAppTranslation } from "../../../locale";
 import { useHashtags } from "../../../hooks";
+import { projects } from "./projects";
 
-function Posts() {
-  const { language, t } = useAppTranslation();
+function Project() {
+  const { t } = useAppTranslation();
 
   const { addHashtag, canView, hashtagsSelected, removeHashtag } =
     useHashtags();
 
   return (
     <>
-      <SubTitle>{t("post")}</SubTitle>
+      <SubTitle>{t("project")}</SubTitle>
       <HorizontalList className="mb-2">
         {hashtagsSelected.map((hashtag) => (
           <Chip
@@ -30,21 +29,20 @@ function Posts() {
         ))}
       </HorizontalList>
       <li className="flex flex-col gap-y-12">
-        {posts.map((post) => {
-          if (!canView(post)) {
-            return <React.Fragment key={post.link}></React.Fragment>;
+        {projects(t).map((project) => {
+          if (!canView(project)) {
+            return <React.Fragment key={project.link}></React.Fragment>;
           }
 
           return (
             <ListItem
-              key={post.link}
-              link={post.link}
-              title={post.title}
-              description={post.description}
-              trailing={formatDate(post.date, { language })}
+              key={project.link}
+              link={project.link}
+              title={project.title}
+              description={project.description}
               footer={
                 <HorizontalList>
-                  {post.hashtags.map((hashtag) => {
+                  {project.hashtags.map((hashtag) => {
                     return (
                       <ButtonChip
                         key={hashtag}
@@ -63,4 +61,4 @@ function Posts() {
   );
 }
 
-export default Posts;
+export default Project;

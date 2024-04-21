@@ -10,11 +10,11 @@ import { localizationInit } from "./locale/init.ts";
 localizationInit().then(() => {
   ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
-      <DarkModeProvider>
-        <HashProvider>
-          <Resume />
-        </HashProvider>
-      </DarkModeProvider>
+        <DarkModeProvider>
+          <HashProvider>
+            <Resume />
+          </HashProvider>
+        </DarkModeProvider>
     </React.StrictMode>
   );
 });

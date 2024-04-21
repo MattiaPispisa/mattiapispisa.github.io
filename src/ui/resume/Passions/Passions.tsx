@@ -7,9 +7,7 @@ function Passions() {
 
   return (
     <>
-      <SubTitle>
-        <>{t("passions")}</>
-      </SubTitle>
+      <SubTitle>{t("passions")}</SubTitle>
       <div className="flex flex-col gap-2">
         <Text>{t("passionsCode")}</Text>
         <Text>{t("passionF1")}</Text>

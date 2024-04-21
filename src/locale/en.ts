@@ -1,6 +1,7 @@
 const en = {
   about: "About",
   post: "Post",
+  project: "Projects",
   experience: "Experience",
   education: "Education",
   passions: "Passions",

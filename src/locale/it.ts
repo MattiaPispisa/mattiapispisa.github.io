@@ -1,6 +1,7 @@
 const it = {
   about: "Su di me",
   post: "Post",
+  project: "Progetti",
   experience: "Esperienze",
   education: "Formazione",
   passions: "Passioni",

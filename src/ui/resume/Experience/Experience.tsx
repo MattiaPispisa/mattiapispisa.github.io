@@ -8,7 +8,7 @@ function Experience() {
   const { t, language } = useAppTranslation();
   return (
     <>
-      <SubTitle>Experience</SubTitle>
+      <SubTitle>{t("experience")}</SubTitle>
       <div className="flex flex-col gap-y-12">
         {experiences(t).map((experience, i) => {
           return (

@@ -3,13 +3,24 @@ import { en } from "./en";
 import { useCallback } from "react";
 
 type LanguageResolver = (t: keyof typeof en, object?: object) => string;
-function useAppTranslation() {
+
+type UseAppTranslationReturn = {
+  /**
+   * language resolver callback
+   */
+  t: LanguageResolver;
+  changeLanguage: (lng: string) => void;
+  language?: string;
+};
+
+/**
+ * Control application localization
+ * @returns {UseAppTranslationReturn}
+ */
+function useAppTranslation(): UseAppTranslationReturn {
   const [t, i18n] = useTranslation();
 
-  const changeLanguage = useCallback(
-    i18n.changeLanguage,
-    [i18n]
-  );
+  const changeLanguage = useCallback(i18n.changeLanguage, [i18n]);
 
   return {
     t: t as LanguageResolver,
