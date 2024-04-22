@@ -2,7 +2,7 @@ import { LanguageResolver } from "../../../locale";
 import { A, Text } from "../../widgets";
 import { ProjectModel } from "./model";
 
-const projects: (t: LanguageResolver) => ProjectModel[] = (t) => [
+const projects: (t: LanguageResolver) => ProjectModel[] = (_) => [
   {
     title: "Posix timezones",
     description:
@@ -21,6 +21,13 @@ const projects: (t: LanguageResolver) => ProjectModel[] = (t) => [
     description: (
       <div className="flex flex-col gap-2">
         <Text>A talk given at the ReactJS meetup in Verona in 2023.</Text>
+        <A
+          hover={true}
+          semantic="primary"
+          href="https://github.com/mvlabs/how-to-train-your-use-reducer"
+        >
+          Code "how-to-train-your-use-reducer"
+        </A>
         <Text>
           Splitting the view from the controller is foundational to build great
           applications. We tend to rely on external libraries to manage their
@@ -29,13 +36,6 @@ const projects: (t: LanguageResolver) => ProjectModel[] = (t) => [
           about it, and especially learn how to enhance it tailoring it to our
           needs. You'll discover what you have been missing.
         </Text>
-        <A
-          hover={true}
-          semantic="default"
-          href="https://github.com/mvlabs/how-to-train-your-use-reducer"
-        >
-          Code "how-to-train-your-use-reducer"
-        </A>
       </div>
     ),
     hashtags: ["talk", "react"],

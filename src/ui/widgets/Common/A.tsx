@@ -6,13 +6,30 @@ import {
 
 type Props = {
   children: JSX.Element | string;
+  /**
+   * link is open in another tab
+   */
   newTab?: boolean;
+  /**
+   * a href
+   */
   href?: string;
   onClick?: () => void;
+  /**
+   * a color semantic
+   */
   semantic?: Semantic;
   className?: string;
+  /**
+   * color color on hover based on `semantic`
+   */
   hover?: boolean;
 };
+/**
+ *
+ * @param {Props} param
+ * @returns {JSX.Element} jsxElement
+ */
 function A({ newTab = true, ...props }: Props) {
   return (
     <a

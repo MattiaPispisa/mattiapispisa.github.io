@@ -11,11 +11,22 @@ type Size = "1x" | "2x" | "3x";
 
 type Props = {
   icon: DevIconProps;
+  /**
+   * black and white or colored
+   */
   colored?: boolean;
   size: Size;
+  /**
+   * toggle to `colored` on hover
+   */
   colorOnHover?: boolean;
 };
 
+/**
+ *
+ * @param {Props} param
+ * @returns {JSX.Element} jsxElement
+ */
 function DevIcon({ icon, size, colorOnHover, ...other }: Props) {
   const [colored, setColored] = useStateEffect(other.colored);
 

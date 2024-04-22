@@ -1,5 +1,11 @@
 type Props = {
+  /**
+   * button text child
+   */
   text?: string;
+  /**
+   * button icon child (before `text`)
+   */
   icon?: JSX.Element;
   onClick?: () => void;
 } & Omit<
@@ -9,7 +15,11 @@ type Props = {
   >,
   "children"
 >;
-
+/**
+ *
+ * @param {Props} param
+ * @returns {JSX.Element} jsxElement
+ */
 const Button = ({ text, icon, onClick, className, ...other }: Props) => {
   return (
     <button
