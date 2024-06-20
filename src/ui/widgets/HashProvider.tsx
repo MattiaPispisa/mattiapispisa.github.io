@@ -1,4 +1,4 @@
-import React from "react";
+import React, { startTransition } from "react";
 import { provide } from "../../functions";
 
 type HashContextType = {
@@ -10,16 +10,20 @@ function _useHash(): HashContextType {
   const [hash, setHash] = React.useState(() => window.location.hash);
 
   const hashChangeHandler = React.useCallback(() => {
-    setHash(window.location.hash.replace("#", ""));
+    startTransition(() => {
+      setHash(window.location.hash.replace("#", ""));
+    });
   }, []);
 
   const updateHash = React.useCallback((newHash?: string) => {
-    if (!newHash) {
-      return;
-    }
+    startTransition(() => {
+      if (!newHash) {
+        return;
+      }
 
-    history.pushState(null, "", `#${newHash}`);
-    setHash(newHash);
+      history.pushState(null, "", `#${newHash}`);
+      setHash(newHash);
+    });
   }, []);
 
   React.useEffect(() => {

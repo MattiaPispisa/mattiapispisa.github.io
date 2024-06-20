@@ -1,5 +1,5 @@
 import { ExperienceModel } from "./model";
-import { Text } from "../../widgets";
+import { List, Text } from "../../widgets";
 import { LanguageResolver } from "../../../locale";
 
 const experiences: (t: LanguageResolver) => ExperienceModel[] = (t) => [
@@ -22,14 +22,16 @@ const experiences: (t: LanguageResolver) => ExperienceModel[] = (t) => [
       <Text>
         <>
           {t("tecnotronicaExperienceDesc")}
-          <ul>
-            <li className="ml-4 list-disc">
-              {t("tecnotronicaExperienceDescWeb")}
-            </li>
-            <li className="ml-4 list-disc">
-              {t("tecnotronicaExperienceDescBe")}
-            </li>
-          </ul>
+          <List
+            items={
+              [
+                "tecnotronicaExperienceDescWeb",
+                "tecnotronicaExperienceDescBe",
+              ] as const
+            }
+          >
+            {(item) => <Text>{t(item)}</Text>}
+          </List>
         </>
       </Text>
     ),

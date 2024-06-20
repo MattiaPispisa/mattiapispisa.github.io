@@ -1,8 +1,58 @@
 import { LanguageResolver } from "../../../locale";
-import { A, Text } from "../../widgets";
+import { A, List, Text } from "../../widgets";
 import { ProjectModel } from "./model";
 
 const projects: (t: LanguageResolver) => ProjectModel[] = (_) => [
+  {
+    title: "File uploader",
+    hashtags: ["library", "dart"],
+    description: (
+      <>
+        <Text>
+          A file upload functionality that is implementation-agnostic.
+        </Text>
+        <Text>This library provides the capability to:</Text>
+        <List
+          items={[
+            "upload a complete file",
+            "upload a file in chunks",
+            "upload a file in chunks with the ability to pause and resume the upload from where it left off (restorable chunks file upload)",
+          ]}
+        >
+          {(item) => <Text>{item}</Text>}
+        </List>
+        <A
+          hover={true}
+          semantic="primary"
+          href="https://github.com/MattiaPispisa/file_uploader/tree/main/plugins"
+        >
+          Plugins
+        </A>
+        <List
+          items={[
+            {
+              href: "https://pub.dev/packages/http_file_uploader",
+              text: "http_file_uploader: This plugin allows you to implement file uploads using the http library.",
+            },
+          ]}
+        >
+          {(item) => (
+            <A hover={true} href={item.href}>
+              {item.text}
+            </A>
+          )}
+        </List>
+        <A
+          semantic="primary"
+          hover={true}
+          href="https://pub.dev/packages/flutter_file_uploader"
+        >
+          UI package
+        </A>
+      </>
+    ),
+    link: "https://pub.dev/packages/en_file_uploader",
+  },
   {
     title: "Posix timezones",
     description:
