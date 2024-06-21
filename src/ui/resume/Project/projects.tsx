@@ -37,7 +37,7 @@ const projects: (t: LanguageResolver) => ProjectModel[] = (_) => [
           ]}
         >
           {(item) => (
-            <A hover={true} href={item.href}>
+            <A semantic="default" hover={true} href={item.href}>
               {item.text}
             </A>
           )}

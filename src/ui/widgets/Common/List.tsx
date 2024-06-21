@@ -18,7 +18,7 @@ type Props<T> = {
 
 function List<T>({
   itemType = "li",
-  itemClassName = "ml-4 list-disc",
+  itemClassName = `ml-4 list-disc marker:text-dark dark:marker:text-white`,
   ...props
 }: Props<T>) {
   const { className, items, children } = props;
