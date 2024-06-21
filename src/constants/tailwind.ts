@@ -1,4 +1,11 @@
 type Primary = "primary";
+/**
+ * ## On light theme
+ * - default: dark
+ * - primary: red
+ * - light: white
+ * - dark: black
+ */
 type Semantic = "default" | Primary | "light" | "dark";
 
 const sematicToTextClass: Record<Semantic, string> = {

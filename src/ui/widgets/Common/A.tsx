@@ -8,10 +8,12 @@ type Props = {
   children: JSX.Element | string;
   /**
    * link is open in another tab
+   *
+   * @default true
    */
   newTab?: boolean;
   /**
-   * a href
+   * href
    */
   href?: string;
   onClick?: () => void;
@@ -27,10 +29,10 @@ type Props = {
 };
 /**
  *
- * @param {Props} param
+ * @param {Props} props
  * @returns {JSX.Element} jsxElement
  */
-function A({ newTab = true, ...props }: Props) {
+function A({ newTab = true, ...props }: Props): JSX.Element {
   return (
     <a
       className={_buildClassName(props)}

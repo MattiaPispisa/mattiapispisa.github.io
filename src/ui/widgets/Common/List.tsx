@@ -1,6 +1,13 @@
 import React from "react";
 import { ReactHTML } from "react";
 
+/**
+ * @template T
+ *
+ * @param {T[]} items a list of elements
+ *
+ * @param children callback for every item
+ */
 type Props<T> = {
   items: T[];
   children: (item: T) => JSX.Element;
@@ -8,6 +15,7 @@ type Props<T> = {
   itemClassName?: string;
   itemType?: keyof ReactHTML;
 };
+
 function List<T>({
   itemType = "li",
   itemClassName = "ml-4 list-disc",

@@ -8,7 +8,7 @@ type SelectOptionProps = {
  * @param {SelectOptionProps} props
  * @returns {JSX.Element} jsxElement
  */
-function SelectOption(props: SelectOptionProps) {
+function SelectOption(props: SelectOptionProps): JSX.Element {
   return <option value={props.value}>{props.component}</option>;
 }
 
