@@ -19,9 +19,9 @@ const experiences: (t: LanguageResolver) => ExperienceModel[] = (t) => [
     application: t("tecnotronicaExperience"),
     company: "TECNOTRONICA S.A.S.",
     description: (
-      <Text>
+      <div>
         <>
-          {t("tecnotronicaExperienceDesc")}
+          <Text>{t("tecnotronicaExperienceDesc")}</Text>
           <List
             items={
               [
@@ -33,7 +33,7 @@ const experiences: (t: LanguageResolver) => ExperienceModel[] = (t) => [
             {(item) => <Text>{t(item)}</Text>}
           </List>
         </>
-      </Text>
+      </div>
     ),
     start: "2022-11-01",
     end: "2023-05-01",

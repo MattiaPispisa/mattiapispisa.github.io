@@ -13,6 +13,7 @@ type Props = {
 };
 
 function NavItems({ items, open, hash, onClick }: Props) {
+
   return (
     <div
       className={`w-full flex-grow  ${open ? "block" : "hidden"}  md:block `}

@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
-import { useIntersectionObserver, useResizeEnd } from "../../hooks";
+import {  useResizeEnd } from "../../hooks";
+import { useIntersectionObserver } from "usehooks-ts";
 
 type Props = {
   items: JSX.Element[];

@@ -30,7 +30,7 @@ function Posts() {
         ))}
       </HorizontalList>
       <li className="flex flex-col gap-y-12">
-        {posts.map((post) => {
+        {posts(t).map((post) => {
           if (!canView(post)) {
             return <React.Fragment key={post.link}></React.Fragment>;
           }

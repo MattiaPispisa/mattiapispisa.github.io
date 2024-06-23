@@ -5,6 +5,8 @@ import Settings from "./_Settings";
 import NavItems, { NavBarItem } from "./_NavItems";
 import { profileImage } from "../../../constants";
 import HamburgerButton from "./_HamburgerButton";
+import { useCallback, useRef } from "react";
+import { useOnClickOutside } from "usehooks-ts";
 
 type Props = {
   items: NavBarItem[];
@@ -20,9 +22,13 @@ function NavBar(props: Props) {
   const { hash } = useHash();
 
   const [open, toggle, set] = useToggle();
+  const close = useCallback(() => set(false), []);
+
+  const ref = useRef<HTMLElement>(null);
+  useOnClickOutside(ref, close);
 
   return (
-    <nav className={className}>
+    <nav className={className} ref={ref}>
       <div className={"py-3"}>
         <ProfileImage src={profileImage} />
       </div>
@@ -30,12 +36,7 @@ function NavBar(props: Props) {
         <Settings />
         <HamburgerButton onClick={toggle} />
       </div>
-      <NavItems
-        hash={hash}
-        items={items}
-        onClick={() => set(false)}
-        open={open}
-      />
+      <NavItems hash={hash} items={items} onClick={close} open={open} />
     </nav>
   );
 }

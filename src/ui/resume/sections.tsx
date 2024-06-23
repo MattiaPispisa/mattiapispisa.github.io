@@ -13,13 +13,13 @@ const sections: (t: LanguageResolver) => SectionModel[] = (t) => [
     label: t("about"),
     component: <About />,
   },
-  { id: "post", label: t("post"), component: <Posts />, centered: false },
   {
     id: "project",
     label: t("project"),
     component: <Project />,
     centered: false,
   },
+  { id: "post", label: t("post"), component: <Posts />, centered: false },
   {
     id: "experience",
     label: t("experience"),

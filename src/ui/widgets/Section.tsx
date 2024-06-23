@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { useIntersectionObserver } from "../../hooks";
 import { useHash } from "./HashProvider";
+import { useIntersectionObserver } from "usehooks-ts";
 
 type Props = {
   id: string;

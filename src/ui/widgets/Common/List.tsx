@@ -25,10 +25,10 @@ function List<T>({
 
   return (
     <ul className={className}>
-      {items.map((item) => {
+      {items.map((item, index) => {
         return React.createElement(
           itemType,
-          { className: itemClassName },
+          { className: itemClassName, key: index },
           children(item)
         );
       })}

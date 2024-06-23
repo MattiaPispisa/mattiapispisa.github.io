@@ -1,5 +1,6 @@
-import { useCallback, useState } from "react";
+import { useCallback } from "react";
 import { provide } from "../../functions";
+import { useLocalStorage } from "usehooks-ts";
 
 interface DarkModeContextType {
   darkMode: boolean;
@@ -7,7 +8,7 @@ interface DarkModeContextType {
 }
 
 function _useDarkMode(): DarkModeContextType {
-  const [darkMode, setDarkMode] = useState(_darkPreference());
+  const [darkMode, setDarkMode] = useLocalStorage("dark", _darkPreference());
 
   const toggleDarkMode = useCallback(() => {
     setDarkMode((prevDarkMode) => !prevDarkMode);
