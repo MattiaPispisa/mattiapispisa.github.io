@@ -13,6 +13,8 @@ const it = {
   curriculum: "Curriculum",
 
   // ------------------- projects -------------------
+  // en logger
+  enLoggerDesc: "EnLogger ti permette di scrivere messaggi di log secondo le tue esigenze, senza limitarti a scrivere messaggi sulla console di debug o su altri sistemi. Mantiene internamente una lista di EnLoggerHandler. Puoi implementare il tuo EnLoggerHandler in base alle tue specifiche necessità. Ogni volta che scriverai un messaggio con EnLogger, ogni EnLoggerHandler verrà invocato per eseguire l'operazione di scrittura.",
   // file upload
   fileUploaderDesc0:
     "Permette di caricare un file indipendentemente dalla implementazione che si vuole avere.",
