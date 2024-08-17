@@ -13,6 +13,8 @@ const en = {
     curriculum: "Curriculum",
 
     // ------------------- projects -------------------
+    // data migration
+    dataMigrationDesc: "A library for applying a series of migrations to update old versions of data structures to the most recent one.",
     // en logger
     enLoggerDesc: "EnLogger allows you to write log messages according to your needs without restricting you to writing messages to the debug console or other systems. It maintains a list of EnLoggerHandlers internally. You can implement your own EnLoggerHandler based on your specific requirements. Each time you want to log a message with EnLogger, each EnLoggerHandler will be invoked to perform the write operation.",
     // file upload

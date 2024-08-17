@@ -4,6 +4,12 @@ import {ProjectModel} from "./model";
 
 const projects: (t: LanguageResolver) => ProjectModel[] = (t) => [
     {
+        title: "Data Migration",
+        hashtags: [t("library"), "dart"],
+        description: t("dataMigrationDesc"),
+        link: "https://pub.dev/packages/data_migration",
+    },
+    {
         title: "En Logger",
         hashtags: [t("library"), "dart"],
         description: t("enLoggerDesc"),
