@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { useAppTranslation } from "../../locale";
 import { Body, NavBar, Section } from "../widgets";
-import { useDarkMode } from "../widgets/DarkModeProvider";
+import { useDarkMode } from "../widgets/DarkModeProvider.ts";
 import { sections as sectionFunc } from "./sections";
 
 export default function App() {

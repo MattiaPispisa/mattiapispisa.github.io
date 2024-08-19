@@ -3,7 +3,7 @@ export { default as ButtonChip } from './ButtonChip';
 export { default as Carousel } from './Carousel';
 export { default as Chip } from './Chip';
 export * from './Common';
-export { default as DarkModeProvider } from './DarkModeProvider';
+export { default as DarkModeProvider } from './DarkModeProvider.ts';
 export { default as FullImage } from './FullImage';
 export { default as HashProvider } from './HashProvider';
 export { default as HorizontalList } from './HorizontalList';

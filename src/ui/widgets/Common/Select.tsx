@@ -1,7 +1,7 @@
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SelectOption, { SelectOptionProps } from "./SelectOption";
-import { useCallback } from "react";
+import React, { useCallback } from "react";
 
 type Props = {
   className?: string;
