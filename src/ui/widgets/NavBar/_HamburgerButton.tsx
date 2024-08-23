@@ -1,23 +1,26 @@
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button } from "..";
+import {faBars} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {Button} from "..";
 
 type Props = {
-  onClick: () => void;
+    onClick: () => void;
 };
 
-const mobClassName = "text-dark dark:text-light";
 const mdClassName = "md:hidden";
-const className = `${mobClassName} ${mdClassName}`;
+const className = `${mdClassName}`;
 
-function HamburgerButton({ onClick }: Props) {
-  return (
-    <Button
-      className={className}
-      onClick={onClick}
-      icon={<FontAwesomeIcon icon={faBars} size="2x" />}
-    />
-  );
+function HamburgerButton({onClick}: Props) {
+    return (
+        <Button
+            semantic={"contrast"}
+            variant={"flat"}
+            hoverEffect={"increase"}
+            tapEffect={"vibrate"}
+            className={className}
+            onClick={onClick}
+            icon={<FontAwesomeIcon icon={faBars} size="2x"/>}
+        />
+    );
 }
 
 export default HamburgerButton;

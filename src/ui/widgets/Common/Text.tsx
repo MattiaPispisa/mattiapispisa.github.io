@@ -6,7 +6,7 @@ type Props = {
   type?: keyof ReactHTML;
   className?: string;
   semantic?: Semantic;
-  children: JSX.Element | string;
+  children: JSX.Element | string | React.ReactNode;
 };
 
 function Text({

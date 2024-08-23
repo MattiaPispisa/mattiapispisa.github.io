@@ -110,6 +110,7 @@ const it = {
     talk: "presentazione",
     exercise: "esercizio",
     university: "università",
+    preview: "Anteprima",
 };
 
 export {it};

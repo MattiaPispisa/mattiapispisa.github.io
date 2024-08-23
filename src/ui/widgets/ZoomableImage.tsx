@@ -1,6 +1,5 @@
-import {useCallback, useState} from "react";
 import FullScreenImage from "./FullImage";
-import {useDisableScroll} from "../../hooks";
+import {useFullScreen} from "../../hooks";
 
 type Props = {
     src: string;
@@ -9,18 +8,7 @@ type Props = {
 };
 
 function ZoomableImage(props: Props) {
-    const [fullScreen, _setFullScreen] = useState(false);
-    const [, setDisableScroll] = useDisableScroll(false);
-
-    const setFullScreen = useCallback(() => {
-        setDisableScroll(true);
-        _setFullScreen(true);
-    }, [setDisableScroll]);
-
-    const removeFullScreen = useCallback(() => {
-        setDisableScroll(false);
-        _setFullScreen(false);
-    }, [setDisableScroll]);
+    const {removeFullScreen, fullScreen, setFullScreen} = useFullScreen()
 
     return (
         <>

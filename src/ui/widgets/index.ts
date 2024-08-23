@@ -20,3 +20,5 @@ export { default as ProfileImage } from './ProfileImage';
 export { default as Section } from './Section';
 export { default as SocialProfile } from './SocialProfile';
 export { default as ZoomableImage } from './ZoomableImage';
+export * from './DevTo'
+export * from './DartPub'

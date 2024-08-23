@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { A, Text } from ".";
 
 type Props = {
-  title: string;
+  title: JSX.Element | string;
   link?: string;
   subtitle?: string;
 
@@ -22,7 +22,7 @@ function ListItem(props: Props) {
   const { description, footer, subtitle, title, trailing, link } = props;
   return (
     <ul className={listClassName}>
-      <div className="grow">
+      <div className="grow w-full">
         {link ? (
           <ListLinkTitle link={link} title={title} />
         ) : (
@@ -39,7 +39,7 @@ function ListItem(props: Props) {
           </div>
         )}
         {description && (
-          <div className={`${footer ? "mb-1" : ""} `}>
+          <div className={`${footer ? "mb-2" : ""} `}>
             {typeof description === "string" ? (
               <Text>{description}</Text>
             ) : (
@@ -64,18 +64,24 @@ function ListLinkTitle(props: Required<Pick<Props, "title" | "link">>) {
     <A hover={true} href={link} semantic="default" newTab={true}>
       <div className={`flex flex-row items-baseline gap-2`}>
         <h3 className="uppercase text-2xl font-bold  ">{title}</h3>
-        <FontAwesomeIcon icon={faUpRightFromSquare} />
+        <FontAwesomeIcon icon={faUpRightFromSquare}/>
       </div>
     </A>
   );
 }
 
 function ListTitle(props: Pick<Props, "title">) {
-  return (
-    <Text type="h3" className="uppercase text-2xl font-bold ">
-      {props.title}
-    </Text>
-  );
+  const {title} = props
+
+  if (typeof title === "string") {
+    return (
+        <Text type="h3" className="uppercase text-2xl font-bold ">
+          {props.title}
+        </Text>
+    );
+  }
+
+  return title
 }
 
 export default ListItem;
