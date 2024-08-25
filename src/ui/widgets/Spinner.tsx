@@ -6,7 +6,12 @@ type Props = {
     className?: string;
 }
 
-function Spinner(props: Props) {
+/**
+ * Spinning primary icon
+ * @param {Props} props
+ * @return {JSX.Element} jsxElement
+ */
+function Spinner(props: Props): JSX.Element {
     return <FontAwesomeIcon
         size={"4x"}
         className={`${sematicToTextClass["primary"]} ${props.className ?? ''}`}

@@ -5,7 +5,12 @@ type Props = {
     onClick?: () => void;
 }
 
-function FullScreen(props: Props) {
+/**
+ * Fixed centered content surrounded by an opacity layer
+ * @param {Props} props
+ * @return {JSX.Element} jsxElement
+ */
+function FullScreen(props: Props): JSX.Element {
     const {children, onClick} = props;
 
     return <div

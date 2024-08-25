@@ -1,5 +1,5 @@
 import {
-    DefaultSemantic, PrimarySemantic,
+    DefaultSemantic, LightSemantic, PrimarySemantic,
     sematicToHoverTextClass,
     sematicToTextClass,
 } from "../../../constants";
@@ -21,7 +21,7 @@ type Props = {
     /**
      * a color semantic
      */
-    semantic?: DefaultSemantic | PrimarySemantic;
+    semantic?: DefaultSemantic | PrimarySemantic | LightSemantic;
     className?: string;
     /**
      * color on hover based on `semantic`
@@ -51,14 +51,11 @@ function _buildClassName(props: Omit<Props, "newTab">) {
     let result = "";
 
     if (props.semantic) {
-        result += ` ${sematicToTextClass[props.semantic]}`;
+        result += ` ${sematicToTextClass[props.semantic]} `;
     }
 
     if (props.hover) {
-        const hoverClass = props.semantic === "primary"
-            ? "hover:text-primary-700 hover:dark:text-primary-500"
-            : sematicToHoverTextClass["primary"];
-        result += ` ${hoverClass}`;
+        result += ` ${sematicToHoverTextClass["primary"]}`;
     }
 
     if (props.className) {

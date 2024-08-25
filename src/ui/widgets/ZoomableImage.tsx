@@ -7,7 +7,12 @@ type Props = {
     alt?: string;
 };
 
-function ZoomableImage(props: Props) {
+/**
+ * An img, on tap show img using {@link FullScreenImage}
+ * @param {Props} props
+ * @return {JSX.Element} jsxElement
+ */
+function ZoomableImage(props: Props): JSX.Element {
     const {removeFullScreen, fullScreen, setFullScreen} = useFullScreen()
 
     return (

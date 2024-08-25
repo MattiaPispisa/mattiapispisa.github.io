@@ -14,7 +14,7 @@ function Passions() {
         <Text>
           <>
             {t("passionGym")}
-            <A semantic="primary" className="pl-1 " href={igMontanri}>
+            <A hover={true} semantic="primary" className="pl-1 " href={igMontanri}>
               montanari_scarsi
             </A>
           </>

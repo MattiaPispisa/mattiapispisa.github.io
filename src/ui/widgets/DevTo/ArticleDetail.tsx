@@ -6,7 +6,12 @@ type Props = {
     description: string | JSX.Element;
 }
 
-function ArticleDetail(props: Props) {
+/**
+ * Show {@link Props.description} and {@link DevToArticle}
+ * @param {Props} props
+ * @return {JSX.Element} jsxElement
+ */
+function ArticleDetail(props: Props): JSX.Element {
     const {id, description} = props;
 
     return <div className={"flex flex-col gap-2 items-start"}>

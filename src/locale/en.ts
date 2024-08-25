@@ -110,6 +110,7 @@ const en = {
     exercise: "exercise",
     university: "university",
     preview: "Preview",
+    viewMore: "View More"
 };
 
 export {en};

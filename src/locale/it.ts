@@ -111,6 +111,7 @@ const it = {
     exercise: "esercizio",
     university: "università",
     preview: "Anteprima",
+    viewMore: "Leggi tutto"
 };
 
 export {it};
