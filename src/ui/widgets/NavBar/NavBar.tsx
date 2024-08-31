@@ -14,7 +14,7 @@ type Props = {
 
 const mobClassName =
   "fixed right-0 top-0 left-0 p-2 bg-primary dark:bg-primary-dark flex flex-row flex-wrap justify-between items-center";
-const mdClassName = "md:w-72 md:h-full md:flex-col";
+const mdClassName = "md:w-72 md:h-full md:flex-col md:flex-nowrap";
 const className = `${mobClassName} ${mdClassName}`;
 
 function NavBar(props: Props) {

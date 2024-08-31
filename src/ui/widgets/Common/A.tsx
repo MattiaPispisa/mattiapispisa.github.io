@@ -55,7 +55,7 @@ function _buildClassName(props: Omit<Props, "newTab">) {
     }
 
     if (props.hover) {
-        result += ` ${sematicToHoverTextClass["primary"]}`;
+        result += ` ${sematicToHoverTextClass["primary"]} hover:underline hover:underline-offset-2`;
     }
 
     if (props.className) {

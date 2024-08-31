@@ -24,7 +24,7 @@ function Select({ options, onSelected, className, value }: Props) {
       <select
         onChange={onChange}
         value={value}
-        className={`block appearance-none w-full bg-transparent border border-dark  dark:border-light  text-dark dark:text-light py-3 px-4 pr-8 rounded leading-tight focus:outline-none ${className}`}
+        className={`block cursor-pointer appearance-none w-full bg-transparent border border-dark  dark:border-light  text-dark dark:text-light py-3 px-4 pr-8 rounded leading-tight focus:outline-none ${className}`}
       >
         {options.map((option) => {
           return <SelectOption key={option.value} {...option} />;
