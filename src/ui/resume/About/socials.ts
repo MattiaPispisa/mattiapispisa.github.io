@@ -3,8 +3,9 @@ import {faGithub} from "@fortawesome/free-brands-svg-icons/faGithub";
 import {faInstagram} from "@fortawesome/free-brands-svg-icons/faInstagram";
 import {faLinkedin} from "@fortawesome/free-brands-svg-icons/faLinkedin";
 import {faDev} from "@fortawesome/free-brands-svg-icons/faDev";
-import {faTwitter} from "@fortawesome/free-brands-svg-icons/faTwitter";
+import {faXTwitter} from "@fortawesome/free-brands-svg-icons/faXTwitter";
 import {faTelegram} from "@fortawesome/free-brands-svg-icons/faTelegram";
+import {faGoogle} from "@fortawesome/free-brands-svg-icons/faGoogle";
 
 
 type SocialProfileType = {
@@ -25,10 +26,13 @@ const socials: SocialProfileType[] = [
         link: "https://dev.to/mattia",
         icon: faDev,
     },
-
+    {
+        link: "https://g.dev/mattia_pispisa",
+        icon: faGoogle,
+    },
     {
         link: "https://twitter.com/MattiaPispisa",
-        icon: faTwitter,
+        icon: faXTwitter,
     },
     {link: "https://www.instagram.com/mattiapispisa", icon: faInstagram},
     {link: "https://t.me/MattiaPispisa", icon: faTelegram},

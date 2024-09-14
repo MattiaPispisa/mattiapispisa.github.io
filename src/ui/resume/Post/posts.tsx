@@ -4,6 +4,13 @@ import {DevToArticleDetail} from "../../widgets";
 
 const posts: (t: LanguageResolver) => PostModel[] = (t) => [
     {
+        link: "https://dev.to/mattia/efficient-logging-in-applications-1id4",
+        title: "Efficient logging in applications",
+        description: <DevToArticleDetail id={1968794} description={t("efficientLoggingInApplicationsDesc")}/>,
+        date: "2024-09-07",
+        hashtags: ["dart", "logging"],
+    },
+    {
         link: "https://dev.to/mattia/expand-your-future-extensions-in-dart-22j",
         title: "Expand your Future, extensions in Dart",
         description: <DevToArticleDetail id={1817135} description={t("extensionInDartDesc")}/>,

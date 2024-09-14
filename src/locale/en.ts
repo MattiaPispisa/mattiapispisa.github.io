@@ -55,6 +55,9 @@ const en = {
         'An exercise on "algorithms and data structures" completed during my bachelor\'s degree in computer science.',
 
     // ------------------- posts -------------------
+    // efficient logging in applications
+    efficientLoggingInApplicationsDesc: "An approach to logging messages of your applications with also my own package solution in dart/flutter.",
+
     // extension in dart
     extensionInDartDesc:
         "You can extend functions, and if these functions are asynchronous, you can create something truly remarkable. Let's dive into some practical and simple demonstrative examples.",

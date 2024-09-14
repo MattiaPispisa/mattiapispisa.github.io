@@ -53,6 +53,9 @@ const it = {
         'Un esercizio di "algoritmi e strutture dati" svolto durante la laurea di informatica.',
 
     // ------------------- posts -------------------
+    // efficient logging in applications
+    efficientLoggingInApplicationsDesc: "Come approcciare la registrazione di eventi in un applicativo ed infine la mia proposta alla soluzione in un applicativo dart/flutter.",
+
     // extension in dart
     extensionInDartDesc:
         "In dart si possono estendere le funzioni, in più, se queste sono asincrone, è incredibile quello che si può fare. Tuffiamoci in alcune pratici e semplici esempi dimostrativi.",
