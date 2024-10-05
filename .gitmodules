@@ -1,3 +1,0 @@
-[submodule "notebook/docs"]
-	path = notebook/docs
-	url = git@github.com:MattiaPispisa/notebook.git
