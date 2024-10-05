@@ -1,6 +1,6 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSpinner} from "@fortawesome/free-solid-svg-icons";
-import {sematicToTextClass} from "../../constants";
+import {semanticToTextClass} from "../../constants";
 
 type Props = {
     className?: string;
@@ -14,7 +14,7 @@ type Props = {
 function Spinner(props: Props): JSX.Element {
     return <FontAwesomeIcon
         size={"4x"}
-        className={`${sematicToTextClass["primary"]} ${props.className ?? ''}`}
+        className={`${semanticToTextClass["primary"]} ${props.className ?? ''}`}
         icon={faSpinner} spin={true}
     />
 }

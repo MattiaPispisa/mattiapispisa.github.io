@@ -1,7 +1,7 @@
 import {
     DefaultSemantic, LightSemantic, PrimarySemantic,
-    sematicToHoverTextClass,
-    sematicToTextClass,
+    semanticToHoverTextClass,
+    semanticToTextClass,
 } from "../../../constants";
 import React from "react";
 
@@ -51,11 +51,11 @@ function _buildClassName(props: Omit<Props, "newTab">) {
     let result = "";
 
     if (props.semantic) {
-        result += ` ${sematicToTextClass[props.semantic]} `;
+        result += ` ${semanticToTextClass[props.semantic]} `;
     }
 
     if (props.hover) {
-        result += ` ${sematicToHoverTextClass["primary"]} hover:underline hover:underline-offset-2`;
+        result += ` ${semanticToHoverTextClass["primary"]} hover:underline hover:underline-offset-2`;
     }
 
     if (props.className) {

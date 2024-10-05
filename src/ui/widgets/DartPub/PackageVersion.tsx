@@ -1,5 +1,5 @@
 import {useDartPackage} from "../../../hooks";
-import {sematicToTextClass} from "../../../constants";
+import {semanticToTextClass} from "../../../constants";
 
 type Props = {
     package: string
@@ -12,7 +12,7 @@ function DartPackageVersion(props: Props): JSX.Element {
         return <></>
     }
 
-    return <div className={`bg-gray-200 text-center px-4 py-2 rounded-full text-sm ${sematicToTextClass["primary"]}`}>
+    return <div className={`bg-gray-200 text-center px-4 py-2 rounded-full text-sm ${semanticToTextClass["primary"]}`}>
         {data.latest.version}
     </div>
 }

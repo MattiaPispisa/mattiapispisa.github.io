@@ -1,5 +1,5 @@
 import React, {useCallback} from "react";
-import {sematicToTextClass} from "../../../constants";
+import {semanticToTextClass} from "../../../constants";
 import {useVibrate} from "../../../hooks";
 
 type ButtonSize = "sm" | "md"
@@ -16,26 +16,26 @@ const sizeClasses = {
 };
 
 const semanticClasses: Record<ButtonSemantic, string> = {
-    primary: `${sematicToTextClass["default"]} bg-primary-500 hover:bg-primary-700 dark:bg-primary-dark dark:hover:bg-primary-600`,
-    secondary: `${sematicToTextClass["default"]} bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600`,
-    contrast: `${sematicToTextClass["default"]}`,
+    primary: `${semanticToTextClass["default"]} bg-primary-500 hover:bg-primary-700 dark:bg-primary-dark dark:hover:bg-primary-600`,
+    secondary: `${semanticToTextClass["default"]} bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600`,
+    contrast: `${semanticToTextClass["default"]}`,
 };
 
 const variantClasses: Record<ButtonVariant, Record<ButtonSemantic, string>> = {
     flat: {
-        primary: `${sematicToTextClass["primary"]} bg-transparent hover:bg-primary-100`,
-        secondary: `${sematicToTextClass["default"]} bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800`,
-        contrast: `${sematicToTextClass["default"]} bg-transparent hover:bg-gray-200 dark:hover:bg-gray-700`,
+        primary: `${semanticToTextClass["primary"]} bg-transparent hover:bg-primary-100`,
+        secondary: `${semanticToTextClass["default"]} bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800`,
+        contrast: `${semanticToTextClass["default"]} bg-transparent hover:bg-gray-200 dark:hover:bg-gray-700`,
     },
     fill: {
         primary: semanticClasses.primary,
         secondary: semanticClasses.secondary,
-        contrast: `${sematicToTextClass["default"]} bg-dark hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-300`,
+        contrast: `${semanticToTextClass["default"]} bg-dark hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-300`,
     },
     outlined: {
-        primary: `${sematicToTextClass["primary"]} border border-primary-600 hover:bg-primary-600 hover:text-white dark:border-primary-500 dark:text-primary-500 dark:hover:bg-primary-500 dark:hover:text-white`,
+        primary: `${semanticToTextClass["primary"]} border border-primary-600 hover:bg-primary-600 hover:text-white dark:border-primary-500 dark:text-primary-500 dark:hover:bg-primary-500 dark:hover:text-white`,
         secondary: `border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white dark:border-gray-500 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white`,
-        contrast: `${sematicToTextClass["default"]} border border-dark hover:bg-dark hover:text-white dark:border-light dark:hover:bg-light dark:hover:text-dark`,
+        contrast: `${semanticToTextClass["default"]} border border-dark hover:bg-dark hover:text-white dark:border-light dark:hover:bg-light dark:hover:text-dark`,
     },
 };
 

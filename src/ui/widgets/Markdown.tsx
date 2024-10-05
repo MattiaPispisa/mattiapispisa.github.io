@@ -1,6 +1,7 @@
 import ReactMarkdown from "react-markdown";
 import {A, Text} from "./Common";
 import Title from "./Common/Title.tsx";
+import {semanticToTextClass} from "../../constants";
 
 type Props = {
     /**
@@ -23,7 +24,9 @@ function Markdown(props: Props): JSX.Element {
         h4: ({children}) => <Text className={"text-2xl mt-4 mb-1"} type={"h4"}>{children}</Text>,
         h5: ({children}) => <Text className={"text-xl mt-4 mb-1"} type={"h5"}>{children}</Text>,
         code: ({children}) => <Text type={"code"}>{children}</Text>,
-        p: ({children}) => <Text type={"p"}>{children}</Text>
+        p: ({children}) => <Text type={"p"}>{children}</Text>,
+        ul: ({children}) => <ul className={`list-disc pl-5 ${semanticToTextClass["default"]}`}>{children}</ul>,
+        li: ({children}) => <li>{<Text>{children}</Text>}</li>,
     }}>
         {props.children}
     </ReactMarkdown>

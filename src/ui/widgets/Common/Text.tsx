@@ -1,6 +1,6 @@
 import React from "react";
 import {ReactHTML} from "react";
-import {Semantic, sematicToTextClass} from "../../../constants";
+import {Semantic, semanticToTextClass} from "../../../constants";
 
 type Props = {
     type?: keyof ReactHTML;
@@ -22,7 +22,7 @@ function Text({
     return React.createElement(
         type,
         {
-            className: `${sematicToTextClass[semantic]} ${uppercase ? 'uppercase' : ''} ${bold ? 'font-bold' : ''} ${className}`,
+            className: `${semanticToTextClass[semantic]} ${uppercase ? 'uppercase' : ''} ${bold ? 'font-bold' : ''} ${className}`,
         },
         props.children
     );
