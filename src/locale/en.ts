@@ -13,6 +13,8 @@ const en = {
     curriculum: "Curriculum",
 
     // ------------------- projects -------------------
+    // en yup decorators
+    enYupDecoratorDesc: "A TypeScript library for creating yup schema decorators, simplifying schema validations.",
     // data migration
     dataMigrationDesc: "A library for applying a series of migrations to update old versions of data structures to the most recent one.",
     // en logger

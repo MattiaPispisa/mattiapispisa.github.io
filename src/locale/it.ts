@@ -13,6 +13,8 @@ const it = {
     curriculum: "Curriculum",
 
     // ------------------- projects -------------------
+    // en yup decorators
+    enYupDecoratorDesc: "Una libreria typescript per creare dei \"yup schema decorators\" semplificando la validazione di \"schema\".",
     // data migration
     dataMigrationDesc: "Una libreria per applicare una serie di migrazione per aggiornare vecchie strutture dati alle loro nuove versioni.",
     // en logger

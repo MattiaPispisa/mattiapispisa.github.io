@@ -4,6 +4,12 @@ import {ProjectModel} from "./model";
 
 const projects: (t: LanguageResolver) => ProjectModel[] = (t) => [
     {
+        title: "En Yup Decorator",
+        hashtags: [t("library"), "typescript"],
+        description: t("dataMigrationDesc"),
+        link: "https://www.npmjs.com/package/en-yup-decorator",
+    },
+    {
         title: "Data Migration",
         hashtags: [t("library"), "dart"],
         description: t("dataMigrationDesc"),

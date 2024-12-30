@@ -1,6 +1,6 @@
 type PrimarySemantic = "primary";
-type DefaultSemantic = "default"
-type LightSemantic = "light"
+type DefaultSemantic = "default";
+type LightSemantic = "light";
 
 /**
  * ## On light theme
@@ -12,15 +12,15 @@ type LightSemantic = "light"
 type Semantic = DefaultSemantic | PrimarySemantic | LightSemantic | "dark";
 
 const semanticToTextClass: Record<Semantic, string> = {
-    default: "text-dark dark:text-light",
-    primary: "text-primary dark:text-primary-dark",
-    light: "text-light",
-    dark: "text-dark",
+  default: "text-dark dark:text-light",
+  primary: "text-primary dark:text-primary-dark",
+  light: "text-light",
+  dark: "text-dark",
 };
 
 const semanticToHoverTextClass: Record<PrimarySemantic, string> = {
-    primary: "hover:text-primary-700 hover:dark:text-primary-500",
+  primary: "hover:text-primary-700 hover:dark:text-primary-500",
 };
 
-export type {Semantic, PrimarySemantic,DefaultSemantic, LightSemantic};
-export {semanticToTextClass, semanticToHoverTextClass};
+export type { Semantic, PrimarySemantic, DefaultSemantic, LightSemantic };
+export { semanticToTextClass, semanticToHoverTextClass };

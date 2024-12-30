@@ -7,6 +7,7 @@ import { profileImage } from "../../../constants";
 import HamburgerButton from "./_HamburgerButton";
 import { useCallback, useRef } from "react";
 import { useOnClickOutside } from "usehooks-ts";
+import NavFooter from "./_NavFooter";
 
 type Props = {
   items: NavBarItem[];
@@ -37,6 +38,7 @@ function NavBar(props: Props) {
         <HamburgerButton onClick={toggle} />
       </div>
       <NavItems hash={hash} items={items} onClick={close} open={open} />
+      <NavFooter open={open} />
     </nav>
   );
 }
