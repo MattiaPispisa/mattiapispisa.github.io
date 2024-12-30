@@ -6,7 +6,7 @@ const projects: (t: LanguageResolver) => ProjectModel[] = (t) => [
     {
         title: "En Yup Decorator",
         hashtags: [t("library"), "typescript"],
-        description: t("dataMigrationDesc"),
+        description: t("enYupDecoratorDesc"),
         link: "https://www.npmjs.com/package/en-yup-decorator",
     },
     {
