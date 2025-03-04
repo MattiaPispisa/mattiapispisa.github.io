@@ -4,6 +4,12 @@ import {ProjectModel} from "./model";
 
 const projects: (t: LanguageResolver) => ProjectModel[] = (t) => [
     {
+        title: "En .env reader",
+        description: t("enEnvReaderDesc"),
+        hashtags: [t("library"), "typescript"],
+        link: "https://marketplace.visualstudio.com/items?itemName=MattiaPispisa.en-env-editor",
+    },
+    {
         title: "En Yup Decorator",
         hashtags: [t("library"), "typescript"],
         description: t("enYupDecoratorDesc"),

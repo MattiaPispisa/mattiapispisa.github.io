@@ -13,6 +13,8 @@ const it = {
     curriculum: "Curriculum",
 
     // ------------------- projects -------------------
+    // en .env reader
+    enEnvReaderDesc: "Un'estensione di Visual Studio Code per gestire i file .env con un'interfaccia utente intuitiva.",
     // en yup decorators
     enYupDecoratorDesc: "Una libreria typescript per creare dei \"yup schema decorators\" semplificando la validazione di \"schema\".",
     // data migration
