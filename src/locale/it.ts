@@ -13,6 +13,10 @@ const it = {
     curriculum: "Curriculum",
 
     // ------------------- projects -------------------
+    // crdt
+    crdtDesc: "Un progetto per la gestione di dati replicabili senza risoluzione di conflitti. Attualmente si suddivide in due librerie:",
+    hlcDartDesc: "Una libreria che implementa il protocollo HLC (Hybrid Logical Clock) per la gestione di dati replicabili.",
+    crdtLfDesc: "Una libreria che implementa il protocollo CRDT (Conflict-free Replicated Data Type) per la gestione di dati replicabili.",
     // en .env reader
     enEnvReaderDesc: "Un'estensione di Visual Studio Code per gestire i file .env con un'interfaccia utente intuitiva.",
     // en yup decorators

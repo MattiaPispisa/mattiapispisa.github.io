@@ -13,6 +13,10 @@ const en = {
     curriculum: "Curriculum",
 
     // ------------------- projects -------------------
+    // crdt
+    crdtDesc: "A project for managing conflict free replicated data. Currently it is divided into two libraries:",
+    hlcDartDesc: "A library that implements the HLC (Hybrid Logical Clock) protocol for managing replicated data.",
+    crdtLfDesc: "A library that implements the CRDT (Conflict-free Replicated Data Type) protocol for managing replicated data.",
     // en .env reader
     enEnvReaderDesc: "A Visual Studio Code extension for managing .env files with a user-friendly interface.",
     // en yup decorators
