@@ -14,7 +14,7 @@ type Props = {
 };
 
 const mobClassName =
-  "fixed right-0 top-0 left-0 p-2 bg-primary dark:bg-primary-dark flex flex-row flex-wrap justify-between items-center";
+  "fixed right-0 top-0 left-0 p-2 bg-primary dark:bg-primary-dark flex flex-row flex-wrap justify-between items-center z-10"; 
 const mdClassName = "md:w-72 md:h-full md:flex-col md:flex-nowrap";
 const className = `${mobClassName} ${mdClassName}`;
 
@@ -23,7 +23,7 @@ function NavBar(props: Props) {
   const { hash } = useHash();
 
   const [open, toggle, set] = useToggle();
-  const close = useCallback(() => set(false), []);
+  const close = useCallback(() => set(false), [set]);
 
   const ref = useRef<HTMLElement>(null);
   useOnClickOutside(ref, close);

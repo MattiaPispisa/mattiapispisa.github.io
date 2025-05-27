@@ -5,6 +5,7 @@ import Experience from "./Experience/Experience";
 import Passions from "./Passions/Passions";
 import Posts from "./Post/Post";
 import Project from "./Project/Project";
+import BooksRead from "./BooksRead/BooksRead";
 import { SectionModel } from "./model";
 
 const sections: (t: LanguageResolver) => SectionModel[] = (t) => [
@@ -26,6 +27,7 @@ const sections: (t: LanguageResolver) => SectionModel[] = (t) => [
     component: <Experience />,
   },
   { id: "education", label: t("education"), component: <Education /> },
+  { id: "booksRead", label: t("booksRead"), component: <BooksRead /> },
   { id: "passions", label: t("passions"), component: <Passions /> },
 ];
 

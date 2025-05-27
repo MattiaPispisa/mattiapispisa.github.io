@@ -6,6 +6,7 @@ const en = {
     experience: "Experience",
     education: "Education",
     passions: "Passions",
+    booksRead: "Books Read",
 
     // ------------------- about me -------------------
     myInfo:
@@ -63,6 +64,9 @@ const en = {
         'An exercise on "algorithms and data structures" completed during my bachelor\'s degree in computer science.',
 
     // ------------------- posts -------------------
+    // go router navigation observer
+    goRouterNavigationObserverDesc: "How to implement a navigation observer with Go Router.",
+
     // efficient logging in applications
     efficientLoggingInApplicationsDesc: "An approach to logging messages of your applications with also my own package solution in dart/flutter.",
 
@@ -108,6 +112,12 @@ const en = {
     bachelorDegreeVote: "Vote: ",
     diploma: "Diploma",
     diplomaText: "Diploma in telecommunications",
+
+    // ------------------- books read -------------------
+    allBooks: "All",
+    noBooksFound: "No books found for the selected category.",
+
+    // ------------------- passions -------------------
     passionsCode:
         "I love designing, programming, and always finding new challenges to push myself.",
     passionF1:

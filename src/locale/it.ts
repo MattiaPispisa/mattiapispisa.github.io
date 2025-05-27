@@ -6,6 +6,7 @@ const it = {
     experience: "Esperienze",
     education: "Formazione",
     passions: "Passioni",
+    booksRead: "Libri Letti",
 
     // ------------------- about me -------------------
     myInfo:
@@ -61,6 +62,8 @@ const it = {
         'Un esercizio di "algoritmi e strutture dati" svolto durante la laurea di informatica.',
 
     // ------------------- posts -------------------
+    goRouterNavigationObserverDesc: "Come implementare un observer per la navigazione con Go Router.",
+
     // efficient logging in applications
     efficientLoggingInApplicationsDesc: "Come approcciare la registrazione di eventi in un applicativo ed infine la mia proposta alla soluzione in un applicativo dart/flutter.",
 
@@ -109,6 +112,12 @@ const it = {
     bachelorDegreeVote: "Voto: ",
     diploma: "Diploma",
     diplomaText: "Diploma in telecomunicazioni",
+
+    // ------------------- books read -------------------
+    allBooks: "Tutti",
+    noBooksFound: "Nessun libro trovato per la categoria selezionata.",
+
+    // ------------------- passions -------------------
     passionsCode:
         "Adoro progettare, programmare e trovare sempre nuove sfide per mettermi in gioco.",
     passionF1:
