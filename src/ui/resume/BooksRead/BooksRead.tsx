@@ -5,7 +5,6 @@ import Select from "../../widgets/Common/Select";
 import BookCard from "../../widgets/BookCard";
 import { books } from "./books";
 import { BookModel } from "./model";
-import { capitalize } from "../../../functions";
 import { SelectOptionProps } from "../../widgets/Common/SelectOption";
 import { Text } from "../../widgets";
 
@@ -20,7 +19,7 @@ function BooksRead() {
       { value: allBooksValue, component: <>{t("allBooks")}</> },
       ...tags.map((tag) => ({
         value: tag,
-        component: <_TagOption tag={tag} />,
+        component: <_TagOption tag={t(tag as keyof typeof t)} />,
       })),
     ];
   }, [t, tags]);
@@ -96,7 +95,7 @@ function _NoBooksFound() {
 }
 
 function _TagOption({ tag }: { tag: string }) {
-  return capitalize(tag.replace(/-/g, " "));
+  return tag;
 }
 
 /**

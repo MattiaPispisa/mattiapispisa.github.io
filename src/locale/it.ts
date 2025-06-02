@@ -116,6 +116,20 @@ const it = {
     // ------------------- books read -------------------
     allBooks: "Tutti",
     noBooksFound: "Nessun libro trovato per la categoria selezionata.",
+    programming: "Programmazione",
+    softwareEngineering: "Ingegneria del software",
+    design: "Design",
+    ux: "UX",
+    dart: "Dart",
+    flutter: "Flutter",
+    react: "React",
+    machineLearning: "Machine Learning",
+    algorithms: "Algoritmi",
+    networks: "Reti di calcolatori",
+    literature: "Letteratura",
+    mobile: "Mobile",
+    web: "Web",
+    javascript: "Javascript",
 
     // ------------------- passions -------------------
     passionsCode:

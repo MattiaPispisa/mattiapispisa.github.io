@@ -7,21 +7,21 @@ const books: (t: LanguageResolver) => BookModel[] = () => [
     author: "Robert C. Martin",
     coverImage: "https://m.media-amazon.com/images/I/51E2055ZGUL._SL1000_.jpg",
     link: "https://www.amazon.it/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882",
-    tags: ["programming", "software-engineering"],
+    tags: ["programming", "softwareEngineering"],
   },
   {
     title: "Javascript: The Definitive Guide",
     author: "David Flanagan",
     coverImage: "https://m.media-amazon.com/images/I/91hUer84PpL._SL1500_.jpg",
     link: "https://www.amazon.it/Javascript-Definitive-Most-used-Programming-Language/dp/1491952024",
-    tags: ["programming", "javascript"],
+    tags: ["programming", "web", "javascript"],
   },
   {
     title: "Refactoring: Improving the Design of Existing Code",
     author: "Martin Fowler",
     coverImage: "https://m.media-amazon.com/images/I/71e6ndHEwqL._SL1500_.jpg",
     link: "https://www.amazon.it/Refactoring-Improving-Design-Existing-Code/dp/0134757599",
-    tags: ["programming", "software-engineering"],
+    tags: ["programming", "softwareEngineering"],
   },
   {
     title:
@@ -37,14 +37,14 @@ const books: (t: LanguageResolver) => BookModel[] = () => [
     coverImage:
       "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1543945452i/43125355.jpg",
     link: "https://refactoring.guru/design-patterns/book",
-    tags: ["programming", "software-engineering"],
+    tags: ["programming", "softwareEngineering"],
   },
   {
     title: "Fluent React",
     author: "Tejas Kumar",
     coverImage: "https://m.media-amazon.com/images/I/71LeIRBPrtL._SL1500_.jpg",
     link: "https://www.amazon.it/Fluent-React-Performant-Intuitive-Applications/dp/1098138716",
-    tags: ["programming", "react"],
+    tags: ["programming", "web", "react"],
   },
   {
     title: "Emotional Design",
@@ -54,10 +54,10 @@ const books: (t: LanguageResolver) => BookModel[] = () => [
     tags: ["design", "ux"],
   },
   {
-    title: "Introduzione agli algoritmi e strutture dati",
+    title: "Introduction to Algorithms",
     author:
       "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein",
-    coverImage: "https://m.media-amazon.com/images/I/61hR7JdqhaL._SL1296_.jpg",
+    coverImage: "https://m.media-amazon.com/images/I/61Mw06x2XcL._SL1500_.jpg",
     link: "https://www.amazon.it/Introduzione-agli-algoritmi-strutture-dati/dp/8838656215",
     tags: ["programming", "algorithms"],
   },
@@ -80,21 +80,22 @@ const books: (t: LanguageResolver) => BookModel[] = () => [
     author: "Andrej Karpathy",
     coverImage: "https://m.media-amazon.com/images/I/81z-5cK1v1L._SL1500_.jpg",
     link: "https://www.amazon.it/Machine-Learning-Coders-Programmers-Intelligence/dp/1492078190",
-    tags: ["programming", "machine-learning"],
+    tags: ["programming", "machineLearning"],
   },
   {
     title: "Learning React",
     author: "Alex Banks, Eve Porcello",
     coverImage: "https://m.media-amazon.com/images/I/91uFdkCJmAL._SL1500_.jpg",
     link: "https://www.amazon.it/Learning-React-Modern-Patterns-Developing/dp/1492051721",
-    tags: ["programming", "react"],
+    tags: ["programming", "web", "react"],
   },
   {
-    title: "Flutter Complete Reference 2.0: The ultimate reference for Dart and Flutter",
+    title:
+      "Flutter Complete Reference 2.0: The ultimate reference for Dart and Flutter",
     author: "Alberto Miola",
     coverImage: "https://m.media-amazon.com/images/I/41dUO2eWkhL._SL1250_.jpg",
     link: "https://www.amazon.it/dp/B0C5P7VXBL",
-    tags: ["programming", "flutter"],
+    tags: ["programming", "mobile", "flutter"],
   },
 ];
 

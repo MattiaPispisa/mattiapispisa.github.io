@@ -116,7 +116,21 @@ const en = {
     // ------------------- books read -------------------
     allBooks: "All",
     noBooksFound: "No books found for the selected category.",
-
+    programming: "Programming",
+    softwareEngineering: "Software Engineering",
+    design: "Design",
+    ux: "UX",
+    dart: "Dart",
+    flutter: "Flutter",
+    react: "React",
+    machineLearning: "Machine Learning",
+    algorithms: "Algorithms",
+    networks: "Computer Networks",
+    literature: "Literature",
+    mobile: "Mobile",
+    web: "Web",
+    javascript: "Javascript",
+    
     // ------------------- passions -------------------
     passionsCode:
         "I love designing, programming, and always finding new challenges to push myself.",
