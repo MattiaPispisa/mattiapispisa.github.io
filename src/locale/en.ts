@@ -15,9 +15,11 @@ const en = {
 
     // ------------------- projects -------------------
     // crdt
-    crdtDesc: "A project for managing conflict free replicated data. Currently it is divided into two libraries:",
+    crdtDesc: "A project for managing conflict free replicated data. It is divided into several libraries:",
     hlcDartDesc: "A library that implements the HLC (Hybrid Logical Clock) protocol for managing replicated data.",
     crdtLfDesc: "A library that implements the CRDT (Conflict-free Replicated Data Type) protocol for managing replicated data.",
+    crdtSyncDesc: "A library for synchronizing crdt documents in real time between different users.",
+    crdtHivePlugin: "A library that supports the persistence of crdt data using hive.",
     // en .env reader
     enEnvReaderDesc: "A Visual Studio Code extension for managing .env files with a user-friendly interface.",
     // en yup decorators

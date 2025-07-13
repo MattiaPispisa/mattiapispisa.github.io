@@ -6,6 +6,7 @@ import { faDev } from "@fortawesome/free-brands-svg-icons/faDev";
 import { faXTwitter } from "@fortawesome/free-brands-svg-icons/faXTwitter";
 import { faTelegram } from "@fortawesome/free-brands-svg-icons/faTelegram";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons/faGoogle";
+import { faBluesky } from "@fortawesome/free-brands-svg-icons/faBluesky";
 
 type SocialProfileType = {
   link: string;
@@ -28,6 +29,10 @@ const socials: SocialProfileType[] = [
   {
     link: "https://g.dev/mattia_pispisa",
     icon: faGoogle,
+  },
+  {
+    link: "https://bsky.app/profile/mattia-pispisa.bsky.social",
+    icon: faBluesky,
   },
   {
     link: "https://twitter.com/MattiaPispisa",

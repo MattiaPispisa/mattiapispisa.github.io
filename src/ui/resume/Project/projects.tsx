@@ -20,6 +20,14 @@ const projects: (t: LanguageResolver) => ProjectModel[] = (t) => [
               text: t("crdtLfDesc"),
               href: "https://pub.dev/packages/crdt_lf",
             },
+            {
+              text: t("crdtSyncDesc"),
+              href: "https://pub.dev/packages/crdt_socket_sync",
+            },
+            {
+              text: t("crdtHivePlugin"),
+              href: "https://pub.dev/packages/crdt_lf_hive",
+            },
           ]}
         >
           {(item) => (
