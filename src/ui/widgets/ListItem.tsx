@@ -16,7 +16,8 @@ type Props = {
 
 const mobListClassName = "flex flex-col gap-2 flex-wrap";
 const mdListClassName = "md:flex-row md:gap-4 md:flex-nowrap";
-const listClassName = `${mobListClassName} ${mdListClassName}`;
+const printClassName = "print-avoid-break print:mb-4";
+const listClassName = `${mobListClassName} ${mdListClassName} ${printClassName}`;
 
 function ListItem(props: Props) {
   const { description, footer, subtitle, title, trailing, link } = props;
@@ -31,8 +32,8 @@ function ListItem(props: Props) {
 
         {subtitle && (
           <div
-            className={`uppercase text-xl text-gray-400 ${
-              description ? "mb-4" : ""
+            className={`uppercase text-xl text-gray-400 print:text-base print:text-gray-600 ${
+              description ? "mb-4 print:mb-2" : ""
             }`}
           >
             {subtitle}
@@ -50,7 +51,7 @@ function ListItem(props: Props) {
         {footer && <div className="text-sm">{footer}</div>}
       </div>
       {trailing && (
-        <div className="lg:min-w-52 md:text-right text-primary ">
+        <div className="lg:min-w-52 md:text-right text-primary print:text-right print:text-gray-600 print:text-sm print:min-w-32">
           {trailing}
         </div>
       )}
@@ -63,8 +64,8 @@ function ListLinkTitle(props: Required<Pick<Props, "title" | "link">>) {
   return (
     <A hover={true} href={link} semantic="default" newTab={true}>
       <div className={`flex flex-row items-baseline gap-2`}>
-        <h3 className="uppercase text-2xl font-bold  ">{title}</h3>
-        <FontAwesomeIcon icon={faUpRightFromSquare}/>
+        <h3 className="uppercase text-2xl font-bold print:text-xl">{title}</h3>
+        <FontAwesomeIcon icon={faUpRightFromSquare} className="print:text-xs"/>
       </div>
     </A>
   );

@@ -10,7 +10,7 @@ function Education() {
       <SubTitle>
         <>{t("education")}</>
       </SubTitle>
-      <div className="flex flex-col gap-y-12">
+      <div className="flex flex-col gap-y-12 print:gap-y-4">
         {educations(t).map((education, i) => {
           return (
             <ListItem

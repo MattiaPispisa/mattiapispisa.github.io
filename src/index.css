@@ -1,3 +1,208 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Print styles for PDF export */
+@media print {
+  /* Page setup */
+  @page {
+    size: A4;
+    margin: 1.5cm 1cm;
+  }
+
+  /* Reset body for print */
+  body {
+    background: white !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Force page breaks */
+  .print-page-break {
+    page-break-after: always;
+    break-after: page;
+  }
+
+  /* Avoid page breaks inside elements */
+  .print-avoid-break {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  /* Ensure sections don't create unnecessary space */
+  section {
+    min-height: 0 !important;
+    height: auto !important;
+    display: block !important;
+    page-break-inside: auto !important;
+  }
+  
+  /* Optimize first section */
+  section:first-of-type {
+    padding-top: 0.5rem !important;
+  }
+  
+  /* Optimize last section */
+  section:last-of-type {
+    padding-bottom: 0.5rem !important;
+  }
+
+  /* Remove shadows and transitions for print */
+  * {
+    box-shadow: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  /* Optimize links for print */
+  a {
+    text-decoration: underline !important;
+    text-decoration-color: #9ca3af !important;
+    text-decoration-thickness: 1px !important;
+    text-underline-offset: 3px !important;
+    color: #000 !important;
+  }
+
+  /* Show URLs after links for important links only */
+  a[href^="http"]::after {
+    content: "";
+    font-size: 0.8em;
+    color: #666;
+  }
+
+  /* Hide URL after social links as they are shown inline */
+  a[href*="linkedin.com"]::after,
+  a[href*="github.com"]::after,
+  a[href*="twitter.com"]::after,
+  a[href*="instagram.com"]::after,
+  a[href*="dev.to"]::after,
+  a[href*="g.dev"]::after,
+  a[href*="bsky.app"]::after,
+  a[href*="t.me"]::after,
+  a[href="#"]::after {
+    content: none;
+  }
+
+  /* Ensure dark mode doesn't affect print */
+  .dark {
+    background: white !important;
+    color: black !important;
+  }
+
+  .dark * {
+    background: transparent !important;
+    color: inherit !important;
+    border-color: #ccc !important;
+  }
+
+  /* Optimize text rendering */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+  
+  /* Compact h2 specifically */
+  h2 {
+    margin-bottom: 0.5rem !important;
+    page-break-after: avoid;
+  }
+
+  /* Optimize lists and paragraphs */
+  p, li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  ul, ol {
+    page-break-inside: avoid;
+  }
+
+  /* Optimize images */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* Remove unnecessary borders in print */
+  section {
+    border: none !important;
+  }
+  
+  /* Prevent orphaned sections */
+  section + section {
+    page-break-before: auto;
+  }
+
+  /* Improve print color rendering */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Optimize spacing for print */
+  .print-compact {
+    margin: 0.5rem 0 !important;
+    padding: 0.5rem 0 !important;
+  }
+
+  /* Ensure links are visible */
+  a[href]::after {
+    word-wrap: break-word;
+  }
+
+  /* Improve contrast for print */
+  .text-gray-400 {
+    color: #6b7280 !important;
+  }
+
+  .text-gray-500 {
+    color: #6b7280 !important;
+  }
+
+  .text-gray-600 {
+    color: #4b5563 !important;
+  }
+
+  /* Reduce line height for compact layout */
+  p, div, span {
+    line-height: 1.4 !important;
+  }
+
+  /* Ensure minimal gap in flex containers */
+  .gap-2 {
+    gap: 0.25rem !important;
+  }
+
+  .gap-y-12 {
+    row-gap: 1rem !important;
+  }
+
+  /* Optimize margins */
+  .mb-2 {
+    margin-bottom: 0.25rem !important;
+  }
+  
+  .mb-4 {
+    margin-bottom: 0.5rem !important;
+  }
+
+  .mb-8 {
+    margin-bottom: 0.75rem !important;
+  }
+
+  .mb-12 {
+    margin-bottom: 0.75rem !important;
+  }
+  
+  /* Fix for empty pages - ensure content flows naturally */
+  * {
+    max-height: none !important;
+  }
+  
+  /* Remove any fixed positioning that might cause issues */
+  .print\:fixed {
+    position: static !important;
+  }
+}

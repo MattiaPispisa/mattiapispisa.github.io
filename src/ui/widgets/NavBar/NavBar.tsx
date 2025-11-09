@@ -14,9 +14,10 @@ type Props = {
 };
 
 const mobClassName =
-  "fixed right-0 top-0 left-0 p-2 bg-primary dark:bg-primary-dark flex flex-row flex-wrap justify-between items-center z-10"; 
+  "fixed right-0 top-0 left-0 p-2 bg-primary dark:bg-primary-dark flex flex-row flex-wrap justify-between items-center z-10";
 const mdClassName = "md:w-72 md:h-full md:flex-col md:flex-nowrap";
-const className = `${mobClassName} ${mdClassName}`;
+const printClassName = "print:hidden";
+const className = `${mobClassName} ${mdClassName} ${printClassName}`;
 
 function NavBar(props: Props) {
   const { items } = props;
@@ -38,7 +39,7 @@ function NavBar(props: Props) {
         <HamburgerButton onClick={toggle} />
       </div>
       <NavItems hash={hash} items={items} onClick={close} open={open} />
-      <NavFooter open={open} />
+      <NavFooter />
     </nav>
   );
 }

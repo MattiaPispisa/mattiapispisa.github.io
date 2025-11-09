@@ -1,6 +1,6 @@
 import {useMemo} from "react";
 import {useAppTranslation} from "../../locale";
-import {Body, NavBar, Section} from "../widgets";
+import {Body, NavBar, Section, PrintSimpleHeader, PrintSimpleFooter} from "../widgets";
 import {useDarkMode} from "../widgets/DarkModeProvider.ts";
 import {sections as sectionFunc} from "./sections";
 import ScrollToTopButton from "../widgets/ScrollToTopButton.tsx";
@@ -18,6 +18,7 @@ export default function App() {
             <NavBar items={sections}/>
             <Body>
                 <>
+                    <PrintSimpleHeader />
                     {sections.map((s) => {
                         return (
                             <Section centered={s.centered} key={s.id} id={s.id}>
@@ -25,6 +26,7 @@ export default function App() {
                             </Section>
                         );
                     })}
+                    <PrintSimpleFooter />
                     <ScrollToTopButton/>
                 </>
             </Body>

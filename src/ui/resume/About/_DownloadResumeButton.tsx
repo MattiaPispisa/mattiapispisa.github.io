@@ -19,7 +19,7 @@ const DownloadResumeButton = () => {
     <button
       onClick={handleDownload}
       className={
-        "bg-neutral-600 hover:bg-primary dark:hover:bg-primary-dark text-white flex flex-row gap-2 items-center font-bold uppercase py-2 px-4 rounded focus:outline-none  focus:bg-primary dark:focus:bg-primary-dark"
+        "bg-neutral-600 hover:bg-primary dark:hover:bg-primary-dark text-white flex flex-row gap-2 items-center font-bold uppercase py-2 px-4 rounded focus:outline-none  focus:bg-primary dark:focus:bg-primary-dark print:hidden"
       }
     >
       <FontAwesomeIcon icon={faFileArrowDown} />

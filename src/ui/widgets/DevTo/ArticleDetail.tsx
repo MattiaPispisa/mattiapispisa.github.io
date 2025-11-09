@@ -14,7 +14,7 @@ type Props = {
 function ArticleDetail(props: Props): JSX.Element {
     const {id, description} = props;
 
-    return <div className={"flex flex-col gap-2 items-start"}>
+    return <div className={"flex flex-col gap-2 items-start print:gap-1"}>
         {typeof description === "string" ? <Text>{description}</Text> : description}
         <DevToArticle article={id}/>
     </div>

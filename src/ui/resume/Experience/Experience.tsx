@@ -9,7 +9,7 @@ function Experience() {
   return (
     <>
       <SubTitle>{t("experience")}</SubTitle>
-      <div className="flex flex-col gap-y-12">
+      <div className="flex flex-col gap-y-12 print:gap-y-4">
         {experiences(t).map((experience, i) => {
           return (
             <ListItem

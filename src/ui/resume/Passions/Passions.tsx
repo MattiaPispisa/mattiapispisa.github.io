@@ -8,7 +8,7 @@ function Passions() {
   return (
     <>
       <SubTitle>{t("passions")}</SubTitle>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 print:gap-1">
         <Text>{t("passionsCode")}</Text>
         <Text>{t("passionF1")}</Text>
         <Text>

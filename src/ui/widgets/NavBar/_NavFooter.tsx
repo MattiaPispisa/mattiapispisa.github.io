@@ -1,11 +1,9 @@
-import { profileSite } from "../../../constants";
-import { A, Text } from "../Common";
+function NavFooter() {
 
-type Props = {
-  open: boolean;
-};
+  return <></>;
 
-function NavFooter(props: Props) {
+  /* 
+  TODO(mattia): wait for the notebook to be ready
   const { open } = props;
 
   return (
@@ -21,7 +19,7 @@ function NavFooter(props: Props) {
         <Text>Notebook (WIP)</Text>
       </A>
     </div>
-  );
+  ); */
 }
 
 export default NavFooter;

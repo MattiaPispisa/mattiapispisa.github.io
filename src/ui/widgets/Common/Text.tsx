@@ -34,7 +34,7 @@ function Text({
         uppercase ? "uppercase" : ""
       } ${size ? textSizeClass[size] : ""} ${
         bold ? "font-bold" : ""
-      } ${className}`,
+      } ${className} print:text-black print:text-sm`,
     },
     props.children
   );

@@ -14,7 +14,7 @@ type Props = {
 function HorizontalList({gap = "4", className = "", ...props}: Props): JSX.Element {
     return (
         <div
-            className={`flex flex-row ${_gapToClassName[gap]} overflow-x-auto ${className} scrollbar-hide md:scrollbar-default`}
+            className={`flex flex-row ${_gapToClassName[gap]} overflow-x-auto ${className} scrollbar-hide md:scrollbar-default print:flex-wrap print:gap-y-2`}
         >
             {props.children}
         </div>

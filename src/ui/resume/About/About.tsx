@@ -5,7 +5,7 @@ import { socials } from "./socials";
 import { mail } from "../../../constants";
 import { useAppTranslation } from "../../../locale";
 
-const spaceAfter = "mb-8" as const;
+const spaceAfter = "mb-8 print:mb-3" as const;
 
 function About() {
   const { t } = useAppTranslation();
@@ -25,7 +25,7 @@ function About() {
       <div className={spaceAfter}>
         <Text>{t("myInfo")}</Text>
       </div>
-      <HorizontalList className={spaceAfter}>
+      <HorizontalList className={`${spaceAfter} print:flex-col print:gap-2`}>
         {socials.map((s) => {
           return <SocialProfile key={s.link} link={s.link} icon={s.icon} />;
         })}

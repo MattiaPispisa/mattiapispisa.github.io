@@ -17,6 +17,8 @@ export { default as _LanguageSelector } from './NavBar/_LanguageSelector';
 export { default as _NavItem } from './NavBar/_NavItem';
 export { default as _NavItems } from './NavBar/_NavItems';
 export { default as _Settings } from './NavBar/_Settings';
+export { default as PrintSimpleHeader } from './PrintSimpleHeader';
+export { default as PrintSimpleFooter } from './PrintSimpleFooter';
 export { default as ProfileImage } from './ProfileImage';
 export { default as Section } from './Section';
 export { default as SocialProfile } from './SocialProfile';

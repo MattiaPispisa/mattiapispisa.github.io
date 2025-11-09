@@ -15,7 +15,7 @@ function Mail({newTab = true, ...props}: Props): JSX.Element {
     return (
         <A
             semantic="primary"
-            className={`uppercase `}
+            className={`uppercase print:normal-case print:text-base`}
             href={`mailto:${mail}`}
             newTab={newTab}
         >

@@ -39,7 +39,7 @@ function ScrollToTopButton(props: Props): JSX.Element {
 }
 
 function _className(options: { visible: boolean }) {
-    const className = "fixed bottom-4 right-4 transition duration-300"
+    const className = "fixed bottom-4 right-4 transition duration-300 print:hidden"
 
     if (!options.visible) {
         return `${className} opacity-0 pointer-events-none`

@@ -42,6 +42,7 @@ function DevToArticlePreview({article}: Props): JSX.Element {
             text={t("preview")}
             onClick={setFullScreen}
             size={"sm"}
+            className="print:hidden"
         />
     </>
 }
