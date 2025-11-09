@@ -1,11 +1,12 @@
 import { LanguageResolver } from "../../locale";
 import About from "./About/About";
+import BooksRead from "./BooksRead/BooksRead";
 import Education from "./Education/Education";
 import Experience from "./Experience/Experience";
 import Passions from "./Passions/Passions";
 import Posts from "./Post/Post";
 import Project from "./Project/Project";
-import Skills from "./Skills/Skills1";
+import Skills from "./Skills/Skills";
 import { SectionModel } from "./model";
 
 const sections: (t: LanguageResolver) => SectionModel[] = (t) => [
@@ -21,11 +22,11 @@ const sections: (t: LanguageResolver) => SectionModel[] = (t) => [
     centered: false,
   },
   { id: "post", label: t("post"), component: <Posts />, centered: false },
-  { 
-    id: "skills", 
-    label: t("skills"), 
+  {
+    id: "skills",
+    label: t("skills"),
     component: <Skills />,
-    centered: false 
+    centered: false,
   },
   {
     id: "experience",
@@ -33,7 +34,7 @@ const sections: (t: LanguageResolver) => SectionModel[] = (t) => [
     component: <Experience />,
   },
   { id: "education", label: t("education"), component: <Education /> },
-  // { id: "books-read", label: t("booksRead"), component: <BooksRead /> },
+  { id: "books-read", label: t("booksRead"), component: <BooksRead /> },
   { id: "passions", label: t("passions"), component: <Passions /> },
 ];
 

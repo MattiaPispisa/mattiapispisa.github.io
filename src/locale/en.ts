@@ -11,10 +11,13 @@ const en = {
 
     // ------------------- about me -------------------
     myInfo:
-        "I have always been passionate about mobile development. I started with iOS and then transitioned to a hybrid approach. After my passion for mobile, I discovered Front-End Web development, and now I specialize in React. I always begin with a theoretical approach 🤓 before putting it into practice 👨🏻‍💻.",
+        `I’ve always been passionate about mobile development. I started out with iOS, then moved on to a hybrid approach with Flutter. I’ve been building apps professionally with Flutter since its first release in 2018.
+After my love for mobile development, I also developed a strong interest in Web Front-End, and I’m now specialized in React as well.Whenever I approach something new, I like to begin with some theoretical study 🤓, do an analysis, and then put everything into practice 👨🏻‍💻.`,
     curriculum: "Curriculum",
 
     // ------------------- projects -------------------
+    // dart_time
+    dartTimeDesc: "A comprehensive Dart library that extends and enhances Dart's built-in time functionality. This library provides powerful extensions to DateTime and Duration, plus specialized classes for advanced time operations.",
     // crdt
     crdtDesc: "A project for managing conflict free replicated data. It is divided into several libraries:",
     hlcDartDesc: "A library that implements the HLC (Hybrid Logical Clock) protocol for managing replicated data.",
@@ -90,17 +93,18 @@ const en = {
     flutterDI: `One of the 5 SOLI D principles capitulates that a high-level module should depend only on abstract class not on the implementation. This leads to less coupling between modules. In this article we will focus on how to apply this pattern in flutter.`,
 
     // ------------------- experiences -------------------
-    mvExperience: "WEB AND MOBILE APPLICATION DESIGNER AND DEVELOPER",
-    mvExperienceWeb:
-        "Specialized in developing web applications, primarily utilizing the following technologies/tools: TypeScript, React, Vite, TurboRepo.",
-    mvExperienceMob:
-        "While mobile applications are primarily developed using Dart/Flutter.",
+    mvExperience: "MOB & WEB Engineer",
+    mvExperienceDesc: `I’m the team lead for both the mobile (MOB) and web (WEB) environments. In my role, I’m responsible for application analysis and design, organizing and dividing work within the team, and providing technical training.
+In both areas, I oversee the company’s core product as well as consulting or development projects commissioned by other companies.`,
+    mvExperienceWeb: `On the web side, the main stack I’ve chosen includes:
+TypeScript as the language, React as the library, React Router as the framework, Inversify for dependency injection, Redux for global state, Reducer + Immer + Yup for business logic, Vite as the bundler, and Turborepo for monorepo management.`,
+    mvExperienceMob: `On the mobile side, the main stack I’ve chosen to use for app development includes Dart/Flutter as the primary language and framework, GetIt + Injectable for dependency injection, BLoC for application business logic, Hive/Hive_CE for data persistence, and Melos for monorepo management.`,
     tecnotronicaExperience:
         "DESIGNER AND DEVELOPER OF A WEB CONNECTOR FOR THE PROXFLOW APPLICATION",
     tecnotronicaExperienceDesc:
-        " Technologies used in the development of the WEB connector for ProXFlow:",
-    tecnotronicaExperienceDescWeb: "Development of a Web-App in dart/flutter.",
-    tecnotronicaExperienceDescBe: "Development of a Back-End in dart",
+        `I designed and developed a connector for the ProxFlow application. The connector was split into a:`,
+    tecnotronicaExperienceDescBe: "Back-End developed in Dart using principally with dart_frog",
+    tecnotronicaExperienceDescWeb: "A Web-App built with React. Initially, the client was also supposed to be developed in Dart/Flutter, but Dart’s interoperability with JavaScript — especially for complex tasks like displaying large PDF files (sometimes up to 100 MB) — was not yet mature enough for a production-grade application.",
     archeidoExperience: "iOS Mobile Developer",
     fillInTheBlanksExperience: "Employee",
 
@@ -133,7 +137,7 @@ const en = {
     mobile: "Mobile",
     web: "Web",
     javascript: "Javascript",
-    
+
     // ------------------- passions -------------------
     passionsCode:
         "I love designing, programming, and always finding new challenges to push myself.",
@@ -144,12 +148,11 @@ const en = {
     passionNerd: "I also love Marvel, Star Wars, and Naruto 🍥!",
 
     // ------------------- skills -------------------
-    skillReactDesc: "Advanced expertise in React, TypeScript, and modern web development. Building scalable and performant applications.",
-    skillFlutterDesc: "Deep knowledge of Flutter and Dart for cross-platform mobile development. Published multiple apps and packages.",
-    skillJavaScriptDesc: "Strong proficiency in JavaScript ecosystem, Node.js, and modern frameworks. Experience with both frontend and backend.",
-    skillGitDesc: "Expert in version control, Git workflows, and CI/CD pipelines. Implementing automated deployment strategies.",
-    skillUIUXDesc: "Good understanding of design principles, user experience, and modern UI patterns. Creating intuitive interfaces.",
-
+    skillDartDesc: "Advanced expertise in Dart since 2018. I follow language releases closely, apply them in personal projects, blog posts, and professional work. My largest personal Dart project is a CRDT system.",
+    skillFlutterDesc: "Expert in Flutter application development, particularly for mobile platforms (Android/iOS). Strong focus on cross-platform consistency and performance.",
+    skillJsTsDesc: "I develop almost exclusively in TypeScript (not JavaScript) because I believe it leads to more maintainable code over time and within teams. I leverage TypeScript's full potential for composing complex data structures.",
+    skillReactDesc: "Expert in building web applications with React and React Router. I've examined React's source code multiple times to fully understand its inner workings. I've written blog posts about it.",
+    skillPythonDesc: "Primarily used for training, fine-tuning, and serving artificial intelligence models.",
     present: "Present",
     library: "library",
     talk: "talk",
@@ -159,4 +162,4 @@ const en = {
     viewMore: "View More"
 };
 
-export {en};
+export { en };

@@ -4,6 +4,12 @@ import { ProjectModel } from "./model";
 
 const projects: (t: LanguageResolver) => ProjectModel[] = (t) => [
   {
+    title: "Dart Time",
+    hashtags: [t("library"), "dart"],
+    link: "https://pub.dev/packages/dart_time",
+    description: t("dartTimeDesc"),
+  },
+  {
     title: "CRDT",
     hashtags: [t("library"), "dart"],
     link: "https://pub.dev/packages/crdt_lf",

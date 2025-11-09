@@ -6,10 +6,14 @@ const experiences: (t: LanguageResolver) => ExperienceModel[] = (t) => [
   {
     application: t("mvExperience"),
     company: "MVLabs",
+    companyLink: "https://mvlabs.it/",
     description: (
       <>
-        <Text>{t("mvExperienceWeb")}</Text>
+        <Text>{t("mvExperienceDesc")}</Text>
+        <br />
         <Text>{t("mvExperienceMob")}</Text>
+        <br />
+        <Text>{t("mvExperienceWeb")}</Text>
       </>
     ),
     start: "2021-02-01",
@@ -18,6 +22,7 @@ const experiences: (t: LanguageResolver) => ExperienceModel[] = (t) => [
   {
     application: t("tecnotronicaExperience"),
     company: "TECNOTRONICA S.A.S.",
+    companyLink: "https://www.tecnotronica.net/",
     description: (
       <div>
         <>
@@ -25,8 +30,8 @@ const experiences: (t: LanguageResolver) => ExperienceModel[] = (t) => [
           <List
             items={
               [
-                "tecnotronicaExperienceDescWeb",
                 "tecnotronicaExperienceDescBe",
+                "tecnotronicaExperienceDescWeb",
               ] as const
             }
           >
@@ -42,6 +47,7 @@ const experiences: (t: LanguageResolver) => ExperienceModel[] = (t) => [
   {
     application: t("archeidoExperience"),
     company: "Archeido",
+    companyLink: "https://archeido.com/it",
     start: "2019-07-01",
     end: "2020-03-01",
     type: "work",

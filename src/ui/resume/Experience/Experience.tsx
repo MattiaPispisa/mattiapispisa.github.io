@@ -16,6 +16,7 @@ function Experience() {
               key={i}
               title={experience.application}
               subtitle={experience.company}
+              link={experience.companyLink}
               description={experience.description}
               trailing={formatDateRange(experience.start, experience.end, {
                 language,

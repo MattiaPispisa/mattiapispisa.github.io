@@ -3,31 +3,51 @@ import { SkillModel } from "./model";
 
 const skillsData = (t: LanguageResolver): SkillModel[] => [
   {
-    title: "React & TypeScript",
-    description: t("skillReactDesc"),
+    title: "Dart",
+    description: t("skillDartDesc"),
     level: 5,
   },
   {
-    title: "Flutter & Dart",
+    title: "Flutter",
     description: t("skillFlutterDesc"),
     level: 5,
   },
   {
-    title: "JavaScript & Node.js",
-    description: t("skillJavaScriptDesc"),
+    title: "Javascript & Typescript",
+    description: t("skillJsTsDesc"),
+    level: 5,
+  },
+  {
+    title: "React & React Router",
+    description: t("skillReactDesc"),
+    level: 5,
+  },
+  {
+    title: "Python",
+    description: t("skillPythonDesc"),
+    level: 3.5,
+  },
+  {
+    title: "Android",
     level: 4.5,
   },
   {
-    title: "Git & CI/CD",
-    description: t("skillGitDesc"),
-    level: 4,
+    title: "iOS",
+    level: 3.5,
+  },
+
+  {
+    title: "SQL",
+    level: 3.5,
   },
   {
-    title: "UI/UX Design",
-    description: t("skillUIUXDesc"),
+    title: "Java",
+    level: 3.5,
+  },
+  {
+    title: "C#",
     level: 3.5,
   },
 ];
 
 export default skillsData;
-
