@@ -17,7 +17,8 @@ function Title(props: Props) {
             uppercase={true}
             bold={true}
             type="h1"
-            className={`text-6xl md:text-8xl print:text-4xl print:mb-3 ${props.className ?? ''}`}>
+            size="6xl"
+            className={`print:mb-3 ${props.className ?? ''}`}>
             {children}
         </Text>
     );

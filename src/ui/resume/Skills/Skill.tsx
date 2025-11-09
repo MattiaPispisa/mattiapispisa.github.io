@@ -21,7 +21,8 @@ function Skill(props: Props) {
       <div className="flex justify-between items-baseline gap-2">
         <Text
           type="h3"
-          className="text-lg font-bold uppercase print:text-base break-words min-w-0 flex-1"
+          size="lg"
+          className="font-bold uppercase break-words min-w-0 flex-1"
         >
           {title}
         </Text>
@@ -29,7 +30,7 @@ function Skill(props: Props) {
           type="span"
           semantic="secondary"
           size="xs"
-          className="print:text-xs whitespace-nowrap flex-shrink-0"
+          className="whitespace-nowrap flex-shrink-0"
         >
           {level}/5
         </Text>
@@ -43,7 +44,7 @@ function Skill(props: Props) {
       </div>
 
       {description && (
-        <Text className="text-sm print:text-xs break-words">{description}</Text>
+        <Text size="sm" className="break-words">{description}</Text>
       )}
 
       {hasMicroskills && (

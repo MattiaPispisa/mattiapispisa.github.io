@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Code block wrapping */
+code, pre {
+  white-space: pre-wrap !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+}
+
 /* Print styles for PDF export */
 @media print {
   /* Page setup */
@@ -37,11 +45,15 @@
     height: auto !important;
     display: block !important;
     page-break-inside: auto !important;
+    page-break-before: always !important;
+    break-before: page !important;
   }
   
-  /* Optimize first section */
+  /* Optimize first section - don't force page break */
   section:first-of-type {
     padding-top: 0.5rem !important;
+    page-break-before: avoid !important;
+    break-before: avoid !important;
   }
   
   /* Optimize last section */
@@ -99,14 +111,17 @@
 
   /* Optimize text rendering */
   h1, h2, h3, h4, h5, h6 {
-    page-break-after: avoid;
-    page-break-inside: avoid;
+    page-break-after: avoid !important;
+    page-break-inside: avoid !important;
+    break-after: avoid !important;
+    break-inside: avoid !important;
   }
   
   /* Compact h2 specifically */
   h2 {
     margin-bottom: 0.5rem !important;
-    page-break-after: avoid;
+    page-break-after: avoid !important;
+    break-after: avoid !important;
   }
 
   /* Optimize lists and paragraphs */

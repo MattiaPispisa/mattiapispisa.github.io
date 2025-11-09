@@ -36,7 +36,7 @@ function BookCard({ book, className = "" }: Props) {
       {/* Print view - simple list item */}
       <div className="hidden print:block print:mb-2">
         <A href={book.link} className="print:no-underline">
-          <Text type="span" className="font-semibold text-sm print:text-black">
+          <Text type="span" size="sm" className="font-semibold print:text-black">
             {book.title}
           </Text>
           <Text type="span" semantic="secondary" size="xs" className="ml-2 print:text-gray-600">
