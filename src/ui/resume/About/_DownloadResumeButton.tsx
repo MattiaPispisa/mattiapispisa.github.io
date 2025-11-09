@@ -1,14 +1,21 @@
 import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useCallback } from "react";
+import { resumeIt, resumeEn } from "../../../constants";
 import { useTranslation } from "react-i18next";
 
 const DownloadResumeButton = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const language = i18n.language;
 
   const handleDownload = useCallback(() => {
-    window.print();
-  }, []);
+    const link = document.createElement("a");
+    link.href = _getResumeUrl(language);
+    link.setAttribute("download", `resume_${language}.pdf`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }, [language]);
 
   return (
     <button
@@ -22,5 +29,12 @@ const DownloadResumeButton = () => {
     </button>
   );
 };
+
+function _getResumeUrl(language: string) {
+  if (language.toLowerCase().includes("it")) {
+    return resumeIt;
+  }
+  return resumeEn;
+}
 
 export default DownloadResumeButton;
