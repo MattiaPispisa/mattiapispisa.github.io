@@ -3,6 +3,7 @@ const en = {
     about: "About",
     post: "Post",
     project: "Projects",
+    skills: "Skills",
     experience: "Experience",
     education: "Education",
     passions: "Passions",
@@ -141,6 +142,14 @@ const en = {
     passionGym:
         "I often go to the gym 🏋🏻‍♀️ and together with some friends, I manage a page dedicated to organizing mountain excursions 🏔️. Follow it too:",
     passionNerd: "I also love Marvel, Star Wars, and Naruto 🍥!",
+
+    // ------------------- skills -------------------
+    skillReactDesc: "Advanced expertise in React, TypeScript, and modern web development. Building scalable and performant applications.",
+    skillFlutterDesc: "Deep knowledge of Flutter and Dart for cross-platform mobile development. Published multiple apps and packages.",
+    skillJavaScriptDesc: "Strong proficiency in JavaScript ecosystem, Node.js, and modern frameworks. Experience with both frontend and backend.",
+    skillGitDesc: "Expert in version control, Git workflows, and CI/CD pipelines. Implementing automated deployment strategies.",
+    skillUIUXDesc: "Good understanding of design principles, user experience, and modern UI patterns. Creating intuitive interfaces.",
+
     present: "Present",
     library: "library",
     talk: "talk",

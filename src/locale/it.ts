@@ -3,6 +3,7 @@ const it = {
     about: "Su di me",
     post: "Post",
     project: "Progetti",
+    skills: "Competenze",
     experience: "Esperienze",
     education: "Formazione",
     passions: "Passioni",
@@ -141,6 +142,14 @@ const it = {
     passionGym:
         "Vado spesso in palestra 🏋🏻‍♀️ e gestisco insieme ad altri miei amici una pagina dedicata all'organizzazione di escursioni in montagna 🏔️, seguitela anche voi:",
     passionNerd: "Adoro la Marvel, Star Wars e Naruto 🍥!",
+
+    // ------------------- skills -------------------
+    skillReactDesc: "Competenza avanzata in React, TypeScript e sviluppo web moderno. Costruzione di applicazioni scalabili e performanti.",
+    skillFlutterDesc: "Profonda conoscenza di Flutter e Dart per lo sviluppo mobile multipiattaforma. Pubblicati molteplici app e pacchetti.",
+    skillJavaScriptDesc: "Solida padronanza dell'ecosistema JavaScript, Node.js e framework moderni. Esperienza sia frontend che backend.",
+    skillGitDesc: "Esperto in controllo di versione, workflow Git e pipeline CI/CD. Implementazione di strategie di deployment automatizzato.",
+    skillUIUXDesc: "Buona comprensione dei principi di design, esperienza utente e pattern UI moderni. Creazione di interfacce intuitive.",
+
     present: "Adesso",
     library: "libreria",
     talk: "presentazione",
