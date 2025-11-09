@@ -11,14 +11,7 @@ export default function Skills() {
       <SubTitle>{t("skills")}</SubTitle>
       <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 print:grid-cols-2 print:gap-4">
         {skillsData(t).map((skill, i: number) => {
-          return (
-            <Skill
-              key={i}
-              title={skill.title}
-              description={skill.description}
-              level={skill.level}
-            />
-          );
+          return <Skill key={i} skill={skill} />;
         })}
       </div>
     </>

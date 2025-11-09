@@ -6,11 +6,20 @@ const skillsData = (t: LanguageResolver): SkillModel[] => [
     title: "Dart",
     description: t("skillDartDesc"),
     level: 5,
+    microskills: [
+      "code_generation",
+      "dart_frog",
+      "rx_dart",
+      "melos",
+      "hive",
+      "get_it",
+    ],
   },
   {
     title: "Flutter",
     description: t("skillFlutterDesc"),
     level: 5,
+    microskills: ["bloc_pattern", "animations", "platform_channels"],
   },
   {
     title: "Javascript & Typescript",
@@ -26,6 +35,7 @@ const skillsData = (t: LanguageResolver): SkillModel[] => [
     title: "Python",
     description: t("skillPythonDesc"),
     level: 3.5,
+    microskills: ["pytorch", "tensorflow", "scikit-learn", "pandas"],
   },
   {
     title: "Android",

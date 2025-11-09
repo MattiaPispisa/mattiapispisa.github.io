@@ -144,11 +144,12 @@ const it = {
     passionNerd: "Adoro la Marvel, Star Wars e Naruto 🍥!",
 
     // ------------------- skills -------------------
-    skillReactDesc: "Competenza avanzata in React, TypeScript e sviluppo web moderno. Costruzione di applicazioni scalabili e performanti.",
-    skillFlutterDesc: "Profonda conoscenza di Flutter e Dart per lo sviluppo mobile multipiattaforma. Pubblicati molteplici app e pacchetti.",
-    skillJavaScriptDesc: "Solida padronanza dell'ecosistema JavaScript, Node.js e framework moderni. Esperienza sia frontend che backend.",
-    skillGitDesc: "Esperto in controllo di versione, workflow Git e pipeline CI/CD. Implementazione di strategie di deployment automatizzato.",
-    skillUIUXDesc: "Buona comprensione dei principi di design, esperienza utente e pattern UI moderni. Creazione di interfacce intuitive.",
+    skillDartDesc: "Competenza avanzata in Dart dal 2018. Seguo da vicino le release del linguaggio, le applico nei progetti personali, nei post del blog e nel lavoro professionale. Il mio progetto personale più grande in Dart è un sistema CRDT.",
+    skillFlutterDesc: "Esperto nello sviluppo di applicazioni Flutter, in particolare per piattaforme mobile (Android/iOS). Focus su consistenza cross-platform e performance.",
+    skillJsTsDesc: "Sviluppo quasi esclusivamente in TypeScript (non JavaScript) perché ritengo che porti a codice più manutenibile nel tempo e all'interno dei team. Sfrutto il pieno potenziale di TypeScript per comporre strutture dati complesse.",
+    skillReactDesc: "Esperto nella realizzazione di applicazioni web con React e React Router. Ho esaminato il codice sorgente di React più volte per comprenderne a fondo il funzionamento interno. Ho scritto post al riguardo.",
+    skillPythonDesc: "Utilizzato principalmente per l'addestramento, il fine-tuning e il serving di modelli di intelligenza artificiale.",
+    moreDetail: "più dettagli",
 
     present: "Adesso",
     library: "libreria",
