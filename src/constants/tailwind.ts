@@ -16,7 +16,7 @@ const semanticToTextClass: Record<Semantic, string> = {
   primary: "text-primary dark:text-primary-dark",
   light: "text-light",
   dark: "text-dark",
-  secondary: "text-gray-600 dark:text-gray-400",
+  secondary: "text-gray-600 dark:text-gray-400 print:text-gray-600",
 };
 
 const semanticToHoverTextClass: Record<PrimarySemantic, string> = {

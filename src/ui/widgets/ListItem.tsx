@@ -76,7 +76,7 @@ function ListTitle(props: Pick<Props, "title">) {
 
   if (typeof title === "string") {
     return (
-        <Text type="h3" className="uppercase text-2xl font-bold ">
+        <Text type="h3" className="uppercase text-2xl font-bold print:text-xl">
           {props.title}
         </Text>
     );

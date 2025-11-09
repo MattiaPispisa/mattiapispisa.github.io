@@ -12,7 +12,8 @@ const allBooksValue = "all";
 
 function BooksRead() {
   const { t } = useAppTranslation();
-  const { selectedTag, setSelectedTag, filteredBooks, tags } = useBooks();
+  const { selectedTag, setSelectedTag, filteredBooks, tags, allBooks } =
+    useBooks();
 
   const selectOptions = useMemo<SelectOptionProps[]>(() => {
     return [
@@ -27,8 +28,8 @@ function BooksRead() {
   return (
     <>
       <SubTitle>{t("booksRead")}</SubTitle>
-
-      <div className="mb-8">
+      <Text size="xs" semantic="secondary" className="mb-4">{t("booksReadDesc")}</Text>
+      <div className="mb-8 print:hidden">
         <div className="max-w-xs">
           <Select
             options={selectOptions}
@@ -38,6 +39,7 @@ function BooksRead() {
         </div>
       </div>
 
+      {/* Normal view - Grid */}
       <_Grid>
         {filteredBooks.map((book, index) => (
           <BookCard
@@ -47,6 +49,17 @@ function BooksRead() {
           />
         ))}
       </_Grid>
+
+      {/* Print view - Simple list */}
+      <div className="hidden print:block print:space-y-1">
+        {allBooks.map((book, index) => (
+          <BookCard
+            key={`${book.title}-${index}-print`}
+            book={book}
+            className=""
+          />
+        ))}
+      </div>
 
       {filteredBooks.length === 0 && <_NoBooksFound />}
     </>
@@ -69,6 +82,7 @@ function useBooks() {
   }, [selectedTag, allBooks]);
 
   return {
+    allBooks,
     selectedTag,
     setSelectedTag,
     filteredBooks,
@@ -78,7 +92,7 @@ function useBooks() {
 
 function _Grid({ children }: { children: JSX.Element[] }) {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 print:hidden">
       {children}
     </div>
   );

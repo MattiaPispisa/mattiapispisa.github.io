@@ -11,10 +11,12 @@ const it = {
 
     // ------------------- about me -------------------
     myInfo:
-        "Sono sempre stato appassionato di sviluppo mobile. Ho iniziato con iOS per poi passare ad un approccio ibrido. Dopo la passione per il mobile è arrivata quella per sviluppo Web Front-End e ora sono anche specializzo in React. Inizio sempre con uno studio teorico 🤓 per poi metterlo in pratica 👨🏻‍💻.",
+        "Sono sempre stato appassionato di sviluppo mobile. Ho iniziato con iOS, per poi passare a un approccio ibrido con Flutter. Sviluppo applicazioni professionalmente con Flutter dal suo primo rilascio nel 2018.\nDopo la passione per il mobile, ho sviluppato anche un forte interesse per il Web Front-End, e ora sono specializzato anche in React. Quando mi approccio a qualcosa di nuovo, mi piace iniziare con uno studio teorico 🤓, fare un'analisi, e poi mettere tutto in pratica 👨🏻‍💻.",
     curriculum: "Curriculum",
 
     // ------------------- projects -------------------
+    // dart_time
+    dartTimeDesc: "Una libreria Dart completa che estende e potenzia le funzionalità temporali native di Dart. Questa libreria fornisce potenti estensioni per DateTime e Duration, oltre a classi specializzate per operazioni temporali avanzate.",
     // crdt
     crdtDesc: "Un progetto per la gestione di dati replicabili senza risoluzione di conflitti. Si suddivide in alcune librerie:",
     hlcDartDesc: "Una libreria che implementa il protocollo HLC (Hybrid Logical Clock) per la gestione di dati replicabili.",
@@ -91,17 +93,18 @@ const it = {
   Questo porta ad un minor accoppiamento tra i moduli. In questo articolo ci concentreremo su come applicare questo pattern in flutter.`,
 
     // ------------------- experiences -------------------
-    mvExperience: "Progettista e sviluppatore di applicazioni web e mobile",
-    mvExperienceWeb:
-        "Specializzato nello sviluppo di applicazioni web, utilizzando principalmente le seguenti tecnologie/strumenti: TypeScript, React, Vite, TurboRepo.",
-    mvExperienceMob:
-        "Mentre le applicazioni mobili le sviluppo principalmente utilizzando Dart/Flutter.",
+    mvExperience: "Ingegnere MOB & WEB",
+    mvExperienceDesc: `Sono il team lead per entrambi gli ambienti mobile (MOB) e web (WEB). Nel mio ruolo, sono responsabile dell'analisi e progettazione delle applicazioni, dell'organizzazione e divisione del lavoro all'interno del team, e della formazione tecnica.
+In entrambe le aree, supervisiono il prodotto principale dell'azienda, così come progetti di consulenza o sviluppo commissionati da altre aziende.`,
+    mvExperienceWeb: `Lato web, lo stack principale che ho scelto include:
+TypeScript come linguaggio, React come libreria, React Router come framework, Inversify per la dependency injection, Redux per lo stato globale, Reducer + Immer + Yup per la business logic, Vite come bundler, e Turborepo per la gestione del monorepo.`,
+    mvExperienceMob: `Lato mobile, lo stack principale che ho scelto per lo sviluppo delle app include Dart/Flutter come linguaggio e framework principale, GetIt + Injectable per la dependency injection, BLoC per la business logic dell'applicazione, Hive/Hive_CE per la persistenza dei dati, e Melos per la gestione del monorepo.`,
     tecnotronicaExperience:
-        "Progettista e sviluppatore di un connettore Web per l'applicativo ProXFlow",
+        "PROGETTISTA E SVILUPPATORE DI UN CONNETTORE WEB PER L'APPLICAZIONE PROXFLOW",
     tecnotronicaExperienceDesc:
-        "Tecnologie utilizzate per lo sviluppo del connettore WEB per il ProXFlow:",
-    tecnotronicaExperienceDescWeb: "Sviluppo di un Web-App in dart/flutter",
-    tecnotronicaExperienceDescBe: "Sviluppo di un Back-End in dart",
+        `Ho progettato e sviluppato un connettore per l'applicazione ProxFlow. Il connettore è stato suddiviso in:`,
+    tecnotronicaExperienceDescBe: "Back-End sviluppato in Dart utilizzando principalmente dart_frog",
+    tecnotronicaExperienceDescWeb: "Una Web-App realizzata con React. Inizialmente, il client doveva essere sviluppato anche in Dart/Flutter, ma l'interoperabilità di Dart con JavaScript — specialmente per compiti complessi come la visualizzazione di file PDF di grandi dimensioni (a volte fino a 100 MB) — non era ancora abbastanza matura per un'applicazione di livello produttivo.",
     archeidoExperience: "Sviluppatore Mobile iOS",
     fillInTheBlanksExperience: "Impiegato",
 
@@ -117,6 +120,7 @@ const it = {
     diplomaText: "Diploma in telecomunicazioni",
 
     // ------------------- books read -------------------
+    booksReadDesc: "Una raccolta dei miei libri preferiti che ho letto. L'elenco non è ancora completo, ma continuerò ad aggiungerne altri nel tempo.",
     allBooks: "Tutti",
     noBooksFound: "Nessun libro trovato per la categoria selezionata.",
     programming: "Programmazione",
@@ -148,7 +152,7 @@ const it = {
     skillFlutterDesc: "Esperto nello sviluppo di applicazioni Flutter, in particolare per piattaforme mobile (Android/iOS). Focus su consistenza cross-platform e performance.",
     skillJsTsDesc: "Sviluppo quasi esclusivamente in TypeScript (non JavaScript) perché ritengo che porti a codice più manutenibile nel tempo e all'interno dei team. Sfrutto il pieno potenziale di TypeScript per comporre strutture dati complesse.",
     skillReactDesc: "Esperto nella realizzazione di applicazioni web con React e React Router. Ho esaminato il codice sorgente di React più volte per comprenderne a fondo il funzionamento interno. Ho scritto post al riguardo.",
-    skillPythonDesc: "Utilizzato principalmente per l'addestramento, il fine-tuning e il serving di modelli di intelligenza artificiale.",
+    skillPythonDesc: "Utilizzato principalmente per l'addestramento, il fine-tuning e per servire i modelli di intelligenza artificiale.",
     moreDetail: "più dettagli",
 
     present: "Adesso",

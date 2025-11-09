@@ -121,6 +121,7 @@ TypeScript as the language, React as the library, React Router as the framework,
     diplomaText: "Diploma in telecommunications",
 
     // ------------------- books read -------------------
+    booksReadDesc: "A collection of my favorite books I've read. The list isn't complete yet, but I'll keep adding more over time.",
     allBooks: "All",
     noBooksFound: "No books found for the selected category.",
     programming: "Programming",

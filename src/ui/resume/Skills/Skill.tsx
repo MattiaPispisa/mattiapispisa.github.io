@@ -74,7 +74,7 @@ function Skill(props: Props) {
                 type="span"
                 size="xs"
                 semantic="secondary"
-                className="bg-gray-100 dark:bg-gray-800 px-2 py-0.5 rounded print:bg-transparent print:border print:border-gray-400 print:text-gray-600"
+                className="bg-gray-100 dark:bg-gray-800 px-2 py-0.5 rounded print:bg-transparent print:border print:border-gray-400 "
               >
                 {microskill}
               </Text>

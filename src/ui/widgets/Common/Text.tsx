@@ -15,7 +15,7 @@ type Props = {
 };
 
 const textSizeClass: Record<TextSize, string> = {
-  xs: "text-xs",
+  xs: "text-xs print:text-xs",
 };
 
 function Text({
