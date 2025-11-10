@@ -97,14 +97,14 @@ After my love for mobile development, I also developed a strong interest in Web 
     mvExperienceDesc: `I’m the team lead for both the mobile (MOB) and web (WEB) environments. In my role, I’m responsible for application analysis and design, organizing and dividing work within the team, and providing technical training.
 In both areas, I oversee the company’s core product as well as consulting or development projects commissioned by other companies.`,
     mvExperienceWeb: `On the web side, the main stack I’ve chosen includes:
-TypeScript as the language, React as the library, React Router as the framework, Inversify for dependency injection, Redux for global state, Reducer + Immer + Yup for business logic, Vite as the bundler, and Turborepo for monorepo management.`,
-    mvExperienceMob: `On the mobile side, the main stack I’ve chosen to use for app development includes Dart/Flutter as the primary language and framework, GetIt + Injectable for dependency injection, BLoC for application business logic, Hive/Hive_CE for data persistence, and Melos for monorepo management.`,
+TypeScript as the language, react as the library, react router as the framework, inversify for dependency injection, redux for global state, reducer + immer + yup for business logic, vite as the bundler, and turborepo for monorepo management.`,
+    mvExperienceMob: `On the mobile side, the main stack I’ve chosen to use for app development includes dart/flutter as the primary language and framework, get_it + injectable for dependency injection, bloc for application business logic, hive/hive_ce for data persistence, and melos for monorepo management.`,
     tecnotronicaExperience:
         "DESIGNER AND DEVELOPER OF A WEB CONNECTOR FOR THE PROXFLOW APPLICATION",
     tecnotronicaExperienceDesc:
         `I designed and developed a connector for the ProxFlow application. The connector was split into a:`,
-    tecnotronicaExperienceDescBe: "Back-End developed in Dart using principally with dart_frog",
-    tecnotronicaExperienceDescWeb: "A Web-App built with React. Initially, the client was also supposed to be developed in Dart/Flutter, but Dart’s interoperability with JavaScript — especially for complex tasks like displaying large PDF files (sometimes up to 100 MB) — was not yet mature enough for a production-grade application.",
+    tecnotronicaExperienceDescBe: "Back-End developed in dart using principally with dart_frog",
+    tecnotronicaExperienceDescWeb: "A Web-App built with react. Initially, the client was also supposed to be developed in dart/flutter, but dart’s interoperability with javascript — especially for complex tasks like displaying large PDF files (sometimes up to 100 MB) — was not yet mature enough for a production-grade application.",
     archeidoExperience: "iOS Mobile Developer",
     fillInTheBlanksExperience: "Employee",
 

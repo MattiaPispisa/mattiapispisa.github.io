@@ -93,18 +93,18 @@ const it = {
   Questo porta ad un minor accoppiamento tra i moduli. In questo articolo ci concentreremo su come applicare questo pattern in flutter.`,
 
     // ------------------- experiences -------------------
-    mvExperience: "Ingegnere MOB & WEB",
+    mvExperience: "Progettista e Sviluppatore MOB & WEB",
     mvExperienceDesc: `Sono il team lead per entrambi gli ambienti mobile (MOB) e web (WEB). Nel mio ruolo, sono responsabile dell'analisi e progettazione delle applicazioni, dell'organizzazione e divisione del lavoro all'interno del team, e della formazione tecnica.
 In entrambe le aree, supervisiono il prodotto principale dell'azienda, così come progetti di consulenza o sviluppo commissionati da altre aziende.`,
     mvExperienceWeb: `Lato web, lo stack principale che ho scelto include:
-TypeScript come linguaggio, React come libreria, React Router come framework, Inversify per la dependency injection, Redux per lo stato globale, Reducer + Immer + Yup per la business logic, Vite come bundler, e Turborepo per la gestione del monorepo.`,
-    mvExperienceMob: `Lato mobile, lo stack principale che ho scelto per lo sviluppo delle app include Dart/Flutter come linguaggio e framework principale, GetIt + Injectable per la dependency injection, BLoC per la business logic dell'applicazione, Hive/Hive_CE per la persistenza dei dati, e Melos per la gestione del monorepo.`,
+TypeScript come linguaggio, react come libreria, react router come framework, inversify per la dependency injection, redux per lo stato globale, reducer + immer + yup per la business logic, vite come bundler, e turborepo per la gestione del monorepo.`,
+    mvExperienceMob: `Lato mobile, lo stack principale che ho scelto per lo sviluppo delle app include dart/flutter come linguaggio e framework principale, get_it + injectable per la dependency injection, bloc per la business logic dell'applicazione, hive/hive_ce per la persistenza dei dati, e melos per la gestione del monorepo.`,
     tecnotronicaExperience:
         "PROGETTISTA E SVILUPPATORE DI UN CONNETTORE WEB PER L'APPLICAZIONE PROXFLOW",
     tecnotronicaExperienceDesc:
         `Ho progettato e sviluppato un connettore per l'applicazione ProxFlow. Il connettore è stato suddiviso in:`,
-    tecnotronicaExperienceDescBe: "Back-End sviluppato in Dart utilizzando principalmente dart_frog",
-    tecnotronicaExperienceDescWeb: "Una Web-App realizzata con React. Inizialmente, il client doveva essere sviluppato anche in Dart/Flutter, ma l'interoperabilità di Dart con JavaScript — specialmente per compiti complessi come la visualizzazione di file PDF di grandi dimensioni (a volte fino a 100 MB) — non era ancora abbastanza matura per un'applicazione di livello produttivo.",
+    tecnotronicaExperienceDescBe: "Back-End sviluppato in dart utilizzando principalmente dart_frog",
+    tecnotronicaExperienceDescWeb: "Una Web-App realizzata con react. Inizialmente, il client doveva essere sviluppato anche in dart/flutter, ma l'interoperabilità di dart con javascript — specialmente per compiti complessi come la visualizzazione di file PDF di grandi dimensioni (a volte fino a 100 MB) — non era ancora abbastanza matura per un'applicazione di livello produttivo.",
     archeidoExperience: "Sviluppatore Mobile iOS",
     fillInTheBlanksExperience: "Impiegato",
 
