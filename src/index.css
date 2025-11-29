@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Dark mode background for html and body */
+html.dark,
+html.dark body {
+  background-color: theme('colors.slate.900');
+}
+
+html:not(.dark),
+html:not(.dark) body {
+  background-color: theme('colors.light');
+}
+
 /* Code block wrapping */
 code, pre {
   white-space: pre-wrap !important;

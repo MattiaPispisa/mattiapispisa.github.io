@@ -2,7 +2,7 @@ import { useCallback, useMemo, useEffect, useState } from "react";
 import { provide } from "../../functions";
 import { useLocalStorage } from "usehooks-ts";
 
-const themeModes = ['light', 'dark', 'system']
+const themeModes = ['light', 'dark', 'system'] as const;
 type ThemeMode = typeof themeModes[number];
 
 interface DarkModeContextType {
@@ -31,22 +31,34 @@ function _useDarkMode(): DarkModeContextType {
   }, [setThemeMode]);
 
   const darkMode = useMemo(() => {
-    if (themeMode === "light") return false;
-    if (themeMode === "dark") return true;
+    if (themeMode === "light") {
+      return false;
+    }
+    if (themeMode === "dark") {
+      return true;
+    }
     return darkPreference;
   }, [themeMode, darkPreference]);
+
+  // Apply dark class to html element
+  useEffect(() => {
+    if (darkMode) {
+      return document.documentElement.classList.add("dark");
+    }
+    document.documentElement.classList.remove("dark");
+  }, [darkMode]);
 
   return { themeMode, darkMode, toggleThemeMode };
 }
 
-const _deserializer = (value: string) => {
-  if (themeModes.includes(value)) {
-    return value;
+const _deserializer = (value: string): ThemeMode => {
+  if (themeModes.includes(value as ThemeMode)) {
+    return value as ThemeMode;
   }
   return "system";
 }
 
-const _serializer = (value: ThemeMode) => {
+const _serializer = (value: ThemeMode): string => {
   if (themeModes.includes(value)) {
     return value;
   }
