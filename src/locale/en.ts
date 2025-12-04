@@ -70,6 +70,9 @@ After my love for mobile development, I also developed a strong interest in Web 
         'An exercise on "algorithms and data structures" completed during my bachelor\'s degree in computer science.',
 
     // ------------------- posts -------------------
+    // workspaces react and vite
+    workspacesReactAndViteDesc: "How to manage a npm workspace avoiding duplicate libraries.",
+
     // go router navigation observer
     goRouterNavigationObserverDesc: "How to implement a navigation observer with Go Router.",
 

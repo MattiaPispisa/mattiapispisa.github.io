@@ -4,6 +4,19 @@ import { DevToArticleDetail } from "../../widgets";
 
 const posts: (t: LanguageResolver) => PostModel[] = (t) => [
   {
+    link: "https://dev.to/mattia/workspaces-react-and-vite-a-real-world-case-study-for-managing-duplicate-libraries-4ojb",
+    title:
+      "Workspaces, react and vite. A real-world case study for managing duplicate libraries.",
+    description: (
+      <DevToArticleDetail
+        id={3084640}
+        description={t("workspacesReactAndViteDesc")}
+      />
+    ),
+    date: "2025-12-04",
+    hashtags: ["react", "javascript", "workspace"],
+  },
+  {
     link: "https://dev.to/mattia/go-router-navigation-observer-1gj4",
     title: "Go Router Navigation Observer",
     description: (

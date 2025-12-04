@@ -67,6 +67,9 @@ const it = {
         'Un esercizio di "algoritmi e strutture dati" svolto durante la laurea di informatica.',
 
     // ------------------- posts -------------------
+    // workspaces react and vite
+    workspacesReactAndViteDesc: "Come gestire un workspace npm evitando la duplicazione di librerie.",
+
     goRouterNavigationObserverDesc: "Come implementare un observer per la navigazione con Go Router.",
 
     // efficient logging in applications
