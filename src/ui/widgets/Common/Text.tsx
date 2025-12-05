@@ -4,7 +4,7 @@ import { Semantic, semanticToTextClass } from "../../../constants";
 
 type TextSize = "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl";
 
-type Props = {
+type TextProps = {
   type?: keyof ReactHTML;
   className?: string;
   semantic?: Semantic;
@@ -35,7 +35,7 @@ function Text({
   bold,
   size,
   ...props
-}: Props) {
+}: TextProps) {
   return React.createElement(
     type,
     {
@@ -49,4 +49,5 @@ function Text({
   );
 }
 
+export type { TextProps };
 export default Text;

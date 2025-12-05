@@ -1,27 +1,24 @@
-import {Text} from "..";
-import React from "react";
+import { Text } from "..";
+import { TextProps } from "./Text";
 
-type Props = {
-    children: JSX.Element | React.ReactNode;
-    className?: string;
-};
+type TitleProps = Omit<TextProps, "type" | "size" | "bold" | "uppercase">;
 
 /**
  * Text h1
- * @param {Props} props
+ * @param {TitleProps} props
  */
-function Title(props: Props) {
-    const {children} = props;
-    return (
-        <Text
-            uppercase={true}
-            bold={true}
-            type="h1"
-            size="6xl"
-            className={`print:mb-3 ${props.className ?? ''}`}>
-            {children}
-        </Text>
-    );
+function Title(props: TitleProps) {
+  const { className, ...rest } = props;
+  return (
+    <Text
+      uppercase={true}
+      bold={true}
+      type="h1"
+      size="6xl"
+      className={`print:mb-3 ${className ?? ""}`}
+      {...rest}
+    />
+  );
 }
 
 export default Title;
