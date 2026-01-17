@@ -1,7 +1,6 @@
 export { default as Body } from './Body';
 export { default as BookCard } from './BookCard';
 export { default as ButtonChip } from './ButtonChip';
-export { default as Carousel } from './Carousel';
 export { default as Chip } from './Chip';
 export * from './Common';
 export { default as DarkModeProvider } from './DarkModeProvider.ts';

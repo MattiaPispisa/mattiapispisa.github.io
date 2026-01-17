@@ -15,6 +15,8 @@ const it = {
     curriculum: "Curriculum",
 
     // ------------------- projects -------------------
+    // rich i18n 
+    richI18nDesc: "Una libreria Dart per analizzare il testo formattato con tag XML. Ideale per aggiungere markup ai messaggi di localizzazione nei file .arb.",
     // dart_time
     dartTimeDesc: "Una libreria Dart completa che estende e potenzia le funzionalità temporali native di Dart. Questa libreria fornisce potenti estensioni per DateTime e Duration, oltre a classi specializzate per operazioni temporali avanzate.",
     // crdt

@@ -16,6 +16,8 @@ After my love for mobile development, I also developed a strong interest in Web 
     curriculum: "Curriculum",
 
     // ------------------- projects -------------------
+    // rich i18n
+    richI18nDesc: "A Dart library for parsing rich text with XML tags into structured items. Ideally used to add markup to localization messages in .arb files.",
     // dart_time
     dartTimeDesc: "A comprehensive Dart library that extends and enhances Dart's built-in time functionality. This library provides powerful extensions to DateTime and Duration, plus specialized classes for advanced time operations.",
     // crdt
