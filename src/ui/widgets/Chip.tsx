@@ -21,7 +21,7 @@ function Chip(props: Props) {
         <div className="flex items-center bg-gray-200 rounded-full px-3 py-1 w-fit print:hidden">
             <span className="mr-2">{name}</span>
             <button
-                className="text-red-500 hover:text-red-700 focus:outline-none"
+                className="cursor-pointer text-red-500 hover:text-red-700 focus:outline-none"
                 onClick={_onClick}
             >
                 <FontAwesomeIcon icon={faXmark}/>

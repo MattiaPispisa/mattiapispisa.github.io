@@ -8,7 +8,7 @@ type ButtonVariant = "fill" | "outlined" | "flat"
 type ButtonHoverEffect = "increase"
 type ButtonTapEffect = "vibrate"
 
-const baseClassName = "flex items-center justify-center py-2 px-4 rounded-md focus:outline-none gap-2 touch-action: manipulation"
+const baseClassName = "flex items-center justify-center py-2 px-4 rounded-md focus:outline-none gap-2 cursor-pointer touch-action: manipulation"
 
 const sizeClasses = {
     sm: "text-sm",
