@@ -1,16 +1,16 @@
 import React from "react";
 
 type Props = {
-    children?: React.ReactNode | JSX.Element;
+    children?: React.ReactNode | React.JSX.Element;
     onClick?: () => void;
 }
 
 /**
  * Fixed centered content surrounded by an opacity layer
  * @param {Props} props
- * @return {JSX.Element} jsxElement
+ * @return {React.JSX.Element} jsxElement
  */
-function FullScreen(props: Props): JSX.Element {
+function FullScreen(props: Props): React.JSX.Element {
     const {children, onClick} = props;
 
     return <div

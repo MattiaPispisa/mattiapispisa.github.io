@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {Text} from "../Common";
 import DevToArticle from "./ArticlePreview.tsx";
 

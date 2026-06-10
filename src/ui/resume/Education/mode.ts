@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 type EducationModel = {
   degree: string;
   university: string;

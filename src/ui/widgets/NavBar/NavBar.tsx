@@ -5,7 +5,7 @@ import Settings from "./_Settings";
 import NavItems, { NavBarItem } from "./_NavItems";
 import { profileImage } from "../../../constants";
 import HamburgerButton from "./_HamburgerButton";
-import { useCallback, useRef } from "react";
+import { useCallback, useRef, type RefObject } from "react";
 import { useOnClickOutside } from "usehooks-ts";
 import NavFooter from "./_NavFooter";
 
@@ -27,7 +27,7 @@ function NavBar(props: Props) {
   const close = useCallback(() => set(false), [set]);
 
   const ref = useRef<HTMLElement>(null);
-  useOnClickOutside(ref, close);
+  useOnClickOutside(ref as RefObject<HTMLElement>, close);
 
   return (
     <nav className={className} ref={ref}>

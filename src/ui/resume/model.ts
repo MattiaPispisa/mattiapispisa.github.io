@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 type SectionModel = {
   id: string;
   label: string;

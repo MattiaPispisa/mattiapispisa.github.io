@@ -1,6 +1,7 @@
 import js from "@eslint/js";
 import globals from "globals";
 import react from "eslint-plugin-react";
+import reactCompiler from "eslint-plugin-react-compiler";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
@@ -21,12 +22,14 @@ export default tseslint.config(
       globals: globals.browser,
     },
     plugins: {
+      "react-compiler": reactCompiler,
       "react-refresh": reactRefresh,
     },
     settings: {
       react: { version: "detect" },
     },
     rules: {
+      "react-compiler/react-compiler": "error",
       "react-refresh/only-export-components": [
         "warn",
         { allowConstantExport: true },

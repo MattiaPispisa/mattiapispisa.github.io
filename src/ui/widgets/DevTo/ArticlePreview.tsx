@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {useDevArticle, useFullScreen} from "../../../hooks";
 import Markdown from "../Markdown.tsx";
 import {A, Button} from "../Common";

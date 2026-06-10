@@ -12,9 +12,9 @@ type Props = {
 /**
  * {@link FullScreen} with a close {@link Button}
  * @param {Props} props
- * @return {JSX.Element} jsxElement
+ * @return {React.JSX.Element} jsxElement
  */
-function FullScreenModal(props: Props): JSX.Element {
+function FullScreenModal(props: Props): React.JSX.Element {
     const {children, onClose} = props;
 
     return <FullScreen

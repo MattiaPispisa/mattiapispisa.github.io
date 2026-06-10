@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 type Gap = "2" | "4";
 
 type Props = {

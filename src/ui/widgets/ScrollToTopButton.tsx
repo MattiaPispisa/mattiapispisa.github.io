@@ -14,9 +14,9 @@ type Props = {
 /**
  * On Tap scroll to tup
  * @param {Props} props
- * @return {JSX.Element} jsxElement
+ * @return {React.JSX.Element} jsxElement
  */
-function ScrollToTopButton(props: Props): JSX.Element {
+function ScrollToTopButton(props: Props): React.JSX.Element {
     const pageYOffset = props.pageYOffset ?? 100
     const [visible, setVisible] = React.useState(false);
 

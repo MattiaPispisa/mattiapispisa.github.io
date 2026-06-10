@@ -1,5 +1,4 @@
 import React from "react";
-import { ReactHTML } from "react";
 
 /**
  * @template T
@@ -10,10 +9,10 @@ import { ReactHTML } from "react";
  */
 type Props<T> = {
   items: T[];
-  children: (item: T) => JSX.Element;
+  children: (item: T) => React.JSX.Element;
   className?: string;
   itemClassName?: string;
-  itemType?: keyof ReactHTML;
+  itemType?: keyof React.JSX.IntrinsicElements;
 };
 
 function List<T>({

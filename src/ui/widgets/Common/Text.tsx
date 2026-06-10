@@ -1,14 +1,13 @@
 import React from "react";
-import { ReactHTML } from "react";
 import { Semantic, semanticToTextClass } from "../../../constants";
 
 type TextSize = "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl";
 
 type TextProps = {
-  type?: keyof ReactHTML;
+  type?: keyof React.JSX.IntrinsicElements;
   className?: string;
   semantic?: Semantic;
-  children: JSX.Element | string | React.ReactNode;
+  children: React.JSX.Element | string | React.ReactNode;
   uppercase?: boolean;
   bold?: boolean;
   size?: TextSize;

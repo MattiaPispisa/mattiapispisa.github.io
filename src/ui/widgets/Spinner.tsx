@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSpinner} from "@fortawesome/free-solid-svg-icons";
 import {semanticToTextClass} from "../../constants";

@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {A} from ".";
 
 type Props = {

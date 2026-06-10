@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {useFetch} from "../../hooks";
 
 type Props<T> = {

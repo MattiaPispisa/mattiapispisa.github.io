@@ -47,11 +47,11 @@ type Props = {
     /**
      * button text child
      */
-    text?: string | JSX.Element;
+    text?: string | React.JSX.Element;
     /**
      * button icon child (before `text`)
      */
-    icon?: JSX.Element;
+    icon?: React.JSX.Element;
     onClick?: () => void;
     size?: ButtonSize
     variant?: ButtonVariant
@@ -68,7 +68,7 @@ type Props = {
 /**
  *
  * @param {Props} param
- * @returns {JSX.Element} jsxElement
+ * @returns {React.JSX.Element} jsxElement
  */
 const Button = ({
                     semantic = "primary",
@@ -81,7 +81,7 @@ const Button = ({
                     hoverEffect,
                     tapEffect,
                     ...other
-                }: Props): JSX.Element => {
+                }: Props): React.JSX.Element => {
 
     const [vibrate] = useVibrate()
 

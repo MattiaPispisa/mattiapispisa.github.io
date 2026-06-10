@@ -13,9 +13,9 @@ type Props = {
 /**
  * Styled markdown
  * @param {Props} props
- * @return {JSX.Element} jsxElement
+ * @return {React.JSX.Element} jsxElement
  */
-function Markdown(props: Props): JSX.Element {
+function Markdown(props: Props): React.JSX.Element {
     return <ReactMarkdown components={{
         a: ({children, href}) => <A hover={true} href={href} semantic={"primary"} newTab={true}>{children}</A>,
         h1: ({children}) => <Title className={"mt-6 mb-2"}>{children}</Title>,

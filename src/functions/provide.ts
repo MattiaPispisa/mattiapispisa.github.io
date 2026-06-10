@@ -2,7 +2,7 @@ import React from "react";
 
 type ProviderComponent<HookProps> = (
   props: HookProps & { children?: React.ReactNode }
-) => JSX.Element;
+) => React.JSX.Element;
 
 /**
  * This function takes the state of the MainHook supplied to the `provide` function and returns one of its elements

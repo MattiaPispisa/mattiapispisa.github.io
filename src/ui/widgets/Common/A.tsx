@@ -6,7 +6,7 @@ import {
 import React from "react";
 
 type Props = {
-    children: JSX.Element | React.ReactNode;
+    children: React.JSX.Element | React.ReactNode;
     /**
      * link is open in another tab
      *
@@ -32,9 +32,9 @@ type Props = {
 /**
  *
  * @param {Props} props
- * @returns {JSX.Element} jsxElement
+ * @returns {React.JSX.Element} jsxElement
  */
-function A({newTab = true, ...props}: Props): JSX.Element {
+function A({newTab = true, ...props}: Props): React.JSX.Element {
     return (
         <a
             className={_buildClassName(props)}

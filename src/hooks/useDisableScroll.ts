@@ -44,16 +44,13 @@ function useDisableScroll(
 
   // Update state if initialValue changes
   useEffect(() => {
-    if (locked !== initialLocked) {
-      setLocked(initialLocked);
-    }
+    setLocked(initialLocked);
     return () => {
       if (unLockOnUnmount) {
         setLocked(false);
       }
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [initialLocked]);
+  }, [initialLocked, unLockOnUnmount]);
 
   return [locked, setLocked];
 }

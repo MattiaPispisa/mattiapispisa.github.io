@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import FullScreenImage from "./FullImage";
 import {useFullScreen} from "../../hooks";
 

@@ -12,5 +12,12 @@ export default defineConfig({
     open: true,
     port: 3000,
   },
-  plugins: [react(), tailwindcss()],
+  plugins: [
+    react({
+      babel: {
+        plugins: [["babel-plugin-react-compiler", {}]],
+      },
+    }),
+    tailwindcss(),
+  ],
 });

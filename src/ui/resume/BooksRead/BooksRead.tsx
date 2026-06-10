@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import { useState, useMemo } from "react";
 import { useAppTranslation } from "../../../locale";
 import SubTitle from "../../widgets/Common/SubTitle";

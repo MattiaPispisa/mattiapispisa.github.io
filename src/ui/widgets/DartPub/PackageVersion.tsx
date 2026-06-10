@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import {useDartPackage} from "../../../hooks";
 import {semanticToTextClass} from "../../../constants";
 

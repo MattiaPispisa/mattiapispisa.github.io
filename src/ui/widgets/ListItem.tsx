@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons/faUpRightFromSquare";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { A, Text } from ".";
