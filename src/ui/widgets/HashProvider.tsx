@@ -6,7 +6,7 @@ type HashContextType = {
   updateHash: (newHash: string) => void;
 };
 
-function _useHash(): HashContextType {
+function useHashState(): HashContextType {
   const [hash, setHash] = React.useState(() => window.location.hash);
 
   const hashChangeHandler = React.useCallback(() => {
@@ -31,7 +31,7 @@ function _useHash(): HashContextType {
     return () => {
       window.removeEventListener("hashchange", hashChangeHandler);
     };
-  }, []);
+  }, [hashChangeHandler]);
 
   return {
     hash,
@@ -39,7 +39,7 @@ function _useHash(): HashContextType {
   };
 }
 
-const [HashProvider, useHash] = provide(_useHash);
+const [HashProvider, useHash] = provide(useHashState);
 
-export { useHash };
+export { useHash }; // eslint-disable-line react-refresh/only-export-components
 export default HashProvider;

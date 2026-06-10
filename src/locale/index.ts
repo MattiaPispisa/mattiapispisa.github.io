@@ -20,7 +20,7 @@ type UseAppTranslationReturn = {
 function useAppTranslation(): UseAppTranslationReturn {
   const [t, i18n] = useTranslation();
 
-  const changeLanguage = useCallback(i18n.changeLanguage, [i18n]);
+  const changeLanguage = useCallback((lng: string) => { i18n.changeLanguage(lng); }, [i18n]);
 
   return {
     t: t as LanguageResolver,

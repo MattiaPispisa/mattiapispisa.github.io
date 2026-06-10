@@ -1,16 +1,34 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "tailwind-scrollbar-hide";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary-50: #fdeaea;
+  --color-primary-100: #facccc;
+  --color-primary-200: #f39999;
+  --color-primary-300: #eb6666;
+  --color-primary-400: #e63333;
+  --color-primary-500: #D04848;
+  --color-primary-600: #b04040;
+  --color-primary-700: #8f3333;
+  --color-primary-800: #6e2626;
+  --color-primary-900: #4d1a1a;
+  --color-primary: #D04848;
+  --color-primary-dark: #822727;
+  --color-light: #f3f4f6;
+  --color-dark: #000000;
+}
 
 /* Dark mode background for html and body */
 html.dark,
 html.dark body {
-  background-color: theme('colors.slate.900');
+  background-color: var(--color-slate-900);
 }
 
 html:not(.dark),
 html:not(.dark) body {
-  background-color: theme('colors.light');
+  background-color: var(--color-light);
 }
 
 /* Code block wrapping */

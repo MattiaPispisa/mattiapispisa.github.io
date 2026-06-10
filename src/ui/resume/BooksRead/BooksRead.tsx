@@ -61,7 +61,7 @@ function BooksRead() {
         ))}
       </div>
 
-      {filteredBooks.length === 0 && <_NoBooksFound />}
+      {filteredBooks.length === 0 && <NoBooksFound />}
     </>
   );
 }
@@ -98,7 +98,7 @@ function _Grid({ children }: { children: JSX.Element[] }) {
   );
 }
 
-function _NoBooksFound() {
+function NoBooksFound() {
   const { t } = useAppTranslation();
 
   return (

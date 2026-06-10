@@ -34,7 +34,7 @@ function useUpdateSection(id: string) {
     }
 
     updateHash(id);
-  }, [isIntersecting]);
+  }, [isIntersecting, id, updateHash]);
 
   return [ref];
 }

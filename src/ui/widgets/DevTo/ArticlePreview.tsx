@@ -32,7 +32,7 @@ function DevToArticlePreview({article}: Props): JSX.Element {
             fullScreen && <FullScreenModal
                 onClose={removeFullScreen}
             >
-                <_Content article={article}/>
+                <Content article={article}/>
             </FullScreenModal>
         }
         <Button
@@ -47,7 +47,7 @@ function DevToArticlePreview({article}: Props): JSX.Element {
     </>
 }
 
-function _Content(props: Props) {
+function Content(props: Props) {
     const {data, isLoading} = useDevArticle(props.article)
     const {t} = useAppTranslation()
 

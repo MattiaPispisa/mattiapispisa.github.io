@@ -41,6 +41,7 @@ function A({newTab = true, ...props}: Props): JSX.Element {
             href={props.href}
             onClick={props.onClick}
             target={newTab ? "_blank" : undefined}
+            rel={newTab ? "noreferrer" : undefined}
         >
             {props.children}
         </a>

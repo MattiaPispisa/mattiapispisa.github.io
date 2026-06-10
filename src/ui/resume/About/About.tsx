@@ -15,7 +15,7 @@ function About() {
 
   return (
     <>
-      <_Title />
+      <AboutTitle />
       <div className={"mb-1"}>
         <MailTo mail={mail} />
       </div>
@@ -39,7 +39,7 @@ function About() {
   );
 }
 
-function _Title() {
+function AboutTitle() {
   const age = useMemo(() => calculateAge(birthday), []);
 
   return (

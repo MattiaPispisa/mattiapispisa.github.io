@@ -40,7 +40,7 @@ function useDisableScroll(
         document.body.style.paddingRight = originalPaddingRight;
       }
     };
-  }, [locked]);
+  }, [locked, rootId]);
 
   // Update state if initialValue changes
   useEffect(() => {

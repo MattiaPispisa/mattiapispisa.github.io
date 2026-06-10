@@ -20,9 +20,9 @@ interface DarkModeContextType {
   toggleThemeMode: () => void;
 }
 
-function _useDarkMode(): DarkModeContextType {
+function useDarkModeState(): DarkModeContextType {
   const [themeMode, setThemeMode] = useLocalStorage<ThemeMode>("theme", "system", { deserializer: _deserializer, serializer: _serializer });
-  const darkPreference = _useSystemDarkPreference();
+  const darkPreference = useSystemDarkPreference();
 
   const toggleThemeMode = useCallback(() => {
     setThemeMode((prev) => {
@@ -71,7 +71,7 @@ const _nextState: Record<ThemeMode, ThemeMode> = {
   system: "light",
 };
 
-function _useSystemDarkPreference() {
+function useSystemDarkPreference() {
   const [darkPreference, _setDarkPreference] = useState(() => _darkPreference());
 
   useEffect(() => {
@@ -88,7 +88,7 @@ function _useSystemDarkPreference() {
   return darkPreference;
 }
 
-const provided = provide(_useDarkMode);
+const provided = provide(useDarkModeState);
 /**
  * Provider for dark mode hook.
  * Use {@link useDarkMode} to get the dark mode state.

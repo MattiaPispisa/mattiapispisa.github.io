@@ -8,9 +8,10 @@ type ProviderComponent<HookProps> = (
  * This function takes the state of the MainHook supplied to the `provide` function and returns one of its elements
  */
 
-type Selector<HookState> = (value: HookState) => any;
+type Selector<HookState> = (value: HookState) => unknown;
 
 type SelectorsHooks<Selectors> = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [K in keyof Selectors]: () => Selectors[K] extends (...args: any) => infer R
     ? R
     : never;
@@ -32,11 +33,10 @@ type ContextProviderAndSelectors<
   Selectors extends Selector<HookState>[]
 > = [
   ProviderComponent<HookProps>,
-  // @ts-ignore
-  // TODO: try to figure out why removing this ignores the build fails
   ...ContextHooks<HookState, Selectors>
 ];
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const createUseContext = (context: React.Context<any>): any => {
   return () => React.useContext(context);
 };
@@ -116,6 +116,7 @@ const provide = <
   useMainHook: (props: MainHookProps) => MainHookState,
   ...selectors: Selectors
 ): ContextProviderAndSelectors<MainHookProps, MainHookState, Selectors> => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const contexts = [] as React.Context<any>[];
   const contextsHooks = [] as unknown as ContextHooks<MainHookState, Selectors>;
 
@@ -139,7 +140,7 @@ const provide = <
     const value = useMainHook(props as MainHookProps);
     let element: React.ReactElement = children as React.ReactElement;
     for (let i = 0; i < contexts.length; i += 1) {
-      const context = contexts[i];
+      const context = contexts[i]!;
       const selector = selectors[i] || ((v: typeof value) => v);
       element = React.createElement(
         context.Provider,
