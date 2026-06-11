@@ -16,6 +16,8 @@ After my love for mobile development, I also developed a strong interest in Web 
     curriculum: "Curriculum",
 
     // ------------------- projects -------------------
+    // image_pipeline
+    image_pipelineDesc: "A cross-platform Dart library for image processing. For each platform, the processing is handled by a specific, carefully selected native library.",
     // rich i18n
     richI18nDesc: "A Dart library for parsing rich text with XML tags into structured items. Ideally used to add markup to localization messages in .arb files.",
     // dart_time

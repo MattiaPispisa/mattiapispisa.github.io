@@ -5,22 +5,32 @@ function useFetch<T, Error = unknown>(input: string, init?: RequestInit) {
     return useSWR<T, Error, string>(input, () => fetch(input, init).then(res => res.json()));
 }
 
-type DartPackage = {
-    name: string;
-    latest: DartPackageVersion
-    versions: DartPackageVersion[]
-}
-type DartPackageVersion = {
+type PubDevPackage = {
     version: string;
-    pubspec: {
-        name: string;
-        description: string;
-    }
 }
 
-// blocked from CORS :(
 function useDartPackage(packageName: string) {
-    return useFetch<DartPackage>(`https://pub.dev/api/packages/${packageName}`, {})
+    return useSWR<PubDevPackage, unknown, string>(
+        `https://img.shields.io/pub/v/${packageName}.json`,
+        (url: string) =>
+            fetch(url)
+                .then((res) => res.json())
+                .then((data: { message: string }) => ({ version: data.message }))
+    );
+}
+
+type NpmPackage = {
+    version: string;
+}
+
+function useNpmPackage(packageName: string) {
+    return useSWR<NpmPackage, unknown, string>(
+        `https://img.shields.io/npm/v/${packageName}.json`,
+        (url: string) =>
+            fetch(url)
+                .then((res) => res.json())
+                .then((data: { message: string }) => ({ version: data.message }))
+    );
 }
 
 type DevArticle = {
@@ -39,4 +49,4 @@ function useDevArticle(articleId: number) {
     return useFetch<DevArticle>(`https://dev.to/api/articles/${articleId}`)
 }
 
-export {useFetch, useDartPackage, useDevArticle};
+export {useFetch, useDartPackage, useNpmPackage, useDevArticle};

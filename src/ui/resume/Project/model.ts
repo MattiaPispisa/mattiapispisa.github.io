@@ -1,8 +1,9 @@
 import type { JSX } from "react";
+
 type ProjectModel = {
-  link: string;
   title: JSX.Element | string;
   description: JSX.Element | string;
+  link: string;
   hashtags: string[];
 };
 

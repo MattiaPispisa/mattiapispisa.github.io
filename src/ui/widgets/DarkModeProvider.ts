@@ -25,10 +25,8 @@ function useDarkModeState(): DarkModeContextType {
   const darkPreference = useSystemDarkPreference();
 
   const toggleThemeMode = useCallback(() => {
-    setThemeMode((prev) => {
-      return _nextState[prev];
-    });
-  }, [setThemeMode]);
+    setThemeMode((prev) => _nextThemeMode(prev, darkPreference));
+  }, [setThemeMode, darkPreference]);
 
   const darkMode = useMemo(() => {
     if (themeMode === "light") {
@@ -65,11 +63,16 @@ const _serializer = (value: ThemeMode): string => {
   return "system";
 }
 
-const _nextState: Record<ThemeMode, ThemeMode> = {
-  light: "dark",
-  dark: "system",
-  system: "light",
-};
+// When system=light: system → dark → light → system
+// When system=dark:  system → light → dark → system
+function _nextThemeMode(current: ThemeMode, darkPreference: boolean): ThemeMode {
+  if (darkPreference) {
+    const next: Record<ThemeMode, ThemeMode> = { system: "light", light: "dark", dark: "system" };
+    return next[current];
+  }
+  const next: Record<ThemeMode, ThemeMode> = { system: "dark", dark: "light", light: "system" };
+  return next[current];
+}
 
 function useSystemDarkPreference() {
   const [darkPreference, _setDarkPreference] = useState(() => _darkPreference());

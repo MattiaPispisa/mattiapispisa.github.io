@@ -1,1 +1,2 @@
-export {default as DartPubPackageVersion} from './PackageVersion.tsx'
+export {default as DartPubPackagePreview} from './PackagePreview.tsx'
+export {default as DartPubPackageDetail} from './PackageDetail.tsx'

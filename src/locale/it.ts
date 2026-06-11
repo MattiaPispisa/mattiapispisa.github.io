@@ -15,6 +15,8 @@ const it = {
     curriculum: "Curriculum",
 
     // ------------------- projects -------------------
+    // image_pipeline
+    image_pipelineDesc: "Una libreria Dart multi-piattaforma per processare le immagini. Il processo di elaborazione viene delegato, per ogni piattaforma, ad una specifica libreria nativa accuratamente scelta.",
     // rich i18n 
     richI18nDesc: "Una libreria Dart per analizzare il testo formattato con tag XML. Ideale per aggiungere markup ai messaggi di localizzazione nei file .arb.",
     // dart_time

@@ -27,6 +27,10 @@ const socials: SocialProfileType[] = [
     icon: faDev,
   },
   {
+    link: "https://x.com/MattiaPispisa",
+    icon: faXTwitter,
+  },
+  {
     link: "https://g.dev/mattia_pispisa",
     icon: faGoogle,
   },
@@ -34,10 +38,7 @@ const socials: SocialProfileType[] = [
     link: "https://bsky.app/profile/mattia-pispisa.bsky.social",
     icon: faBluesky,
   },
-  {
-    link: "https://twitter.com/MattiaPispisa",
-    icon: faXTwitter,
-  },
+
   { link: "https://www.instagram.com/mattiapispisa", icon: faInstagram },
   { link: "https://t.me/MattiaPispisa", icon: faTelegram },
 ];
