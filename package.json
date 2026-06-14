@@ -19,6 +19,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "devicon": "^2.16.0",
+    "en-yup-decorator": "^2.0.0",
     "i18next": "^26.3.0",
     "i18next-browser-languagedetector": "^8.2.0",
     "i18next-http-backend": "^4.0.0",
@@ -27,9 +28,13 @@
     "react-i18next": "^17.0.0",
     "react-markdown": "^10.1.0",
     "swr": "^2.3.3",
-    "usehooks-ts": "^3.1.1"
+    "usehooks-ts": "^3.1.1",
+    "yup": "^1.7.1"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.29.7",
+    "@babel/plugin-transform-class-properties": "^7.29.7",
+    "@babel/plugin-transform-class-static-block": "^7.29.7",
     "@eslint/js": "^9.39.4",
     "@tailwindcss/vite": "^4.3.0",
     "@types/react": "^19.2.17",
@@ -47,6 +52,6 @@
     "tailwindcss": "^4.3.0",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.61.0",
-    "vite": "^6.3.5"
+    "vite": "^6.4.3"
   }
 }

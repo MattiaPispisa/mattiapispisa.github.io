@@ -1,7 +1,7 @@
 import type { JSX } from "react";
-import { useDartPackage } from "../../../hooks";
 import { semanticToTextClass } from "../../../constants";
 import { Skeleton } from "../Common";
+import { useDartPackage } from "../../../hooks";
 
 type Props = {
     package: string;
@@ -10,7 +10,8 @@ type Props = {
 const VERSION_SKELETON = [{ width: "w-16", height: "h-5" }];
 
 function DartPackagePreview(props: Props): JSX.Element {
-    const { data, isLoading } = useDartPackage(props.package);
+    const { data, isLoading ,error} = useDartPackage(props.package);
+    console.log("error",error)
 
     if (isLoading) {
         return <Skeleton items={VERSION_SKELETON} />;

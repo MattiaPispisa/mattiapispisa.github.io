@@ -15,7 +15,12 @@ export default defineConfig({
   plugins: [
     react({
       babel: {
-        plugins: [["babel-plugin-react-compiler", {}]],
+        plugins: [
+          ["babel-plugin-react-compiler", {}],
+          ["@babel/plugin-proposal-decorators", { version: "2023-05" }],
+          "@babel/plugin-transform-class-properties",
+          "@babel/plugin-transform-class-static-block",
+        ],
       },
     }),
     tailwindcss(),
