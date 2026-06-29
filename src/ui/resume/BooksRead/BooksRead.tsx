@@ -33,6 +33,7 @@ function BooksRead() {
       <div className="mb-8 print:hidden">
         <div className="max-w-xs">
           <Select
+            ariaLabel={t("booksRead")}
             options={selectOptions}
             value={selectedTag}
             onSelected={setSelectedTag}

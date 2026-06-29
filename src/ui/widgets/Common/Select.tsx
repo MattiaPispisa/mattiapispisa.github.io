@@ -8,9 +8,11 @@ type Props = {
   options: SelectOptionProps[];
   value?: string;
   onSelected?: (value: string) => void;
+  /** accessible name for the select control */
+  ariaLabel?: string;
 };
 
-function Select({ options, onSelected, className, value }: Props) {
+function Select({ options, onSelected, className, value, ariaLabel }: Props) {
   const onChange = useCallback(
     (event: React.ChangeEvent<HTMLSelectElement>) => {
       const targetValue = event.currentTarget.value;
@@ -24,6 +26,7 @@ function Select({ options, onSelected, className, value }: Props) {
       <select
         onChange={onChange}
         value={value}
+        aria-label={ariaLabel}
         className={`block cursor-pointer appearance-none w-full bg-transparent border border-dark  dark:border-light  text-dark dark:text-light py-3 px-4 pr-8 rounded leading-tight focus:outline-none ${className}`}
       >
         {options.map((option) => {

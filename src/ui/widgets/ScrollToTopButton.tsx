@@ -27,6 +27,7 @@ function ScrollToTopButton(props: Props): React.JSX.Element {
     useEventListener('scroll', toggleVisibility)
 
     return <Button
+        aria-label="Scroll to top"
         className={_className({visible})}
         icon={<FontAwesomeIcon icon={faArrowUp}/>}
         size={"md"}

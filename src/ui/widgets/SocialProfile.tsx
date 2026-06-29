@@ -18,6 +18,7 @@ function SocialProfile({newTab = true, ...props}: Props) {
         <A
             href={link}
             newTab={newTab}
+            ariaLabel={displayLink}
             semantic="light"
             className="print:no-underline">
             <div

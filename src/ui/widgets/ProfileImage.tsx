@@ -10,6 +10,17 @@ const className = `${mobClassName} ${mdClassName}`;
 function ProfileImage(props: Props) {
   const { src } = props;
 
-  return <img className={className} alt="profile-image" src={src} />;
+  return (
+    <img
+      className={className}
+      alt="profile-image"
+      src={src}
+      width={160}
+      height={160}
+      // LCP element: load eagerly with high priority (also preloaded in index.html)
+      fetchPriority="high"
+      decoding="async"
+    />
+  );
 }
 export default ProfileImage;

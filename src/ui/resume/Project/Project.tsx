@@ -28,7 +28,7 @@ function Project() {
           />
         ))}
       </HorizontalList>
-      <li className="flex flex-col gap-y-12 print:gap-y-4">
+      <div className="flex flex-col gap-y-12 print:gap-y-4">
         {projects(t).map((project) => {
           if (!canView(project)) {
             return <React.Fragment key={project.link}></React.Fragment>;
@@ -56,7 +56,7 @@ function Project() {
             />
           );
         })}
-      </li>
+      </div>
     </>
   );
 }

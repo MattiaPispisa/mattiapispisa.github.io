@@ -6,6 +6,7 @@ function LanguageSelector() {
 
   return (
     <Select
+      ariaLabel="Language"
       value={language}
       onSelected={changeLanguage}
       className={

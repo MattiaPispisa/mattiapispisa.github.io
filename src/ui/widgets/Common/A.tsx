@@ -17,7 +17,11 @@ type Props = {
      * href
      */
     href?: string;
-    onClick?: () => void;
+    onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
+    /**
+     * accessible name, required when the link content is icon-only
+     */
+    ariaLabel?: string;
     /**
      * a color semantic
      */
@@ -39,6 +43,7 @@ function A({newTab = true, ...props}: Props): React.JSX.Element {
         <a
             className={_buildClassName(props)}
             href={props.href}
+            aria-label={props.ariaLabel}
             onClick={props.onClick}
             target={newTab ? "_blank" : undefined}
             rel={newTab ? "noreferrer" : undefined}

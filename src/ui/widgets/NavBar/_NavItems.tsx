@@ -22,15 +22,14 @@ function NavItems({ items, open, hash, onClick, onNavigate }: Props) {
       <ul>
         {items.map((item) => {
           return (
-            <div key={item.id} className={"py-2"}>
-              <NavItem
-                selected={item.id === hash}
-                id={item.id}
-                label={item.label}
-                onClick={onClick}
-                onNavigate={onNavigate}
-              />
-            </div>
+            <NavItem
+              key={item.id}
+              selected={item.id === hash}
+              id={item.id}
+              label={item.label}
+              onClick={onClick}
+              onNavigate={onNavigate}
+            />
           );
         })}
       </ul>

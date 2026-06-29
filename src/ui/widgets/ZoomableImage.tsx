@@ -8,6 +8,9 @@ type Props = {
     src: string;
     className?: string;
     alt?: string;
+    /** intrinsic dimensions, set to reserve layout space and avoid CLS */
+    width?: number;
+    height?: number;
 };
 
 /**
@@ -33,6 +36,9 @@ function ZoomableImage(props: Props): JSX.Element {
                 alt={props.alt}
                 className={`${props.className} cursor-pointer`}
                 src={props.src}
+                width={props.width}
+                height={props.height}
+                loading="lazy"
                 onClick={setFullScreen}
             />
         </>

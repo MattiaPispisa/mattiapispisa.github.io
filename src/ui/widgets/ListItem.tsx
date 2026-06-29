@@ -23,7 +23,7 @@ const listClassName = `${mobListClassName} ${mdListClassName} ${printClassName}`
 function ListItem(props: Props) {
   const { description, footer, subtitle, title, trailing, link } = props;
   return (
-    <ul className={listClassName}>
+    <div className={listClassName}>
       <div className="grow w-full">
         {link ? (
           <ListLinkTitle link={link} title={title} />
@@ -56,7 +56,7 @@ function ListItem(props: Props) {
           {trailing}
         </div>
       )}
-    </ul>
+    </div>
   );
 }
 
