@@ -30,10 +30,6 @@ function About() {
           return <SocialProfile key={s.link} link={s.link} icon={s.icon} />;
         })}
       </HorizontalList>
-      {/* 
-      <div className="mb-8 min-h-14 flex justify-center">
-        <Skills />
-      </div> */}
       <DownloadResumeButton />
     </>
   );
