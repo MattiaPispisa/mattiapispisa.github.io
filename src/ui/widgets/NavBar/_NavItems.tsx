@@ -8,11 +8,12 @@ type NavBarItem = {
 type Props = {
   hash: string;
   onClick: () => void;
+  onNavigate: (id: string) => void;
   items: NavBarItem[];
   open: boolean;
 };
 
-function NavItems({ items, open, hash, onClick }: Props) {
+function NavItems({ items, open, hash, onClick, onNavigate }: Props) {
 
   return (
     <div
@@ -27,6 +28,7 @@ function NavItems({ items, open, hash, onClick }: Props) {
                 id={item.id}
                 label={item.label}
                 onClick={onClick}
+                onNavigate={onNavigate}
               />
             </div>
           );

@@ -1,4 +1,3 @@
-import {useCallback} from "react";
 import {A, Text} from "..";
 import {useVibrate} from "../../../hooks";
 
@@ -7,23 +6,17 @@ type Props = {
     label: string;
     selected: boolean;
     onClick?: () => void;
+    onNavigate: (id: string) => void;
 };
 
 function NavItem(props: Props) {
-    const {id, selected, label} = props;
+    const {id, selected, label, onNavigate} = props;
 
     const [vibrate] = useVibrate();
 
-    const smoothScrollTo = useCallback(() => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({behavior: "smooth"});
-        }
-    }, [id]);
-
     const onClick = () => {
         props.onClick?.();
-        smoothScrollTo();
+        onNavigate(id);
         vibrate()
     };
 

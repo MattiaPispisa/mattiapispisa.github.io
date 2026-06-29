@@ -11,6 +11,7 @@ import NavFooter from "./_NavFooter";
 
 type Props = {
   items: NavBarItem[];
+  onNavigate: (id: string) => void;
 };
 
 const mobClassName =
@@ -20,7 +21,7 @@ const printClassName = "print:hidden";
 const className = `${mobClassName} ${mdClassName} ${printClassName}`;
 
 function NavBar(props: Props) {
-  const { items } = props;
+  const { items, onNavigate } = props;
   const { hash } = useHash();
 
   const [open, toggle, set] = useToggle();
@@ -38,7 +39,7 @@ function NavBar(props: Props) {
         <Settings />
         <HamburgerButton onClick={toggle} />
       </div>
-      <NavItems hash={hash} items={items} onClick={close} open={open} />
+      <NavItems hash={hash} items={items} onClick={close} onNavigate={onNavigate} open={open} />
       <NavFooter />
     </nav>
   );
