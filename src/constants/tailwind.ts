@@ -13,7 +13,7 @@ type Semantic = DefaultSemantic | PrimarySemantic | LightSemantic | "dark" | "se
 
 const semanticToTextClass: Record<Semantic, string> = {
   default: "text-dark dark:text-light",
-  primary: "text-primary dark:text-primary-dark",
+  primary: "text-primary-600 dark:text-primary-dark",
   light: "text-light",
   dark: "text-dark",
   secondary: "text-gray-600 dark:text-gray-400 print:text-gray-600",
