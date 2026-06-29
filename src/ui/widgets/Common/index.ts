@@ -7,3 +7,5 @@ export { default as Text } from "./Text";
 export { default as Title } from "./Title";
 export { default as List } from "./List";
 export { default as Skeleton } from "./Skeleton";
+export { default as Pill } from "./Pill";
+export { default as VersionBadge } from "./VersionBadge";

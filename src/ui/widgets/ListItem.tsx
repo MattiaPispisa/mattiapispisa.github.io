@@ -33,7 +33,7 @@ function ListItem(props: Props) {
 
         {subtitle && (
           <div
-            className={`uppercase text-xl text-gray-400 print:text-base print:text-gray-600 ${
+            className={`uppercase text-xl text-gray-600 dark:text-gray-400 print:text-base print:text-gray-600 ${
               description ? "mb-4 print:mb-2" : ""
             }`}
           >
@@ -52,7 +52,7 @@ function ListItem(props: Props) {
         {footer && <div className="text-sm">{footer}</div>}
       </div>
       {trailing && (
-        <div className="lg:min-w-52 md:text-right text-primary print:text-right print:text-gray-600 print:text-sm print:min-w-32">
+        <div className="lg:min-w-52 md:text-right text-primary-600 dark:text-primary-dark print:text-right print:text-gray-600 print:text-sm print:min-w-32">
           {trailing}
         </div>
       )}

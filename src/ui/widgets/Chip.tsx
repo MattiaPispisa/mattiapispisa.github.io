@@ -2,6 +2,7 @@ import {faXmark} from "@fortawesome/free-solid-svg-icons/faXmark";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {useCallback} from "react";
 import {useVibrate} from "../../hooks";
+import {Pill} from "./Common";
 
 type Props = {
     name: string;
@@ -18,7 +19,7 @@ function Chip(props: Props) {
     }, [onRemove, vibrate]);
 
     return (
-        <div className="flex items-center bg-gray-200 rounded-full px-3 py-1 w-fit print:hidden">
+        <Pill className="inline-flex items-center px-3 py-1 w-fit">
             <span className="mr-2">{name}</span>
             <button
                 className="cursor-pointer text-red-500 hover:text-red-700 focus:outline-none"
@@ -26,7 +27,7 @@ function Chip(props: Props) {
             >
                 <FontAwesomeIcon icon={faXmark}/>
             </button>
-        </div>
+        </Pill>
     );
 }
 

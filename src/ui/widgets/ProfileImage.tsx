@@ -17,7 +17,6 @@ function ProfileImage(props: Props) {
       src={src}
       width={160}
       height={160}
-      // LCP element: load eagerly with high priority (also preloaded in index.html)
       fetchPriority="high"
       decoding="async"
     />
