@@ -1,4 +1,4 @@
-import {faXmark} from "@fortawesome/free-solid-svg-icons";
+import {faXmark} from "@fortawesome/free-solid-svg-icons/faXmark";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {useCallback} from "react";
 import {useVibrate} from "../../hooks";

@@ -2,7 +2,7 @@ import React from "react";
 import FullScreen from "./FullScreen.tsx";
 import {Button} from "../Common";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faXmark} from "@fortawesome/free-solid-svg-icons";
+import {faXmark} from "@fortawesome/free-solid-svg-icons/faXmark";
 
 type Props = {
     children: React.ReactNode;

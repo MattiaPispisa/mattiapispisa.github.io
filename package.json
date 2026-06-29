@@ -18,7 +18,6 @@
     "@fortawesome/free-regular-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
-    "devicon": "^2.16.0",
     "en-yup-decorator": "^2.0.0",
     "i18next": "^26.3.0",
     "i18next-browser-languagedetector": "^8.2.0",
