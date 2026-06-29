@@ -1,6 +1,8 @@
 import type { JSX } from "react";
-import FullScreenImage from "./FullImage";
+import {lazy, Suspense} from "react";
 import {useFullScreen} from "../../hooks";
+
+const FullScreenImage = lazy(() => import("./FullImage"));
 
 type Props = {
     src: string;
@@ -19,11 +21,13 @@ function ZoomableImage(props: Props): JSX.Element {
     return (
         <>
             {fullScreen && (
-                <FullScreenImage
-                    src={props.src}
-                    alt={props.alt}
-                    onClick={removeFullScreen}
-                />
+                <Suspense fallback={<></>}>
+                    <FullScreenImage
+                        src={props.src}
+                        alt={props.alt}
+                        onClick={removeFullScreen}
+                    />
+                </Suspense>
             )}
             <img
                 alt={props.alt}
