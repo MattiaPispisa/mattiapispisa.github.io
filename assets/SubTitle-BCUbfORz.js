@@ -1,0 +1,1 @@
+import{c as i,j as o}from"./react-DCZPTYgm.js";import{T as m}from"./index-WL7fNWLB.js";import"./fontawesome-BccMS8y1.js";import"./i18n-BDRrJkzb.js";function u(s){const t=i.c(2),{children:r}=s;let e;return t[0]!==r?(e=o.jsx(m,{type:"h2",uppercase:!0,bold:!0,size:"4xl",className:"mb-12 print:mb-4 print:mt-4",children:r}),t[0]=r,t[1]=e):e=t[1],e}export{u as S};

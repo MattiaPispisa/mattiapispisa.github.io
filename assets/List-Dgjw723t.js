@@ -1,0 +1,1 @@
+import{j as l,R as n}from"./react-DCZPTYgm.js";function x({itemType:e="li",itemClassName:t="ml-4 list-disc marker:text-dark dark:marker:text-white",...r}){const{className:s,items:a,children:i}=r;return l.jsx("ul",{className:s,children:a.map((m,c)=>n.createElement(e,{className:t,key:c},i(m)))})}export{x as L};

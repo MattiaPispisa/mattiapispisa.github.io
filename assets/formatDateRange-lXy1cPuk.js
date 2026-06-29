@@ -1,0 +1,1 @@
+import{i as r}from"./i18n-BDRrJkzb.js";const i=(n,a,t)=>{const e={month:"short",year:"numeric"},m=new Intl.DateTimeFormat(t==null?void 0:t.language,e).format(new Date(n)),o=a?new Intl.DateTimeFormat(t==null?void 0:t.language,e).format(new Date(a)):r.t("present");return`${m} - ${o}`};export{i as f};
