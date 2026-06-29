@@ -1,13 +1,45 @@
+import { lazy } from "react";
 import { LanguageResolver } from "../../locale";
-import About from "./About/About";
-import BooksRead from "./BooksRead/BooksRead";
-import Education from "./Education/Education";
-import Experience from "./Experience/Experience";
-import Passions from "./Passions/Passions";
-import Posts from "./Post/Post";
-import Project from "./Project/Project";
-import Skills from "./Skills/Skills";
 import { SectionModel } from "./model";
+
+const importAbout = () => import("./About/About");
+const importProject = () => import("./Project/Project");
+const importPosts = () => import("./Post/Post");
+const importSkills = () => import("./Skills/Skills");
+const importExperience = () => import("./Experience/Experience");
+const importEducation = () => import("./Education/Education");
+const importBooksRead = () => import("./BooksRead/BooksRead");
+const importPassions = () => import("./Passions/Passions");
+
+const About = lazy(importAbout);
+const Project = lazy(importProject);
+const Posts = lazy(importPosts);
+const Skills = lazy(importSkills);
+const Experience = lazy(importExperience);
+const Education = lazy(importEducation);
+const BooksRead = lazy(importBooksRead);
+const Passions = lazy(importPassions);
+
+/**
+ * Warms up every section chunk in the background. Each chunk is only parsed
+ * (the heavy per-section work runs when the component actually mounts), so this
+ * stays off the critical render path while making scrolling and printing instant.
+ *
+ * Returns a promise that resolves once every chunk is loaded. `import()` is
+ * cached, so calling this repeatedly is cheap (resolves instantly once warm).
+ */
+function prefetchSections(): Promise<unknown> {
+  return Promise.all([
+    importAbout(),
+    importProject(),
+    importPosts(),
+    importSkills(),
+    importExperience(),
+    importEducation(),
+    importBooksRead(),
+    importPassions(),
+  ]);
+}
 
 const sections: (t: LanguageResolver) => SectionModel[] = (t) => [
   {
@@ -38,4 +70,4 @@ const sections: (t: LanguageResolver) => SectionModel[] = (t) => [
   { id: "passions", label: t("passions"), component: <Passions /> },
 ];
 
-export { sections };
+export { sections, prefetchSections };
